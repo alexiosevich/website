@@ -1,0 +1,533 @@
+\documentstyle{amsppt}
+\magnification=\magstep1
+\pagewidth{5.5in}
+\vsize=7in
+\NoBlackBoxes
+%
+\def\R{{\Bbb R}}
+%
+%
+\def\n#1{\left\vert\,{#1}\,\right\vert}
+ %
+\topmatter    
+\title A restriction theorem for flat manifolds of codimension two 
+\endtitle
+\author Laura De Carli and Alex Iosevich 
+\endauthor
+\endtopmatter
+\document
+\noindent{\bf Introduction}: Let $M$ denote a submanifold of $\R^{n+2}$ of 
+codimension $2$. Let $\Cal R$ denote a restriction operator
+$$
+{\Cal R}f(\eta) =\int e^{-i\langle x,\,\eta\rangle} f(x)dx,  
+\quad  \eta\in M, \quad f\in{\Cal S}(\R^{n+2}).
+\tag (1.1)r
+$$
+ We wish
+to find an optimal range of exponents $p$ such that
+$$ 
+\Vert{{\Cal R}f}_{L^2(M,\,d\sigma)}\Vert \leq
+C_p\Vert f\Vert_{L^p(\R^{n+2})}, \tag (1.2)
+$$
+where $d\sigma$ is a  compactly supported measure on $M$.
+\par
+Let ${\Cal F}[d\sigma]$ denote the Fourier transform of $d\sigma$. By a theorem
+of Greenleaf (see [G]), the inequality ( (1.2)) holds for 
+$\dsize p=\frac{2(2+\gamma)}{4+\gamma}$ if 
+$$
+\vert{{\Cal F}[d\sigma](R\zeta)}\Vert\leq C(1+ R)^{-\gamma},
+\qquad \zeta \in S^{n+1} .
+\tag (1.3)
+$$
+The purpose of this paper is to use Greenleaf's result to establish 
+a restriction theorem for a  class of degenerate submanifolds of $\R^{n+2}$ of 
+codimension $2$. We shall assume that our manifold is given as a joint graph 
+of two homogeneous functions, where the first graphing 
+function is homogeneous of degree 1 and 
+the second graphing 
+function is homogeneous of degree m. Under the appropriate curvature assumption
+we will show that ( (1.3)) holds with $\gamma=\frac{n}{m}$.
+\par
+An application of Greenleaf's result yields a restriction theorem with
+$\dsize p=\frac{2(2m+n)}{4m+n}$.
+\par
+We shall need the following definitions. 
+\par
+\noindent
+{\bf Nonvanishing Gaussian curvature:} Let $\Sigma$ be a submanifold of $\R^{N+1}$ 
+of codimension $1$ equiped with a smooth compactly supported measure $d\mu$.
+Let $J:\Sigma \to S^{N}$ be the usual Gauss map taking each point on 
+$\Sigma$ to the outward  unit normal at that point. We say that $\Sigma$
+has everywhere nonvanishing Gaussian curvature if the differential of the 
+Gauss map $dJ$ is always nonsingular.
+\par
+\noindent
+{\bf Strong curvature condition:} Let $S$ be a submanifold of $\R^{N+2}$ 
+of codimension $2$ equiped with a smooth compactly supported measure $d\mu$.
+Suppose that $S$ is a joint graph of smooth functions $g_1$ and $g_2$, 
+where $g_j:\R^N\to\R$. Let ${\Cal N}_{x_0}(S) $ denote the two dimensional
+space of normals to $S$ at a point $x_0$. We say that $S$ satisfies the 
+strong curvature condition (SCC) if for all $x_0 \in S$ in some neighborhood of 
+support$(d\mu)$,
+$$\det D^2(\nu_1g_1(x)+\nu_2g_2(x))\ne 0,\qquad 
+\forall \nu\in {\Cal N}_{x_0}$$, 
+where $D^2$ denotes the Hessian matrix.
+
+One can check that the above definitions are independent of the  parametrization.
+Our main result is the following:
+
+\proclaim{Main Theorem} Let $M=\{(x,\,x_{n+1},\,x_{n+2})\in \R^{n+2}\ : \ 
+x_{n+1} = \phi_1(x),\ x_{n+2} = \phi_2(x)\}$, $n \ge 2$, 
+where $\phi_i\in {\Cal C}^{\infty}_0(\R^n\backslash\{0\})$, $\phi_1$ is homogeneous 
+of degree $1$, and
+$\phi_2$ is homogeneous of degree $m\ge 2$. 
+Let $\Sigma_j = \{x \ : \ \phi_j(x) =1\}$.
+Assume also that $\phi_2$ only vanishes at the origin  and that $\Sigma_2$ has 
+everywhere nonvanishing Gaussian curvature. Let
+$$ F(\xi,\,\lambda_1,\,\lambda_2) =
+\int_{\R^{n}}
+e^{i(\langle \xi,\, x\rangle +\lambda_1\phi_1(x) + \lambda_2\phi_2(x))}
+\chi(x)\,dx,$$
+where $\chi \in {\Cal C}^{\infty}_0(\R^n) $.
+\item{ }a)  Suppose that the restriction of $\phi_1$ to the set where
+$\phi_2 = 1$,  $\dsize {\phi_1}_{\vert_{\Sigma_2}}$, is constant. Then
+$$\vert{F(\xi,\,\lambda_1,\,\lambda_2)}\vert\leq C(\n\xi+\n\lambda_1+\n\lambda_2)^
+{-\frac{n}{m}}
+\tag (1.4)$$
+when $m\ge 2n$.
+\item{ }b)  Let  $\dsize M_{\vert_{\{x_{n+2}=1\}}}$  denote the restriction 
+of $M$ to the hyperplane $\{x_{n+2}=1\}$.  If  
+$\dsize M_{\vert_{\{x_{n+2}=1\}}}$ (wiewed as a submanifold of codimension $2$
+of $\{x_{n+2}=1\}$) satisfies the 
+strong curvature condition, then ( (1.4)) holds for $m\ge 2$.
+\par
+\endproclaim
+\bigskip
+The conclusions of part (a) do not in general hold if $m<2n$.  
+Let $\phi_1(x) = \n x$, $\phi_2(x) = \n x^m$. 
+Let $\xi = (0,\, 0,\, \cdots,\, 0)$.
+Then, in polar coordinates, 
+$$
+F(0,\,\lambda_1,\,\lambda_2) =
+C\int_{0}^{\infty}
+e^{i( \lambda_1 r + \lambda_2 r^m)}r^{n-1}
+\chi(r)\,dr. 
+$$
+It is not hard to see that the best isotropic decay for this integral cannot
+exceed 
+\par\noindent
+$\dsize O\left(\left(\sqrt{\lambda_1^2+\lambda_2^2}\right)^{-\frac{1}{2}}\right)$.
+Hence the restriction $m\ge 2n$ is necessary.
+\vskip.125in 
+\noindent
+{\bf Remarks:} (1) It is known that isotropic decay estimates for the Fourier transform
+of the surface-carried measure cannot be expected to yield an optimal restriction
+theorem (see e.g. [C]).
+We shall apply a homogeneity argument due to Knapp  to the class of
+manifolds considered in the theorem above.
+\par
+Let ${\Cal R}$ denote the restriction operator defined above. Let 
+$\hat f_\delta = h$, where $h$ is the characteristic function of a rectangle in 
+$\R^{n+2}$ with sides of lengths $ (1,\,1,\,\cdots 1,\,C,\,C)$, $C$ large.
+\par
+Then $$ 
+\Vert{f_\delta}\Vert_p\approx \delta^{(1-1/p)(n+m+1)}\qquad
+\text{and} \qquad \Vert{{\Cal R}f_\delta}\Vert_p \approx\delta^{n/2}.
+$$
+Hence ( (1.2)) can only hold if $\dsize p \leq \frac{2(n+m+1)}{n+2(m+1)}$.
+\par
+If we apply Greenleaf's result  ( (1.3)) to the Main Theorem, we see that 
+( (1.2)) holds for $\dsize p\leq\frac{2(2m+n)}{4m+n}$ .
+\par
+The gap between this exponent and the exponent given by Knapp's homogeneity
+argument suggests that the restriction theorem (1.2) may hold for a 
+wider range of exponents. The result obtained using the Main Theorem is not 
+sharp. In order to obtain a sharp result one would probably have to obtain
+precise non-isotropic estimates for the Fourier transform of the
+surface carried measure using the techniques of M. Christ (see [C]).
+\par
+\quad (2) The curvature conditions of the Main Theorem are not entirely
+satisfying because there is no natural transition between parts (a) and (b).
+\par
+We hope to address these difficulties  in a subsequent paper.
+\bigskip
+\centerline{\bf Proof of the main result:}
+\bigskip
+\noindent
+{\bf Notation:} \roster
+\item
+Given  $a$, $b > 0$ we say  that $a \approx b$ ($a$ comparable to $b$)
+if there exist   $c_1$, $c_2 > 0$ such that 
+$ 
+c_1 a \leq b \leq c _ 2 a .
+$
+We say that  $a>\!>b$  ($a$  much larger than  $b$)  if  the inequality
+$ a \leq  Cb$ is not satisfied for any $C >0$. The notion $a<\!<b$ is 
+defined similarly.
+\item
+We   denote by $C$ a generic constant which may change from line to line.
+\endroster
+\bigskip
+\demo {Proof of part (a) of the Main Theorem} 
+Let $\Psi(x) =\langle \xi,\, x\rangle +\lambda_1\phi_1(x)+\lambda_2\phi_2(x) 
+.$ Then $\bigtriangledown\Psi(x) = \xi+\lambda_1\bigtriangledown\phi_1(x)  +
+\lambda_2\bigtriangledown\phi_2(x)$. Since ${\phi_1}_{\vert_{\Sigma_2}}$  
+is constant by assumption, then $\phi_1 \ne 0$ away from the origin. Hence, 
+$\bigtriangledown\phi_1(x)\ne 0$ away from the origin by the Euler homogeneity 
+relation, and since every
+component of $\bigtriangledown\phi_1(x)$ is homogeneous of degree zero,
+we have $\vert{\bigtriangledown\phi_1(x)}\vert \ge C$ for all $x \in$ support$(\phi_1)$.
+\par
+Suppose that  $ \vert\xi\vert<\!< \vert{\lambda_2}\vert<\!< \vert{\lambda_1}\vert$  or 
+ $ \vert{\lambda_2}\vert<\!< \n\xi <\!< \vert{\lambda_1}\vert$ . Then  
+$\vert{ \bigtriangledown\Psi(x)}\vert \ge C\vert{\lambda_1}\vert$ and so an integration by parts 
+argument (see theorem (1) in the appendix) shows that
+$\vert{F(\xi,\,\lambda_1,\,\lambda_2) }\vert\leq C(1+\vert{\lambda_1}\vert)^{-N} \quad \forall 
+N>0 $.
+Similarly, if $ \vert{\lambda_1}\vert<\!< \vert{\lambda_2}\vert<\!< \vert{\xi}\vert$, or
+$ \vert{\lambda_1}\vert\approx \vert{\lambda_2}\vert<\!< \vert{\xi}\vert$, then 
+$\vert{F(\xi,\,\lambda_1,\,\lambda_2) }\vert\leq C(1+\vert{\xi}\vert)^{-N} \quad \forall 
+N>0 $.
+\par
+If we rewrite 
+$F$ using polar coordinates with respect to $\Sigma_2$ and assume  that 
+$\chi$ is radial with respect to $\Sigma_2igmsa$, we get 
+$$
+F(\xi,\,\lambda_1,\,\lambda_2) =
+ \int_{0}^{+\infty}r^{n-1}\chi(r)
+\int_{\Sigma_2}e^{i(r\langle \xi,\, \omega\rangle +r\lambda_1+r^m\lambda_2)}
+\,d\sigma(\omega)\,dr,
+$$
+where $ d\sigma$ is the Lebesgue measure carried by $\Sigma_2$.
+Let $I(\xi)$ denote the Fourier transform of the surface-carried measure on
+$\Sigma_2$, 
+$$
+I(\xi) = \int_{\Sigma_2}
+e^{i\langle \xi,\, \omega\rangle }
+\,d\sigma(\omega) .
+$$
+Since the Gaussian curvature on $\Sigma_2$ never vanishes, we can use 
+the method of stationary phase (see theorem (3) in the appendix ) 
+to write 
+$I(\xi)= b(\xi)e^{iq(\xi)}$,  where $\xi $ belongs to a cone $\Gamma$ containing 
+the 
+normal directions to $\Sigma_2$ on the support of $d\sigma$, and where 
+$b(\xi) $ is a symbol of order 
+$-\frac{n-1}{2}$, $q(\xi)$ is homogeneous of degree $1$, and 
+$q(\xi)\approx\n\xi$.
+Away from $\Gamma$, $I(\xi)$ decays rapidly in  $\n\xi$.
+\par
+Suppose that we are in one of the cases where $\n\xi$ dominates: 
+\roster
+\item $ \vert{\lambda_2}\vert<\!< \vert{\lambda_1}\vert\approx \vert\xi\vert$,
+\item $ \vert{\lambda_1}\vert<\!< \vert{\lambda_2}\vert \approx\vert\xi\vert $,
+\item $ \vert{\lambda_1}\vert<\!<\vert{\lambda_2}\vert <\!< \vert\xi\vert$,
+\item $ \vert{\lambda_2}\vert<\!<\vert{\lambda_1}\vert <\!< \vert\xi\vert$,
+\item $ \vert{\lambda_1}\vert\approx \vert{\lambda_2}\vert \approx\vert\xi\vert $.
+\endroster
+Using our observation about $I(\xi)$, we write 
+$$
+F(\xi,\,\lambda_1,\,\lambda_2) = 
+ \int_{0}^{+\infty}r^{n-1}
+e^{i( rq(\xi)+r\lambda_1+r^m\lambda_2)}b(r\xi)\chi(r)dr \ .
+$$
+Then
+$$ 
+\vert{F(\xi,\,\lambda_1,\,\lambda_2)}\vert\leq C\int_{0}^{2}
+r^{n-1}\n{b(r\xi)}dr.
+$$
+Let $s=r\n\xi $, and define $ \tilde\xi =\xi\vert\xi\vert^{-1}$. 
+The integral above is bounded by 
+$$
+C\vert\xi\vert^{-n}\int_{0}^{2\n\xi}
+s^{n-1}\vert{b(s\tilde\xi)}\vert ds = 
+$$
+$$
+= C\vert\xi\vert^{-n}\int_{0}^{N}
+s^{n-1}\vert{b(s \tilde\xi)}\vert ds + C\vert\xi\vert^{-n}\int_{N}^{2\vert\xi\vert}
+s^{n-1}\vert{b(s \tilde\xi)}\vert ds,
+$$
+where $N$ is large. The first integral is $O(\vert\xi\vert^{-n})$ and the second 
+integral is bounded by 
+$$ 
+C\n\xi^{-n}\int_{N}^{2\n\xi}
+s^{\frac{n-1}{2}}ds  \leq C(1+\n\xi)^{-\frac{n-1}{2}} .
+$$ 
+Note that $\dsize \frac{n-1}{2}\ge \frac{n}{m} $ \quad when 
+$\dsize m\ge \frac{2n}{n-1}$.
+\par
+We are left to consider the  cases where $\lambda_2$ dominates: 
+\roster
+\item $ \n\xi\approx\vert{\lambda_1}\vert<\!< \vert{\lambda_2}\vert$,
+\item $ \n\xi<\!<\vert{\lambda_1}\vert\approx\vert{\lambda_2}\vert$,
+\item $ \n\xi<\!<\vert{\lambda_1}\vert<\!<\vert{\lambda_2}\vert$,
+\item $ \vert{\lambda_1}\vert<\!<\n\xi<\!<\vert\lambda_2\vert$.
+\endroster
+\par
+As before, let
+$$
+F(\xi,\,\lambda_1,\,\lambda_2) =
+\int_{0}^{+\infty}r^{n-1}
+e^{i( rq(\xi)+r\lambda_1+r^m\lambda_2)}b(r\xi)\chi(r)dr.
+$$ 
+Let $s\lambda_2^{-1/m}=r$. Then  
+$$
+F(\xi,\,\lambda_1,\,\lambda_2) = \lambda_2^{-\frac{n}{m}}
+ \int_{0}^{+\infty}s^{n-1}
+e^{i (q(s\lambda_2^{-1/m}\xi)+s\lambda_2^{-1/m}\lambda_1+s^m)}
+b(s\lambda_2^{-1/m}\xi)\chi(s\lambda_2^{-1/m})ds .
+$$
+Let 
+$$
+G(\xi,\,\lambda_1,\,\lambda_2) = 
+ \int_{0}^{+\infty}s^{n-1}
+e^{i (\lambda_2^{-1/m}sq(\xi)+s\lambda_2^{-1/m}\lambda_1+s^m)}
+b(s\lambda_2^{-1/m}\xi)\chi(s\lambda_2^{-1/m})ds .
+$$
+It suffices to show that $\vert{G(\xi,\,\lambda_1,\,\lambda_2)}\vert$ is uniformly
+bounded. When 
+ $\dsize \vert\frac{\lambda_1+\n\xi}{{\lambda_2}^{\frac{1}{m}}}\vert $ is sufficiently small, 
+then $\n G$ is  bounded by $\dsize C\vert{\int_{0}^{+\infty}e^{i t^m}t^{n-1} dt}\vert$.
+An integration by parts argument shows that this integral converges. 
+In particular  the above integral
+equals 
+$\dsize e^{\frac{2 \pi i }{m} }\frac{1}{m}\Gamma\left(\frac{n}{m}\right)$. 
+Thus we may assume that $\dsize \vert\frac{\lambda_1+\n\xi}{{\lambda_2}^{\frac{1}{m}}}\vert \ge C$.
+\par
+ Let $\dsize \Phi(s)= s\frac{\lambda_1+q(\xi)}{{\lambda_2}^{\frac{1}{m}} }+s^m$. Then $\dsize \Phi'(s) =0 $ if 
+$\dsize s = C\left(\frac{\lambda_1+q(\xi)}{{\lambda_2}^{\frac{1}{m}} }\right)^{\frac{1}{m-1}}$, 
+and  $\dsize \Phi''(s) = m(m-1)s^{m-2}$.
+\par
+If we apply the  van der  Corput Lemma 
+(see theorem (2) in the appendix) in the case $k=2$, and  recall that 
+in particular 
+$\n b$ is uniformly bounded, we see that $\n G$ 
+is bounded by 
+$$
+C\vert\frac{\lambda_1+\n\xi}{{\lambda_2}^{\frac{1}{m}}}^{-\frac{(m-2)}{2(m-1)}+
+\frac{n-1}{m-1}}\vert.
+$$
+The power of \ $\dsize \vert\frac{\lambda_1+\n\xi}{{\lambda_2}^{\frac{1}{m}}}\vert$ \ in the expression above is non-positive if
+$m\ge 2n$, and so 
+$G(\xi,\,\lambda_1,\,\lambda_2)$ is uniformly
+bounded. 
+This completes the proof of part (a) of the Main Theorem.
+\enddemo
+%
+\bigskip
+\demo {Proof of part (b) of the Main Theorem} As before, we rewrite $F$ 
+using polar coordinateds associated to $\Sigma_2$. We get 
+$$
+F(\xi,\,\lambda_1,\,\lambda_2) =\int_0^{+\infty}\int_{\Sigma_2}e^{i(r\langle \omega,\,\xi
+\rangle +r\lambda_1\phi_1(\omega)+\lambda_2r^m)}r^{n-1}\chi(r)d\omega dr,
+$$
+where, as before, $\chi$ is a smooth cutoff function which is radial with 
+respect to the polar coordinates associated to $ \Sigma_2$.
+Let 
+$$
+I(\xi,\,\lambda_1) = \int_{\Sigma_2} e^{i(\langle \omega,\,\xi
+\rangle +\lambda_1\phi_1(\omega))}d\omega.
+$$
+Using the implicit function theorem   we can parametrize $\Sigma_2$  near a point $s_0$
+by a smooth function 
+$\psi: \R^{n-1}\to \R$. 
+Without loss of generality,  we can assume that  $\bigtriangledown
+\phi_1(s_0) = 0$ and that $\bigtriangledown
+\phi_2(s_0) = (0,\, 0,\, \cdots,\,0,\,1)$. Thus, we can  locally
+write $\Sigma_2 =\{(\omega',\,\omega_n) \ :\  \omega_n = \psi(\omega')\}.$ 
+The restriction 
+of $M$ to the hyperplane $\{x_{n+2}=1\}$ can thus be locally parametrized
+by the functions $\psi(\omega')$ and $ \phi_1(\omega',\,\psi(\omega'))$.
+If we let $\xi = (\xi',\,\xi_n)$, we can  write 
+$I(\xi,\,\lambda_1)$ as a finite sum of terms of the form
+$$
+ \int_{\R^{n-1}} e^{i(\langle \omega',\,\xi'
+\rangle +\xi_n\psi(\omega')+ \lambda_1\phi_1(\omega',\,\psi(\omega')))}
+\chi_1(\omega')d\omega',
+\tag  (1.5) $$
+where $\chi_1$ is a smooth cutoff function supported in a neighborhood of
+$s_0$.
+It was observed by M. Christ (see [C]) that  the strong curvature 
+condition  (see the introduction) implies the following result.
+\proclaim{Lemma} 
+Let $\Omega$ be a submanifold of $\R^{N+2}$ of codimension $2$ locally
+parametrized by smooth functions $g_1$ and $g_2$, where $g_j : \R^N\to \R$.
+Let $d\sigma$ denote a smooth measure on $\Omega$. Suppose that $\Omega$
+satisfies the strong curvature condition. Then 
+$$
+\n{{\Cal F}[d\sigma](R\eta) } \leq C(1+R)^{-\frac{N}{2}}.
+$$
+\endproclaim
+The proof of the lemma shows that the integral in ( (1.5)) can be written 
+as 
+$\dsize  b(\xi,\,\lambda_1)e^{iq(\xi,\,\lambda_1)}$, 
+where  $(\xi,\lambda_1) $ belongs to a cone  containing 
+the normal directions to $M_{\vert_{\{x_{n+2}=1\}}}$ on the support of 
+$d\sigma$, $b(\xi,\,\lambda_1) $
+is a symbol of order 
+$-\frac{n-1}{2}$, $q(\xi,\,\lambda_1)$ is homogeneous of degree $1$, and 
+$\n{q(\xi,\,\lambda_1)}\approx(\n\xi+\n{\lambda_1})$.
+\par
+We must analyze the following integral:
+$$ 
+ \int_{0}^{+\infty}r^{n-1}
+e^{i( rq(\xi,\,\lambda_1)+r^m\lambda_2)}b(r\xi, \,r\lambda_1)\chi(r)dr .
+\tag (1. 6)
+$$
+We may assume that $\n{q(\xi,\,\lambda_1) } \leq C\n{\lambda_2}$, since if
+$\n{q(\xi,\,\lambda_1) } \ge c\n{\lambda_2}$ for a sufficiently large 
+$c >0$, then the integral in ( (1. 6)) decays rapidly in 
+$\n\xi +\n{\lambda_1} $. (See theorem (1) in the appendix.)
+\par
+Let $s=r\lambda_2^{\frac{1}{m}} $. Then,  the integral in
+ (1. 6) can be written as
+$$
+\lambda_2^{-\frac{n}{m}}\int_{0}^{+\infty}s^{n-1}
+e^{i( s\lambda_2^{\frac{1}{m}}q(\xi,\,\lambda_1)+s^m)}
+b(s\lambda_2^{\frac{1}{m}}\xi, \,s\lambda_2^{\frac{1}{m}}\lambda_1)
+\chi(s\lambda_2^{\frac{1}{m}})dr .
+$$
+Let 
+$$
+G(\xi,\,\lambda_1,\,\lambda_2) = 
+\int_{0}^{+\infty}s^{n-1}
+e^{i( s\lambda_2^{\frac{1}{m}}q(\xi,\,\lambda_1)+s^m)}
+b(s\lambda_2^{\frac{1}{m}}\xi, \,s\lambda_2^{\frac{1}{m}}\lambda_1)
+\chi(s\lambda_2^{\frac{1}{m}})dr .
+$$
+As before, it suffices to show that $\n{G(\xi,\,\lambda_1,\,\lambda_2)}$ is 
+uniformly bounded . When
+ $\dsize \vert\frac{\n{\lambda_1}+\n{\xi}}{{\lambda_2}^{\frac{1}{m}}}\vert $ is sufficiently small, 
+then $\n G$ is  bounded by $\dsize C\n{\int_{0}^{+\infty}e^{i t^m}t^{n-1} dt}$.
+Hence we can assume  $\dsize \vert
+\frac{\n{\lambda_1}+\n{\xi}}{{\lambda_2}^{\frac{1}{m}}}\vert \ge C$. We can write 
+$\dsize G(\xi,\,\lambda_1,\,\lambda_2) = 
+\int_{0}^{N}+\int_{N}^{C\n{\lambda_2}^{\frac{1}{m}}}$, $ N$ large. The first integral 
+is uniformly bounded. In order to handle the second integral  let 
+$\dsize \Phi(s) = s\lambda_2^{\frac{1}{m}}q(\xi,\,\lambda_1)+s^m$. 
+Then $\dsize \Phi'(s) = 0$ if 
+$\dsize s = 
+c_m\left(\lambda_2^{-\frac{1}{m}}q(\xi,\,\lambda_1)\right)^{\frac{1}{m-1}}$, 
+and 
+$\dsize \Phi''(s) = m(m-1)s^{m-2}$. If the critical point is smaller than 
+$N$ the integral has rapid decay, so we may assume that 
+$\n{\lambda_2^{-\frac{1}{m}}q(\xi,\,\lambda_1)}$ is large. 
+If we recall that $\dsize 
+\n{q(\xi,\,\lambda_1)} \approx \n\xi+\n{\lambda_1}$, then by the van der 
+Corput lemma (see theorem (2) in the appendix)  we get 
+$$
+\int_{N}^{C\n{\lambda_2}^{\frac{1}{m}} }\leq\n{ \frac{\n{\lambda_1}+\n{\xi}}{{\lambda_2}^{\frac{1}{m}}}}^{-\frac{(m-2)}{2(m-1)} +
+\frac{n-1}{m-1}-\frac{n-1}{2(m-1)} -\frac{n-1}{2}}.
+\tag (1. 7)
+$$
+Note that the third and the fourth terms in the power of $\dsize \n{\frac{\n{\lambda_1}+\n{\xi}}{{\lambda_2}^{\frac{1}{m}}}}$
+arise from the fact that $b$ is a symbol of order $-\frac{n-1}{2}$, and 
+$\dsize \vert\frac{\n{\lambda_1}+\n{\xi}}{{\lambda_2}^{\frac{1}{m}}}\vert$ is large.
+\par
+The power of $\dsize \vert\frac{\n{\lambda_1}+\n{\xi}}{{\lambda_2}^{\frac{1}{m}}}\vert$ in ( (1. 7)) is nonnegative provided that 
+$m\ge 2$. Hence, $\vert{ G(\xi,\,\lambda_1,\,\lambda_2)}\vert$ is bounded and the 
+proof is complete.
+\enddemo
+\bigskip
+
+\centerline{\bf Appendix}
+\bigskip
+In this section we recall a few classical results that we used to prove the Main 
+Theorem.
+The first two theorems, which deal with  oscillatory integrals,  can be found e.g. 
+in [St].
+\proclaim
+{\bf Theorem 1}\quad Suppose  $\phi \in {\Cal C}^{\infty}_0{\R^n}$ and suppose that
+$\psi$ is a real-valued and smooth function which has no critical points on the 
+support of $\phi$. Then 
+$$
+\n{\int_{\R^n} e^{i\lambda\psi(x)}\phi(x)dx} = O(\lambda^{-N}) 
+$$
+as $\lambda\to \infty$, for every $N \ge 0$.
+\endproclaim
+\medskip
+\proclaim
+{\bf Theorem 2}\quad Suppose that $\psi$ is  real-valued and smooth 
+and that $\phi$ is complex-valued and smooth in $[a,\,b]$. If
+$\n{\psi^{(k)}(x)}\ge 1$, then
+$$
+\n{\int^b_a e^{i\lambda\psi(x)}\phi(x)dx}\leq C_k\lambda^{-\frac{1}{k}}
+\left[\n{\phi(b)}+\int^b_a\n{\phi'(t)}\,dt\right]
+$$
+holds when
+\roster
+\item $ k\ge 2$
+\item or $k=1$, if in addition it is assumed that $\psi'(x)$ is monotonic.
+\endroster
+\endproclaim
+\medskip
+\proclaim
+{\bf Theorem 3}\quad 
+ Let $S$ be a smooth hypersurface in $\R^{n}$ 
+with nonvanishing Gaussian curvature, and let 
+$d\sigma $
+be a ${\Cal C}^\infty$ measure  on $S$.
+Then
+$$
+\n{\widehat{ d\mu}(\xi)} \leq C(1+\n\xi)^{-\frac {n-1}{2}} .
+$$
+Moreover suppose that $\Gamma\subset \R^n\backslash\{0\} $ is the cone consisting
+of all $\xi$ which are normal to some point $x\in S$ belonging to
+some compact neighborhood ${\Cal N}$ of support$(d\mu)$. Then,
+$$
+\frac{\partial^{\alpha}}{\partial{\xi}}\widehat{ d\mu}(\xi) = O\left((1+\n\xi)^{-N}\right), 
+\qquad \forall N, \text{ if }
+\xi\not\in\Gamma,
+$$
+$$
+\widehat{ d\mu}(\xi) =\sum
+= a_j(\xi)e^{i\langle x_j,\,\xi\rangle},\qquad \text{ if }\xi\in\Gamma,
+$$
+where the finite sum is taken over all points $x_j\in {\Cal N}$ having
+$\xi$ as a normal and 
+$$
+\vert
+\frac{\partial^{(\alpha)}}{\partial\xi}\widehat {d\mu}(\xi)\vert \leq C_\alpha(1+\n\xi)^
+{-\frac {n-1}{2}-\n\alpha}.
+$$
+\endproclaim
+\demo{Proof} See [So] pag. 50-51.
+\enddemo
+\bigskip
+\centerline{\bf References}
+\bigskip
+\item{{\bf [C]}} M.  Christ,\quad {\it Restriction of the Fourier transform to 
+submanifolds of low codimension}, Thesis, University of Chicago (1982). 
+\par
+\item{{\bf [DC]}} L. De Carli,\quad {\it Unique continuation for higher order
+elliptic operators}, Thesis, UCLA (1993). 
+\par
+\item{{\bf [G]}} A. Greenleaf,\quad {\it Principal curvatures in harmonic analysis},
+Ind. Univ. Math. J.  {\bf 30}  (1981), 519-537.
+\par
+\item{{\bf [H]}} L. Hormander,\quad {\it 
+The analysis of linear partial differential operators I}, 
+ New York, 1990.
+\par
+\item{{\bf [I1]}} A. Iosevich,\quad {\it Maximal Operators associated to 
+families of flat curves and hypersurfaces }, Thesis, UCLA (1993). 
+\par
+\item{{\bf [I2]}} A. Iosevich,\quad {\it Maximal Operators associated to 
+families of flat curves in the plane.} To appear in Duke Math.J.  
+\par
+\item{\bf [L]} W. Littman,\quad {\it Fourier transforms of surface-carried measures 
+and differentiability of surface averages}, Bull. Am. Math. Soc.  {\bf 69} (1963), 766-770.
+\par
+\item{{\bf [So]}} C.D.Sogge,\quad 
+{\it Fourier integrals in classical analysis}, 
+Cambridge  University Press,  Cambridge, 1993.
+\par
+\item{{\bf [St]}} E. M. Stein,\quad 
+{\it Harmonic Analysis},  
+Princeton University Press, Princeton, 1993.
+
+\end
+
+
+
+

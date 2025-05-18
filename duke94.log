@@ -1,0 +1,46 @@
+This is pdfTeX, Version 3.14159-13d (Web2C 7.3.1) (format=amstex 2000.9.15)  14 JUL 2002 16:35
+**duke95
+(duke94.tex[/usr/local/share/texmf/pdftex/config/pdftex.cfg]
+
+AmS-TeX- Version 2.1
+COPYRIGHT 1985, 1990, 1991 - AMERICAN MATHEMATICAL SOCIETY
+Use of this macro package is not restricted provided
+each use is acknowledged upon publication.
+
+
+(/usr/local/share/texmf/tex/amstex/base/amsppt.sty version 2.1h (1997/02/02):
+Loading utility definitions, more fonts, page dimension settings, top matter,
+section heads, theorems/proofs/definitions/remarks, rosters, footnotes,
+figures and captions, miscellaneous, references, end of document,
+output routine,
+\copyins=\insert252
+ hyphenation exceptions (U.S. English)
+(/usr/local/share/texmf/tex/amstex/config/amsppt.sti symbol names
+(/usr/local/share/texmf/tex/plain/amsfonts/amssym.tex) ,)
+
+) [1[/usr/local/share/texmf/dvips/config/pdftex.map]] [2] [3] [4] [5] [6]
+[7] [8] [9] [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 702--706
+[]\tenrm D.H.Phong, \tenit Sin-gu-lar in-te-grals and Fourier in-te-gral operat
+ors[]
+
+\hbox(7.5+2.5)x397.48499, glue set 8.09146
+.\hbox(7.5+2.5)x53.53967, glue set 30.62296fil
+..\tenrm [
+..\tenrm P
+..\tenrm h
+..\tenrm ]
+..\kern 5.0
+..etc.
+.\tenrm D
+.\tenrm .
+.\tenrm H
+.\tenrm .
+.etc.
+
+)
+*\end
+[12]<msbm7.pfb><cmsy5.pfb><cmsy8.pfb><cmr8.pfb><cmmi5.pfb><cmr5.pfb><cmsy7.pfb>
+<msbm10.pfb><cmti10.pfb><cmr7.pfb><cmsy10.pfb><cmex10.pfb><cmmi7.pfb><cmmi10.pf
+b><cmr10.pfb><cmcsc10.pfb><cmbx10.pfb>
+Output written on duke94.pdf (12 pages, 191402 bytes).
