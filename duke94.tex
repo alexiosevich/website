@@ -1,0 +1,759 @@
+\documentstyle{amsppt}
+\pagewidth{5.5in}
+\vsize7.0in
+\magnification=\magstep1
+\widestnumber \key{AAAAAAA}
+\topmatter
+\author Alex Iosevich
+\endauthor
+\title Maximal operators associated to families of flat curves in the plane 
+\endtitle
+\endtopmatter
+\document
+
+{\bf Introduction:} Let $C$ denote a smooth curve in the plane. Let  
+$M_tf(x)=\int_C f(x-ty)d\sigma(y)$, where $d\sigma(y)$ denotes a 
+cutoff function times the Lebesgue
+measure on $C$. Let $\Cal{M}f(x)=\sup_{t>0}M_tf(x)$. A question we ask is, 
+for what range of the exponents $p$, is the following a priori inequality
+satisfied:
+$$ {||\Cal{M}f||}_p \leq C_p {||f||}_p, \ \ f\in \Cal{S}. \tag1.1$$
+
+Bourgain showed that if $C$ has non-vanishing curvature, the
+inequality (1.1) holds for $p>2$ (see \cite{B}). 
+In this paper, we shall consider a situation
+when the curvature is allowed to vanish of finite order on a finite set of  
+isolated points. We shall need the following definition:
+
+\proclaim{Definition1.1} Let $C:I\rightarrow {\Bbb R}^2$, where $I$ is a 
+compact interval in ${\Bbb R}$, and $C$ is smooth. We say that $C$ is 
+finite type if $\langle (C(x)-C(x_0)), \mu \rangle$ 
+does not vanish of infinite
+order for any $x_0\in I$, and any unit vector $\mu$. 
+\endproclaim 
+
+We shall also need a more precise definition which would specify the 
+order of vanishing at each point. Let $a_0$ denote a point
+in the compact interval $I$. We can always find a smooth function $\gamma$,
+such that in a small neighborhood of $a_0$, $C(s)=(s,\gamma(s))$, where
+$s\in I$. 
+
+\proclaim{Definition1.2} Let $C$ be defined as before. Let 
+$C(s)=(s,\gamma(s))$ in a small neighborhood of $a_0$. We say that 
+$C$ is finite type $m$ at $a_0$ if ${\gamma}^{(k)}(a_0)=0$ for 
+$1\leq k<m$, and ${\gamma}^{(m)}(a_0)\not=0$. \endproclaim 
+
+Our main result is the following:
+
+\proclaim{Theorem 1.1} Let $C$ be a finite type curve which is finite type
+$m$ at $a_0$. Let 
+$M_tf(x)=\int_C f(x-ty)d\sigma(y)$, where $d\sigma$ is 
+the Lebesgue measure on $C$ multiplied by a smooth cutoff function supported
+in a sufficiently small neighborhood of $a_0$. 
+Let ${\Cal M}f(x)=\sup_{t>0}M_tf(x)$. Then, 
+$$ {||{\Cal M}f||}_p \leq C_p{||f||}_p \ \ \text{for} \ \ p>m. \tag1.2$$
+\endproclaim
+
+Furthermore, the result is sharp. Let  
+$h_p(x)={|x_2|}^{-\frac{1}{p}} {\log(\frac{1}{|x_2|})}^{-1} 
+\phi(x)$, where $\phi(x)$ is a non-negative $C^{\infty}_{0}$ function 
+supported in the unit ball, such that $\phi \equiv 1$ near the origin. 
+It is not hard to check that $h_p\in L^p({\Bbb R}^2)$, if
+$p>1$. Locally, $C(s)=(s,\gamma(s))$. Without loss of generality,
+let $a_0=0$, and $\gamma(0)=-1$. Then, 
+$M_t h_p(x)= \infty$, for $p \leq m$, if
+$|x_2|=t$, and $x_2<0$. 
+
+We shall also consider a variable coefficient version of Theorem 1.
+The averaging operator $M_t$ that we have considered so far is called
+translation invariant, or the constant coefficient operator because it
+averages a function over the translates and dilates of a fixed curve. We are
+now going to consider an operator which averages a function over
+a more general distribution of curves in the plane. We are also going to
+consider a more general time dependence. As before, we are going to define
+a maximal operator by taking the supremum over the time dependence. In order
+to formulate the conditions for $L^p$ boundedness of such operators, a more
+sophisticated geometric setup is required. 
+
+Let's consider a curve distribution in $ {\Bbb R}^2$ such that through 
+every point $x\in {\Bbb R}^2$ we have a $C^\infty$ curve. 
+If we assume that 
+this curve distribution is a smooth submanifold for each fixed $t$, 
+then we can locally 
+express this curve distribution as 
+$$ {\Cal D}_t=\{(x,y):y_2=x_2+A(x_1,y_1,x_2,t)\} \ \text{for some smooth} \ 
+A(x_1,y_1,x_2,t).$$
+
+Let $S_{x,t}$ denote $ \{ y:(x,y) \in {\Cal D}_t \}$    and consider a 
+family of operators
+$$ M_t(f)(x)=\int_{S_{x,t}} f(x-y) d{\sigma}_{x,t}(y), \tag1.3$$where    
+$d{\sigma}_{x,t}$ is the  
+smooth cutoff function times the Lebesgue measure on  $S_{x,t}.$ 
+
+After taking a partial Fourier transform, we can rewrite $M_t(f)(x)$ as 
+$$ {(2\pi)}^{-1} \int \int e^{i\theta(A(x_1,y_1,x_2,t)+x_2-y_2)} \psi(x,y) f(y)
+d\theta dy, \tag1.4$$ where $\psi(x,y)$ is a cutoff function.
+
+After setting $M_t(f)(x)=(Ff)(x,t)$ and using a standard theorem about orders
+of Fourier integral operators (See \cite{So1}), 
+we see that the $M_t$'s are Fourier 
+integral operators of the order given by 
+$$ \text{order(symbol)}+(\frac{1}{2}  
+\# \text{oscillating 
+vars})-\frac{1}{4} (\# x \ \text{vars}+ \# y \  \text{vars})=0+
+\frac{1}{2}-1=-\frac{1}{2}.$$
+
+Let $F_t(x,y)$ denote the kernel of this Fourier integral operator. 
+The distribution defined by $(x,y)\rightarrow F(x,y,t)$ is a Lagrangian
+distribution of order $-\frac{1}{2}$, the wave front set of which is contained 
+in a subset of the cotangent bundle of ${\Bbb R}^2 \times {\Bbb R}^2$ with the
+zero section removed (See e.g. \cite{So1}). This subset is called a canonical
+relation. The canonical relation is a Lagrangian submanifold of the 
+cotangent bundle with respect to the canonical symplectic form 
+$dx\wedge d\xi-dy\wedge d\mu$. 
+
+Since the kernel $F_t(x,y)$ is supported in ${\Cal D_t}$, 
+it is not hard to see that if we consider a "twisted" canonical relation
+$C$ where $(x,\xi,y,\mu)$ is replaced by $(x,\xi,y,-\mu)$, 
+$C$ is in fact a conormal bundle of ${\Cal D_t}$ 
+denoted by $N^{*}(D_t)$ (See \cite{Trvs}).
+This is related to the fact that the Fourier transform
+of the smooth density on a hypersurface decays rapidly in every direction 
+except the normal directions to the hypersurface (See \cite{Hor1}).
+
+Let ${\Cal C}_t$ denote the canonical relation for a fixed $t$.
+If we let $X,Y$ denote the support of $x \rightarrow F_t(x,y)$ and 
+$y \rightarrow F_t(x,y)$ respectively, 
+${\Cal C}_t$ can be naturally viewed as
+a Lagrangian submanifold of the cotangent space of $X \times Y$ with the 
+zero section removed. Let ${\pi}_l:{\Cal C_t}\rightarrow T^{*}(X)\backslash 0$  
+and ${\pi}_r:{\Cal C_t} \rightarrow T^{*}(Y)\backslash 0$ 
+denote the natural projections of ${\Cal C_t}$. 
+
+We say that ${\Cal C}_t$ is a local canonical graph if 
+$$ {\Cal C}_t=\{(x,\xi,y,\mu):(y,\mu)=\Xi_t(x,\xi)\},$$  
+where $\Xi_t$ is a symplectomorphism for each $t.$ The distribution of curves
+is then said to satisfy the rotational curvature condition (See \cite{PhSt1}).
+It is not hard to see 
+that this condition is equivalent to the condition that both ${\pi}_l$ and
+${\pi}_r$ are local diffeomorphisms. 
+
+As we have noted earlier, the canonical relation ${\Cal C_t}$ is the 
+conormal bundle of the curve distribution ${\Cal D_t}$. In other words,
+the canonical relation is parameterized by the phase function of the
+operator (1.4), $\theta \Phi(x,y,t)$, where 
+$\Phi(x,y,t)=y_2-x_2-A(x,y_1,t)$.  
+
+The condition that the projection ${\pi}_l$ is a local diffeomorphism 
+means that given \newline $(x_0,{\xi}_0) \in T^{*}(X)\backslash 0$ we can find  
+$(y,\theta)\in Y\times {\Bbb R}$ such that $\Phi(x_0,y)=0$ and 
+$\theta d_x\Phi(x_0,y,t)={\xi}_0$. This means that the Jacobian of the map
+$(\theta,y) \rightarrow (\Phi(x,y,t), \theta d_x\Phi(x,y,t))$ is non-zero.
+The resulting Jacobian is called the Monge-Ampere determinant: 
+
+$$ J_t(x,y)=Det \left( \matrix
+0 & \Phi_{x_1} & \Phi_{x_2}\\
+\Phi_{y_1} & \Phi_{x_1y_1} & \Phi_{x_2y_1}\\
+\Phi_{y_2} & \Phi_{x_1y_2} & \Phi_{x_2y_2}\\
+\endmatrix \right).
+\tag1.5$$ 
+
+We are interested in the defining function of the form  
+$y_2-x_2-A(x_1,y_1,x_2,t)$. Hence, the
+Monge-Ampere determinant becomes $$(1-A_{x_2})A_{x_1y_1}+ 
+A_{x_1}A_{x_2y_1}.\tag1.6$$  
+
+Since the Monge-Ampere determinant is symmetric in the $x$ and $y$ variables,
+we see that ${\pi}_l$ is a local diffeomorphism if and only if 
+${\pi}_r$ is also. 
+
+If each ${\Cal C}_t$ is a local canonical graph, 
+we can express the full canonical
+relation in the form:
+$$ {\Cal C}=\{(x,\xi,y,\mu,t,\tau):(y,\mu)=\Xi_t(x,\xi), 
+\ \tau={q}^*(x,t,\xi)\}, 
+\tag1.7$$
+where ${q}^*(x,t,\xi)$ is homogeneous of degree 1 in $\xi.$ 
+
+Sogge showed that the
+rotational curvature condition is not sufficient in two dimensions (see 
+\cite{So1}). He showed that the following extra assumption is necessary.
+\proclaim{Cone condition} We say that the canonical relation ${\Cal C}$
+as in $(1.7)$ satisfies the cone condition if the cone given by the
+equation $\tau=q^{*}(x,t,\xi)$, has exactly one non-vanishing principal
+curvature.
+\endproclaim
+
+We are going to generalize Sogge's result using the following definition
+due to Phong and Stein:
+
+\proclaim{Definition 1.3} Let $  {\Sigma}_t=\{ a \in {\Cal C}_t:\pi_l \ 
+\text{is not locally 1-1} \} $
+where $ \pi_l,\pi_r:
+{\Cal C}_t \rightarrow T^* {\Bbb R}^2 \backslash 0 $ are natural 
+projections. We say that ${\Cal C}_t$ 
+is folding of order $m-2$ if the following 
+conditions hold 
+\roster \item $ \Sigma_t$ is a submanifold of ${\Cal C}_t$ of 
+codimension 1.
+\item $det(d{\pi}_l)$ and $det(d{\pi}_r)$ vanish of order $m-2$ along 
+$\Sigma_t$\item  $T_a(\Sigma_t)\oplus 
+Ker{(d{\pi}_l)}_a =T_a({\Cal C}_t)$ \item 
+$T_a(\Sigma_t)\oplus Ker{(d{\pi}_r)}_a=T_a({\Cal C}_t)$
+\endroster 
+Conditions (3) and (4) are called the transversality conditions.  
+\endproclaim
+
+We note that when $m=3$, the above condition is equivalent to the condition
+that both ${\pi}_l$ and ${\pi}_r$ are Whitney folds. (See e.g \cite{MlTr},
+\cite{Hor1}). 
+
+Let ${\pi}_{X \times Y}$ denote a projection of the canonical relation onto the
+$x$ and $y$ variables. Let $V_t={\pi}_{X \times Y}({\Sigma}_t)$. It follows from
+the definition that locally $V_t$ can be expressed in the form
+$\{(x,y):y_1={\chi}_t(x_1,x_2), y_2=x_2+A(x,y_1,t) \}$ where ${\chi}_t$ is a 
+local diffeomorphism for each fixed $(x_2,t)$. In other words, we can find
+a smooth function ${\chi}^{*}_t(y_1,x_2)$ such that 
+$V_t= \{(x,y):x_1={\chi}^{*}_t(y_1,x_2), y_2=x_2+A(x,y_1,t) \}$ where
+${\chi}^{*}_t(y_1,x_2)$ is a local diffeomorphism for each fixed $(x_2,t)$.
+
+$V_t$ can be viewed as a parameterization of the zeroes of the Monge-Ampere
+determinant intersected with the curve distribution ${\Cal D_t}$. 
+In the translation invariant case, we have 
+$y_2=x_2+A(x,y_1,t)$ with $A(x,y_1,t)=\gamma(\frac{y_1-x_1}{t})$, where
+$\gamma:{\Bbb R} \rightarrow {\Bbb R}$ is a smooth function satisfying the
+finite type condition described earlier. The Monge-Ampere
+determinant in this case is just ${\gamma}^{(2)}(\frac{y_1-x_1}{t})$. Hence,
+the Monge-Ampere determinant vanishes of order $m-2$ along the diagonal 
+$x=y$. Consequently, $V_t$ is just the intersection of ${\Cal D_t}$ 
+with the diagonal. 
+
+In general, the situation is more complicated. However, locally a curve
+distribution whose canonical relation has a two-sided fold behaves very
+much like a translation invariant family. This idea is contained in the
+following result:
+
+\proclaim{Lemma 1.1} Suppose that the canonical relation associated to the
+curve distribution ${\Cal D_t}$ has a two-sided fold of order $m-2$. Then,
+for each fixed $({x}^{\prime},{t}^{\prime})$ the curve given by the equation 
+$y_2={x}^{\prime}_2+A({x}^{\prime},y_1,{t}^{\prime})$ is a 
+curve of finite type $m$ with a flat point at
+$y_1={\chi}_t({x}^{\prime},{t}^{\prime})$. 
+\endproclaim  
+
+\demo{Proof} Without loss of generality let 
+${\chi}_{t}^{\prime}({x}^{\prime})=0$. We must show that the second partial
+derivative of $A({x}^{\prime},y_1,{t}^{\prime})$ with respect to $y_1$ 
+vanishes of order $m-2$ at $y_1=0$. 
+
+By our observation in (1.6) the Monge-Ampere determinant is given by
+\newline 
+$A_{x_1 y_1}-A_{x_2}A_{x_1 y_1}+A_{x_1}A_{x_2 y_1}.$ By assumption and
+our observations, the Monge-Ampere determinant vanishes of order $m-2$
+along $V_t$ which is given by
+$ \{(x,y): y_1={\chi}_t(x_1,x_2), y_2=x_2+A(x,y_1,t) \}$. Hence,
+along $V_t$, $\dsize{A_{x_1}=A_{y_1} \frac{\partial {\chi}_t}{x_1}}$. Since 
+${\chi}_t$ is a local diffeomorphism for each fixed $(x,t)$, we conclude
+that under our assumptions, $A_{y_1 y_1}({x}^{\prime},y_1,{t}^{\prime})$
+vanishes of order $m-2$. Hence, the curve obtained by fixing $(x,t)$ is
+finite type $m$. \enddemo
+
+We can actually prove a little more. Fix $({x}^{\prime},{t}^{\prime})$ as
+before. We can again assume that ${\chi}_{{t}^{\prime}}({x}^{\prime})=0$. 
+Then, by Lemma 1.1 and the Malgrange Preparation Theorem
+(See \cite{Hor1}),  
+there exist ${\delta}_1,{\delta}_2,{\delta}_3>0$,
+such that if $|t-{t}^{\prime}|<{\delta}_1, |y_1|<{\delta}_2,$ and
+$|x-{x}^{\prime}|<{\delta}_3$, then 
+$$ A(x,y_1,t)=g(x,y_1,t)({y_1}^m+a_{m-1}(x,t){y_1}^{m-1}+...+a_0(x,t)), 
+\tag1.8$$
+where $g(x,{y_1},t)$ is smooth, $g({x}^{\prime},0,{t}^{\prime})\not=0$, 
+$a_j$'s are smooth, and
+$a_j({x}^{\prime},{t}^{\prime})=0$.   
+
+However, we must conclude that $a_j=0$ for $j>0$. 
+If not, let $t^{\prime \prime}$
+denote a point in $ \{t:|t-{t}^{\prime}|<{\delta}_1 \}$ such that  
+$a_j(t^{\prime \prime})\not=0$. Then the proof of Lemma 1.1 would show that 
+the Monge-Ampere determinant at $({x}^{\prime},0,{t}^{\prime \prime})$ vanishes
+of order $j-2$. This is a contradiction, since by 
+the assumption of Lemma 1.1,
+the Monge-Ampere determinant can only vanish of order $m-2$. Hence, we have 
+shown that in a small neighborhood of $({x}^{\prime},{t}^{\prime})$, the 
+defining function $A(x,y_1,t)$ is of the form 
+$$ A(x,y_1,t)=g(x,y_1,t)({y_1}^m+a_0(x,t)), \tag1.9$$ 
+where $g(x,y_1,t)$ and $a_0(x,t)$ have the properties described above. 
+
+We can now state the variable coefficient version of Theorem 1.1.
+\vskip .125in
+\proclaim{Theorem 1.2} Let $M_t$ be as in (1.3). Let 
+${\Cal M}(f)(x)=\sup_{t>0}M_t(f)(x)$. Suppose that for each $t$ the canonical
+relation is folding of order $ \ m-2 \ $ 
+and the cone condition (see \cite{So1}, p.352) is satisfied away 
+from $\Sigma$. Then,
+$$ {\Cal M}:L^p({\Bbb R}^2) \rightarrow L^p({\Bbb R}^2)\ \text{for} \ 
+p>m.\tag1.10$$  
+\endproclaim 
+
+\vskip.25in
+{\bf Proof of Theorem 1.1}:
+\vskip.125in
+Our proof will consist of three main steps. First, we will 
+decompose each $M_t$ away from the flat point. Then, we will use the method of
+stationary phase to express each dyadic operator in terms of the Fourier 
+transform of the surface measure on each dyadic piece. We will then use a
+stretching argument to expose the behavior of our operator near the flat point.
+
+To complete the proof, we will use a scaling argument and a technical lemma
+in order to reduce our problem to the  local smoothing estimates of 
+Mockenhaupt, Seeger, and Sogge (\cite{MSSo2}).
+In the process, we shall take advantage of the fact that the 
+local smoothing arguments in question are valid under small 
+smooth perturbations.
+
+We now turn to the details. We wish to use the following stationary phase 
+result (See \cite{So2}) which we shall only use for curves in $ {\Bbb R}^2.$
+\proclaim{Lemma 1.2} Let $S$ be a smooth hypersurface in  ${\Bbb R}^n$
+with non-vanishing 
+Gaussian curvature and $d\mu$ a $C^\infty_0$ measure on S. Then,
+$$|\widehat{ d\mu}(\xi)| \leq const.(1+|\xi|)^{-\frac{n-1}{2}}.\tag1.11$$
+  
+Moreover, suppose that $\Gamma \subset {\Bbb R}^n \setminus0$ is the cone consisting
+of all $\xi$  which are normal  to some point $x \in S$ belonging to a 
+fixed relatively compact neighborhood $\Cal N$ of supp $d\mu$. Then,
+$$ \left(\frac{\partial}{\partial\xi}\right)^{\alpha} \widehat{ d\mu}(\xi)=
+O(1+|\xi|)^{-N}\   \ \forall N, \text{  if }  \xi   \notin   \Gamma,$$          
+$$ \widehat{ d\mu}(\xi)=\sum {}e^{-i\langle x_j,  \xi\rangle} a_j (\xi) \ \text{if}\ \xi \in 
+\Gamma,
+\tag1.12$$
+where the finite sum is taken over all $x_j \in \Cal N$ having $\xi$ as the 
+normal and  
+$$ \left|\left(\frac{\partial}{\partial\xi}
+\right)^{\alpha} 
+a_j (\xi)\right| \leq C_\alpha  
+(1+|\xi|)^{-\frac{n-1}{2}-|\alpha|}.\tag1.13$$ \endproclaim
+
+As we have noted earlier, if $C$ is finite type $m$ at $a_0$, the curvature at
+$a_0$ vanishes of order $m-2$. Hence, in order to take advantage of the above
+lemma, we must first decompose each $M_t$ away from the flat point. Without
+loss of generality, $a_0=(0,c)$.  
+
+Since our curve is finite type $m$, locally we can write $C(s)=(s,g(s)s^m+c).$ 
+With that in mind we define $\rho \in C^\infty_0({\Bbb R})$ such that 
+$supp(\rho) \subset (\frac{B}{2},2B) \cup (-2B,-\frac{B}{2})$, $B>0$,  
+and $\sum {} \rho (2^k y_1 ) \equiv 1$, where $B$ is chosen to be small
+enough so that the interval $(-2B, 2B)$ does not contain any other flat points.
+
+
+Let 
+$M^k_t(f)(x)=\int_C f(x-ty) 
+\rho (2^k y_1) d\sigma(y)$. Then,
+$M_t(f)=\sum_{k=0}^{\infty} M^k_t(f)$. \newline
+Let $\Cal {M}^k(f)(x)=\sup_{t>0} 
+M^k_t(f)(x)$. Hence, it would suffice to show that 
+$$ \Cal {M}^k :L^p({\Bbb R}^2)\rightarrow L^p({\Bbb R}^2)\ \ \text{with norm}\ 
+2^{-k\epsilon(p)
+}\ \text{ for some}\ \epsilon(p)>0.\tag1.14$$ 
+
+\vskip .125in
+We can now apply Lemma 1.2 to each $M^k_t$ which is defined over a dyadic 
+piece of our curve. Simultaneously, we perform a stretching transformation 
+$$y_1 \rightarrow 2^k y_1 \ \ \ y_2 \rightarrow 2^{mk} y_2\tag1.15$$
+which sends each dyadic piece to the curve of unit length $2^{mk}c$ units up 
+the $y_2$-axis.
+\vskip .125in
+We now apply the lemma to the "stretched" operator $M_t$. Keeping in mind the
+Jacobian of the stretching  transformation we get an operator of the form
+$$ {\Cal G}_k(f)(x,t)=(2\pi)^{-2}2^{-k}\int_\Gamma e^{i\langle x,\xi\rangle} 
+e^{itq_k(\xi)} e^{t2^{mk}c{\xi}_2} \frac{a_k(t\xi)}{(1+t|\xi|)^{\frac{1}{2}}} 
+\hat{f}(\xi) 
+d\xi, \tag1.16$$     
+where $\Gamma$ is a fixed cone away from coordinate axes, $q_k(\xi)$ is 
+homogeneous of degree 1, and $a_k(t\xi)$ is a symbol of order $0$.     
+
+\vskip .125in
+
+It suffices to show that 
+$$ ||\sup_{t>0}{\Cal G}_k(f)(x,t)||_p \leq 2^{-k\epsilon(p)} C_p ||f||_p \ 
+ \text{for some}\ \epsilon(p) >0.\tag1.17$$
+
+We complete the microlocalization of our operator by introducing $\beta \in
+C^\infty_0({\Bbb R})$ satisfying 
+$$ \text{supp}(\beta) \subset [1/2,2],\ \sum^{\infty}_{-\infty} 
+\beta(2^{-j}s)=1,
+s>0.$$                                  
+
+Let 
+$$ {\Cal G}_{k,j}(f)(x,t)=(2\pi)^{-2}2^{-k}\int_{\Gamma} 
+e^{i\langle x,\xi\rangle} 
+e^{itq_k(\xi)} e^{it2^{mk}c\xi_2} 
+\frac{a_k(t\xi)}{(1+t|\xi|)^{\frac{1}{2}}}      
+\beta(|\xi|/2^j) \hat{f}(\xi) d\xi. \tag1.18$$
+
+If we take the supremum over $t$ of the absolute value of the difference 
+between 
+${\Cal G}_k(f)(x,t)$  and   $\sum^{\infty}_{j=1} {\Cal G}_{k,j}(f)(x,t)$, 
+we see that it is  
+is dominated by the Hardy--Littlewood Maximal function of $f$. 
+Hence, it suffices 
+to show that 
+$$ ||\sup_{t>0}{\Cal G}_{k,j}(f)(x,t)||_p \leq C_p 2^{-k\epsilon(p)} 
+2^{-j\epsilon^{\prime}(p)} ||f||_p\tag1.19$$ $$ \text{for} \  m<p<\infty \ 
+\text{and some}\ \epsilon(p), \ \epsilon^{\prime}(p)>0.$$
+
+Since we are dealing with dyadic operators, we can use Littlewood-Paley theory 
+(see \cite{So3}) 
+to see that the inequality holds iff 
+$$ \left \| \sup_{t \in [1,2]} |{\Cal G}_{k,j}(f)(x,t)|  
+\right \|_p  \le  C_p 2^{-k\epsilon(p)} 2^{-j\epsilon^{\prime}(p)} 
+||f||_p, \ m<p<\infty. \tag1.20$$
+
+In order to complete our argument, we need another technical lemma. 
+\proclaim{Lemma 1.3} Suppose that $F$ is $C^1({\Bbb R}).$ Then if $p>1$ and
+$ 1/p+1/p^{\prime}=1$, 
+$$  \sup_{\lambda} {|F(\lambda)|}^p \leq {|F(0)|}^p + p{\left(\int 
+{|F(\lambda)|}^p 
+d\lambda\right)  }^{1/p^{\prime}} \times {\left(\int {|F^{\prime}(\lambda)|}^p 
+d\lambda\right)}^{1/p}.$$
+\endproclaim 
+
+To prove the lemma, we just express $F(\lambda)$ as an integral of its 
+derivative using the fundamental theorem of calculus. Then, if we use 
+Hoelder's inequality, we get the desired result (see \cite{So2}).
+
+If we let $\rho$ be the cutoff function defined previously 
+and apply the lemma, we see that 
+${|| \sup_{t\in[1,2]}|\rho(t){\Cal G}_{k,j}(f)(x,t)| \ ||}^p_p$ 
+is dominated by 
+$$ {\left\|  2^{-k}\int_{\Gamma} e^{i\langle x,\xi\rangle} e^{itq_k(\xi)} 
+e^{it2^{mk}c\xi_2}
+\frac{a_k(t\xi)}{(1+t|\xi|)^{\frac{1}{2}}} \beta(|\xi|/2^j) \hat{f}(\xi) d\xi
+\right\|}^{p-1}_{p}\times \tag1.21$$ 
+$$ {\left\| 2^{-k}\! \int_{\Gamma} e^{i\langle x,\xi\rangle} e^{itq_k(\xi)} 
+e^{it2^{mk}c\xi_2} \beta(|\xi|/2^j) A_{m,k}(\xi,t) \hat{f}(\xi) d\xi 
+\right\|}_p,$$
+where
+$$A_{m,k}(\xi,t)=  i(q_k(\xi) +2^{mk}c\xi_2)
+\frac{a_k(t\xi)}{(1+t|\xi|)^{\frac{1}{2}}}  +
+\frac{d}{dt}\frac{a_k(t\xi)}{(1+t|\xi|)^{\frac{1}{2}}},$$ 
+where we are taking the $L^p$ \  norm with respect to \ 
+$ {\Bbb R}^2 \times$ [1,2].
+
+\vskip .125in
+
+Since $q_k(\xi)\approx |\xi| \approx 2^j$ on the support of $\beta$, 
+we can count the orders of the symbols to see that the expression in
+$(1.21)$ is dominated by 
+$$ C2^{-k(1-\frac{m}{p})} 2^{-j(\frac{1}{2}-\frac{1}{p})} 
+{||{\Cal F}_{k,j}f||}_{L^p({\Bbb R}^3)}, \tag1.22$$ where 
+$$ {\Cal F}_{k,j}f(x,t)=\rho(t)\int_{\Gamma} 
+e^{i\langle x,\xi\rangle} e^{itq_k(\xi)}
+e^{it2^{mk}c\xi_2}\beta(|\xi|/2^j)a_k(t,\xi)\hat{f}(\xi)d\xi,\tag1.23$$
+and where $a_k(t,\xi)$ is a symbol of order $0$ in $\xi.$  
+
+Since $-(1-\frac{m}{p})<0$ if $p>m$, we can take 
+$\epsilon=-1+\frac{m}{p}$. Hence, it suffices to show that 
+$$ {||{\Cal F}_{k,j}f||}_{L^p({\Bbb R}^3)} \leq C_{\epsilon^{\prime}} 
+2^{j(\frac{1}{2} -\frac{1}{p}-\epsilon^{\prime}(p))} 
+{||f||}_{L^p({\Bbb R}^2)}, \ \ m<p<\infty, \tag1.24$$ for some
+${\epsilon}^{\prime}>0$. 
+
+In \cite{MSSo1} and \cite{MSSo2}, Mockenhaupt, Seeger, and Sogge proved 
+$L^p({\Bbb R}^2) \rightarrow L^p({\Bbb R}^3)$ estimates for the operators
+of the form 
+$$ P_jf(x,t)=\rho(t) \int e^{i\langle x,\xi \rangle} e^{itq(\xi)} a(t,\xi) 
+\hat{f}(\xi) \beta(|\xi|/2^j) d\xi, \tag1.25$$ 
+where $a(t,\xi)$ is a symbol of order $0$ in $\xi$, and the Hessian matrix
+of $q$ always has rank one. They showed that 
+$$ {||P_jf||}_{L^p({\Bbb R}^3)} \leq C_{\delta} 
+2^{j(\frac{1}{2}-\frac{1}{p}-\frac{1}{2p}+\delta(p))} {||f||}_{L^p({\Bbb R}^2)}.
+\tag 1.26$$ 
+
+Moreover, the proof of \cite{MSSo2} shows that this estimate is valid under
+small smooth perturbations. The constants in those estimates depend on only
+a finite number of derivatives of the phase function and the symbol. The 
+same estimates are still valid for small smooth perturbations of this 
+operator with perhaps larger constants.  
+
+In order to take advantage of this fact, we need
+to make several observations about the operator ${\Cal F}_{k,j}$. 
+
+The phase function $q_k(\xi)+2^{mk}c{\xi}_2$ is the phase
+function of the Fourier transform of the Lebesgue measure on the 
+stretched dyadic piece of the
+curve $C$. As we have noted, without loss of generality 
+$C(s)=(s,g(s)s^m+c),$ where  
+$g \in C^\infty({\Bbb R}), g(0) \neq 0,$ and $c$ is a constant. 
+
+If we take a dyadic piece of this curve, and then dilate and stretch, 
+we get \newline
+$(2^kts,2^{mk}t\{g(s)s^m+c\})$, and setting $u=2^ks,$ we
+get $(ut,tg(u/2^k)u^m+2^{mk}ct).$ We notice that as $\ k \rightarrow \infty \ $
+this family of curves smoothly approaches a fixed family of curves 
+$C^{\prime}(s)=(s,g(0)s^m+c)$. Lemma 1.2 tells us that the phase function
+of the Fourier transform of the curve carried measure is given by 
+$e^{\langle{x}_j,\xi\rangle}$ where $\xi$ is normal to ${x}_j$. 
+If we note that the Gauss
+map taking the point on the curve to the normal at that point is smooth as
+long as the Gaussian curvature does not vanish, we conclude that 
+inside $\Gamma$, $q_k(\xi)+2^{mk}c{\xi}_2$ smoothly converges  
+to the phase function $q(\xi)+2^{mk}c{\xi}_2$. In particular, 
+$$ |D^{\alpha}_{\xi}q_k(\xi)| \leq C{(1+|\xi|)}^{1-|\alpha|},$$ 
+where $C$ does not depend on $k$. 
+Moreover, $q(\xi)+c{\xi}_2$ is the phase function of the Fourier transform
+of the  Lebesgue measure on the unit length piece of the curve
+\newline $C^{\prime}(s)=(s,g(0)s^m+c)$.
+
+It is important to note that the Hessian of $q$ always has rank one.  
+In order to see this, we explicitly compute $q(\xi)$ up to a 
+multiplicative constant using Lemma 1.2.
+After computing the unit normal and taking the dot product, we get
+$$ \frac{(m-1)s^m}{{(m^2s^{2m-2}+1)}^{\frac{1}{2}}}. \tag1.27$$
+
+If we note that the normal $\overrightarrow { N}=(ms^{m-1},-1)$, 
+then we see that
+$$ q(\xi)+c{\xi}_2=const.\frac{{\xi_1}^{\frac{m}{m-1}}}
+{{\xi_2}^{\frac{1}{m-1}}}+
+c{\xi_2}. \tag1.28$$ 
+
+At this point, a direct computation shows that the Hessian of $q$ has rank
+one for $\xi \in \Gamma$, since $\Gamma$ is a cone away from the coordinate
+axes. 
+
+We also observe that a similar argument shows that 
+$\{a_k(t,\xi)\}$ is contained in a bounded subset of symbols of order $0$. 
+More precisely, for $t\in [1,2]$, 
+$|D^{\alpha}_{\xi}a_k(t,\xi)|\leq C_{\alpha}{(1+|\xi|)}^{-\alpha}$, where
+$C_{\alpha}$ does not depend on $k$. 
+
+Let $a(t,\xi)=a_N(t,\xi)$ for $N$ very large, and let $q(\xi)+c{\xi}_2$ be
+the limiting phase function discussed above. Let
+$$ {\Cal F}^{*}_{k,j}f(x,t)=\rho(t)\int_{\Gamma} e^{i\langle x,\xi \rangle}
+e^{itq(\xi)} e^{it2^{mk}c{\xi}_2} a(t,\xi) \beta(|\xi|/2^{j}) \hat{f}(\xi)
+d\xi. \tag1.29$$ 
+
+It is not hard to check that 
+$$ {\Cal F}^{*}_{0,j}f(x,t)={\Cal F}^{*}_{k,j}f(x_1,x_2+t2^{mk}c,t).\tag1.30$$
+
+Since the Lebesgue measure is invariant under translations, $(1.30)$ implies
+that 
+$$ {||{\Cal F}^{*}_{k,j}f||}_{L^p({\Bbb R}^3)}=
+{||{\Cal F}^{*}_{0,j}f||}_{L^p({\Bbb R}^3)}.\tag1.31$$ 
+
+The operator ${\Cal F}^{*}_{0,j}$ satisfies the aforementioned local 
+smoothing estimates of Mockenhaupt, Seeger and Sogge. More precisely, 
+$$ {||{\Cal F}^{*}_{0,j}f||}_{L^p({\Bbb R}^3)} \leq
+C_{\delta} 2^{j(\frac{1}{2}-\frac{1}{p}-\frac{1}{2p}+\delta(p))}
+{||f||}_{L^p({\Bbb R}^2)}, \ \ \delta(p)>0. \tag1.32$$
+
+The argument above shows that ${\Cal F}_{k,j}$ is a smooth family of
+Fourier integral operators which belong to a bounded subset of Fourier
+integral operators of order $0$ (see e.g \cite{So2}, Ch.6). 
+The proof of the local smoothing estimates (see \cite{MSSo2}) shows that the 
+estimates are valid under small perturbations. More precisely, the
+proof of the local smoothing estimates combined with the statement $(1.31)$ 
+and our observations about the ${\Cal F}_{k,j}$'s, 
+imply that the operator ${\Cal F}_{k,j}$, for a large enough $k$,
+satisfies the estimate $(1.32)$ with perhaps a larger constant.  
+
+Hence, if we let ${\epsilon}^{\prime}=\frac{1}{2p}-\delta(p)$, we see that
+the estimate $(1.24)$ is satisfied. This completes the proof.
+
+\vskip .25in         
+{\bf Proof of Theorem 1.2}:
+\vskip .125in
+
+Our argument will be based on a scaling argument, Lemma 1.1,
+the proof of Theorem 1, and most importantly the local smoothing
+estimates of Mockenhaupt, Seeger and Sogge (\cite{MSSo2}). 
+
+Fix $({x}^{\prime},{t}^{\prime})$. Consider a curve given by
+$y_2={x_2}^{\prime}+A({x}^{\prime},y_1,t)$. The remarks following the proof of
+Lemma 1.1 show that there exists a ${\delta}_1>0$, 
+such that for $|t-{t}^{\prime}|<{\delta}_1$,
+this curve is finite type $m$ with a flat point at  
+$y_1={\chi}_{{t}^{\prime}}({x}^{\prime})$. 
+
+We extend this curve to a translation invariant
+family by defining $y_2=x_2+A({x}^{\prime},y_1-x_1+{x_1}^{\prime},t)$. 
+Again using the proof of Lemma 1.1 and the discussion that followed,  
+we see that for
+$|t-{t}^{\prime}|<{\delta}_1$, 
+$$ A({x}^{\prime},y_1,t)=g({x}^{\prime},y_1,t)
+(({y_1-{\chi}_{{t}^{\prime}}({x}^{\prime}))}^{m}+a_0({x}^{\prime},t)), 
+\tag1.33$$
+where $a_0({x}^{\prime},{t}^{\prime})=0$, $g({x}^{\prime},y_1,t)\not=0$ when 
+$y_1={\chi}_{{t}^{\prime}}({x}^{\prime})$, and 
+$t\in \{t:|t-{t}^{\prime}|<{\delta}_1 \} .$ 
+
+We shall first argue that the maximal operator associated to this translation
+invariant family satisfies the conclusions of Theorem 1.2. 
+As we did in the proof of Theorem 1.1, 
+we localize our
+operator near the flat point by introducing a cutoff function $\rho$ with 
+the same properties as before. We perform a stretching transformation
+$$ (y_1-{\chi}_{{t}^{\prime}}({x}^{\prime}))\rightarrow 
+2^k(y_1-{\chi}_{{t}^{\prime}}({x}^{\prime})) \ \ 
+y_2\rightarrow 2^{mk}y_2. \tag1.34$$  
+
+The limiting operator under this stretching transformation corresponds to
+the family of curves given by 
+$$y_2=x_2+g({x}^{\prime},{\chi}_{{t}^{\prime}}({x}^{\prime},t)
+({(y_1-{\chi}_{{t}^{\prime}}({x}^{\prime}))}^m+a_0({x}^{\prime},t)). \tag1.35$$
+
+The only difference between this family of curves and the ones handled in 
+Theorem 1.1 is the $t$ dependence. However, using a Littlewood-Paley argument
+as we did in the proof of Theorem 1.1, 
+we see that it suffices to take a supremum over
+$t\in [1,2]$. Since $g({x}^{\prime},{\chi}_{{t}^{\prime}}({x}^{\prime}),t)$
+does not vanish in intersection of this interval with the set
+$ \{ t:|t-{t}^{\prime}|<{\delta}_1 \}$, we can treat 
+$g({x}^{\prime}, {\chi}_{{t}^{\prime}}({x}^{\prime}),t)$ as our time 
+parameter, and the same argument goes through.
+
+We again use the fact that the variable coefficient estimates of Mockenhaupt,
+Seeger, and Sogge (See \cite{MSSo2}) are valid under small smooth perturbations.
+The estimates only depend on the finite number of derivatives of the phase
+function and the symbol of the corresponding Fourier integral operator.
+Hence, the estimates which are valid for the limiting operator are also valid
+for the sufficiently small perturbation of that operator with perhaps a larger
+constant. This is directly related to the fact that the cinematic curvature
+condition is stable under smooth changes of coordinates. In other words, if
+we consider a family of curves satisfying the cinematic curvature condition,
+this family will still satisfy that condition in a new smooth coordinate
+system (See \cite{So3}). 
+
+In order to complete the proof, we localize the operator corresponding to the
+general family of functions. As before, we use the cutoff function
+$\rho$ and we define 
+$$ M^{k}_tf(x)=\int e^{i\theta(y_2-x_2-A(x,y_1,t))}       
+\rho(y_1-{\chi}_{{t}^{\prime}}({x}^{\prime})) \psi(x,y) f(y)dy. \tag1.36$$
+
+If we perform a stretching transformation sending 
+$$ (x_1-{x_1}^{\prime})\rightarrow 2^k(x_1-{x_1}^{\prime}) \ \ 
+   (x_2-{x_2}^{\prime})\rightarrow 2^{mk}(x_2-{x_2}^{\prime})$$
+$$ (y_1-{\chi}_{{t}^{\prime}}({x}^{\prime}))\rightarrow
+2^k(y_1-{\chi}_{{t}^{\prime}}({x}^{\prime})) \ \ 
+y_2\rightarrow 2^{mk}y_2, $$
+we can use Lemma 1.1 to see that our family of curves smoothly converges  
+to the family of translation invariant curves defined above.
+Moreover, each $M^{k}_t$ satisfies
+the cinematic curvature condition. If we again use the fact that local
+smoothing estimates used to analyze the translation invariant family are
+valid under small perturbations, we see that our localized operators satisfy
+the right estimates. 
+
+More precisely, we can show that if we localize near the point ${x}^{\prime}$
+in the plane and take the supremum over $t$ in a sufficiently small 
+neighborhood of some ${t}^{\prime}$, the resulting maximal operator maps
+$L^p({\Bbb R}^2)\rightarrow L^p({\Bbb R}^2)$ for $p>m$.
+As we have noted earlier, we only need to consider 
+$t\in[1,2]$ and $x$ in some compact subset of the plane. Hence, using 
+partitions of unity and the triangle inequality, we complete the proof. 
+\vskip.25in 
+\newpage
+
+{\bf Acknowledgements : } This paper represents a part of the author's thesis. I
+would like to express my gratitude to my teacher and advisor C.D. Sogge for 
+bringing this problem to my attention as well as for his numerous suggestions  
+and criticisms.  
+I would like to thank the referee for his infinite patience and excellent 
+suggestions which greatly improved this paper. I would also like to thank 
+Michael Christ and Andreas Seeger for helpful conversations on related 
+topics. 
+\vskip .25in
+
+\ref \key B  \by J.Bourgain \pages 69-85
+\paper Averages in the plane over convex curves and maximal operators
+\yr 1986 \vol 47
+\jour J.Analyse Math. \endref    
+                                                   
+\ref \key Falc  \by K.J.Falconer        
+\paper The geometry of fractal sets
+\yr1985 
+\jour Cambridge U. Press, Cambridge  \endref 
+
+\ref \key Hor1  \by L.Hormander 
+\paper The Analysis of linear partial differential operators, Vols. 1-4
+\yr1983 
+\jour Springer-Verlag, Berlin   \endref  
+
+\ref \key Hor2   \by L.Hormander  \pages 93-140
+\paper Estimates for translation invariant operators in $L^p$ spaces 
+\yr1960 \vol 104
+\jour Acta Math.  \endref
+
+\ref \key MlTr   \by R.Melrose and M.Taylor \pages 242-315
+\paper Near peak scattering and the corrected Kirchoff approximation for a
+convex obstacle
+\yr 1985 \vol 55
+\jour Adv.Math. 
+\endref 
+
+\ref \key MSSo1   \by G.Mockenhaupt, A.Seeger, C.D.Sogge        
+\paper Wave front sets, local smoothing and Bourgain's circular maximal theorem
+\jour Annals Math. (to appear) \endref
+
+\ref \key MSSo2  \by G.Mockenhaupt, A.Seeger and C.D.Sogge    
+\paper Local smoothing of Fourier integral operators and Carleson-Sjolin estimates (Preprint)    
+\yr1991 
+\endref 
+
+\ref \key Ph   \by D.H.Phong 
+\paper Singular integrals and Fourier integral operators \newline
+(preprint)
+\yr 1992 
+\endref
+
+\ref \key PhSt1  \by D.H.Phong and E.M.Stein
+\paper Radon transforms and torsion
+\yr1991 \vol 4
+\jour Duke Math J. \endref
+
+\ref \key PhSt2  \by D.H.Phong and E.M.Stein \pages 99-157 
+\paper Hilbert Integrals, singular integrals and Radon transforms I
+\yr1986 \vol 157
+\jour Acta Math.  \endref
+
+\ref \key So1  \by C.D.Sogge \pages 349-376
+\paper Propagation of singularities and maximal functions in the plane 
+\yr1991 \vol 104
+\jour Invent. Math. \endref
+
+\ref \key So2  \by C.D.Sogge         
+\paper Fourier Integrals in Classical Analysis 
+\yr1992
+\jour Oxford Univ.Press. \endref
+
+\ref \key So3  \by C.D.Sogge
+\paper Maximal Operators associated to the hypersurfaces with one non-vanishing
+Gaussian curvature (preprint)
+\yr 1992
+\endref 
+
+\ref  \key SoPan  \by C.D.Sogge and Y.Pan \pages 413-419
+\paper Oscillatory integrals associated to folding canonical relations
+\yr 1990 \vol 60
+\jour Colloquium Mathematicum 
+\endref
+
+\ref \key St       \by E.M.Stein \pages 2174-2175
+\paper Maximal functions:spherical means
+\yr 1986 \vol 73
+\jour Proc.Nat.Acad.Sci. 
+\endref
+
+\ref \key StWa  \by E.Stein and S.Wainger \pages 1239-1295
+\paper Problems in harmonic analysis 
+\yr 1978 \vol 84
+\jour Bull.A.M.S.
+\endref  
+
+\ref \key Trvs   \by F. Treves
+\paper Introduction to pseudodifferential and Fourier integral operators
+\yr 1980 
+\jour Plenum Press
+\endref
+
+
+

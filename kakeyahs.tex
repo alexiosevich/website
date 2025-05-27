@@ -1,0 +1,896 @@
+\documentstyle{amsppt}
+\tolerance 3000
+\pagewidth{5.5in}
+\vsize7.0in
+\magnification=\magstep1
+\widestnumber
+\key{AAAAAAAAAAAAAAA}
+\NoRunningHeads
+\topmatter
+\title Introduction to the Besicovitch/Kakeya conjecture: Part I
+\endtitle
+\author Alex Iosevich
+\endauthor
+\date August 1, 2004
+\enddate
+\address Department of Mathematics, University of Missouri-Columbia,
+Columbia Missouri 65211 USA \endaddress
+\email iosevich \@ math.missouri.edu
+\endemail
+\abstract This is a set of notes on the Besicovitch/Kakeya conjecture
+written for the summer school for mathematically talented high-school
+students to be held in August 2004. The notes are dedicated to Tom Wolff
+whose legacy continues to tower over the study of the Besicovitch/Kakeya
+conjecture and many other important problems in mathematics to this day.
+\endabstract
+\thanks The work was partly supported by a grant from the National
+Science Foundation
+\endthanks
+\endtopmatter
+\document
+
+\head Introduction \endhead
+
+\vskip.125in
+
+This is a set of notes written for the summer program in combinatorial
+mathematics to be held at the University of Missouri-Columbia in August
+2004. The program will last a total of five days, with approximately 1.5
+hours of lectures and 1.5 hours of problem solving each day. The purpose
+of this program and these notes is to introduce a motivated high-school
+students to one of the most far-reaching and beautifull problems of modern
+mathematics- the Besicovitch/Kakeya conjecture which related the size of
+sets in the Euclidean space with the number unit line segments in
+different directions. Due to the technical nature of the full-fledged
+Besicovitch/Kakeya conjecture and its connection to problems in analysis,
+partial differential equations and analytic number theory, no effort is
+made to present an exhaustive and rigorous view of the subject. Instead,
+the students are given a glimpse of this sophisticated problem in a simple
+"discrete" setting, where the most salient features of the Kakeya
+conjecture can already be seen.
+
+The program was initially designed for two weeks and consequently, these
+notes contain way too much material to be covered in one week. It is my
+hope that the participants will choose to continue reading and exploring
+these notes in particular and the subject matter in general after the
+program is over. I also plan to reintroduce some of the material in these
+notes in the process of teaching Math 395, the Problem Solving class,
+during the Fall semester. 
+
+In the first part of these notes we present the basics of the
+Besicovitch/Kakeya problem that does not require anything beyond the
+Cauchy-Schwartz in equality (described and illustrated in Section 2
+below) and basic counting. In the second part of the notes slicing
+arguments, discrete Fourier transform, discrete restriction theory, and
+more advanced arithmetic arguments are introduced.
+
+The student is expected to work hard on these notes. This is not bed time
+reading, nor is it a fantasy novel. You must have a pen and plenty of
+paper handy, and expect to fill up about ten pages of calculations for
+every page you read. Mathematics is not a spectator sport, so create in
+addition to reading and computing. Every time you see a theorem or a
+calculation, try to formulate a new one. Every time you see a proof, try
+to find a better one. And most importantly, have fun!
+
+\subhead Acknowledgements \endsubhead Much of the material in these notes
+is either inspired by or taken directly from a set of notes, entitled "On
+Besicovitch sets", by Ben Green, a survey article by Tom Wolff,
+entitled "Recent work connected with the Kakeya problem" (\cite{W99}),
+class notes by Terry Tao on the Besicovitch/Kakeya that can be found at
+http://www.math.ucla.edu/
+\~ \ tao, a survey of the Besicovitch/Kakeya problem by Izabella Laba,
+which can be found on her website at http://www.math.ubc.ca/ \~ \ ilaba,
+and a semi-expository article by A. Iosevich, entitled "Geometric measure
+theory and Fourier analysis" (\cite{I04}). 
+
+\head Basic setup \endhead Let $q$ be a positive integer, prime in
+the sense that an integer $a$ divides $q$ if and only if $a=1$ or
+$a=q$. Define ${\Bbb F}_q$ to be the set $\{0,1,2, \dots, q-1\}$ with the
+rule that addition and multiplication is taken modulo $q$. What this
+means is that if $a \in {\Bbb F}_q$ and $b \in {\Bbb F}_q$, $a+b$ (in the
+world of ${\Bbb F}_q$) is obtained by adding $a$ and $b$ in the standard
+way and computing the remainder after division by $q$. Similarly, to
+compute $a \cdot b$, we multiply $a$ and $b$ in the standard way and
+again compute the remainder after the division by $q$.
+
+\proclaim{Example 1.1} Let $q=5$. Then ${\Bbb F}_5=\{0,1,2,3,4\}$. Suppose
+that we want to multiply $2$ and $4$ in the world of ${\Bbb F}_5$. Well,
+$2 \cdot 4=8$ in the sense of regular multiplication. If we divide $8$ by
+$5$, the remainder is $3$. Thus $2 \cdot 4=3$ in the world of ${\Bbb
+F}_5$.
+
+Now let's compute $2+4$. In the sense of regular addition, this equals
+$6$. The remainder of division of $6$ by $5$ is $1$. Thus $2+4=1$ in the
+world of ${\Bbb F}_5$.
+
+After this point, we shall stop saying "in the world of ${\Bbb F}_q$". We
+shall simply perform our addition annd multiplication according to the
+rules we just described and illustrated. \endproclaim
+
+We now introduce a "grid" ${\Bbb F}_q^d$, defined as a set of $d$-tuples
+$ (a_1, a_2, \dots, a_d), $ such that $a_j$ is an element of ${\Bbb
+F}_q$.
+
+\proclaim{Example 1.2} The set ${\Bbb F}_3^2$ consists of $9$ pairs:
+$(0,0)$,
+$(0,1)$, $(0,2)$, $(1,0)$, $(1,1)$, $(1,2)$, $(2,0)$, $(2,1)$, and
+$(2,2)$.
+
+The set ${\Bbb F}_3^3$ consists of $27$ tiples. Write them out!
+
+\endproclaim
+
+\proclaim{Exercise 1.1} Show that ${\Bbb F}_q^d$, $d$ a positive integer,
+consists of $q^d$ elements.
+
+\endproclaim
+
+We now intoduce the notion of a line in ${\Bbb F}_q^d$. Let $x \in {\Bbb
+F}_q^d$ and let $v \in {\Bbb F}_q^d$ with the additional restriction that
+$v \not=(0,0, \dots, 0)$. Let
+$$ L(x,v)=\{x+tv: t=0,1, \dots, q-1\}. \tag1.1$$
+
+\proclaim{Example 1.3} Let $x=(0,1)$ and $v=(1,1)$ and let $q=3$. Then
+$L(x,v)$ is the "line" consisting of points $(0,1)$, $(1,2)$, and
+$(2,0)$. Why is that? Well, by definition, $L((0,1),
+(1,1))=\{(0,1)+t(1,1):t=0,1,2\}$. If
+$t=0$, we get $(0,1)$ easily enough. If $t=1$, we get $(1,2)$, no
+problem. If $t=2$, we get $(0+2 \cdot 1, 1+2 \cdot 1)=(2,0)$ since $1+2
+\cdot1=3$ which is $0$ in the world of ${\Cal F}_3$. \endproclaim
+
+\proclaim{Exercise 1.2} Let $q=3$. Show that $L((0,1),(1,1))$ is the same
+line as $L((0,1),(2,2)$ and $L((1,2),(1,1)$. What is going on
+here? \endproclaim
+
+\proclaim{Exercise 1.3} We have seen in the previous exercise that given
+$x \in {\Bbb F}_q^d$, there may exist $v \not=v' \not=(0,\dots,0$ such
+that $L(x,v)$ and $L(x,v')$ are the same line. You probably observed that
+this problem takes place if and only if $v=\lambda v'$ for some $\lambda
+\in {\Bbb F}_q$. (If you did not observe this, please verify it right
+away). Let $V$ be a subset of ${\Bbb F}_q^d$ with the following
+properties: \roster \item If $v \in V$, $v \not=(0,\dots,0)$. \item If $v
+\in V$ and $v' \in V$, there does not exist $\lambda \in {\Bbb F}_q$ such
+that $v=\lambda v'$. \endroster
+
+Suppose that $V$ is {\it maximal} in the sense that it is impossible to
+add even more element to $V$ without violating one of the properties
+stated above. (Note that without this restriction we may simply take $V$
+to consist of a single point, say, $(1,0, \dots, 0)$). 
+
+Compute $\# V$, the number of elements of $V$.
+\endproclaim
+
+In the standard (Euclidean) space, two different lines either do not
+intersect at all, or intersect at a single point. We shall now verify
+that the same is true of lines in ${\Bbb F}_q^d$.
+
+\proclaim{Exercise 1.4} Two different lines $L(x,v)$ and $L(x',v')$ in
+${\Bbb F}_q^d$ either do not intersect at all or intersect at a single
+point. If $d=2$ prove that two distinct lines $L(x,v)$ and $L(x',v')$ do
+not intersect if and only if there exists $\lambda \in {\Bbb
+F}_q$ such that $v=\lambda v'$. \endproclaim
+
+We are now ready to state the main problem to be studied in these notes.
+
+\proclaim{Besicovitch/Kakeya conjecture} Let $K \subset {\Bbb F}_q^d$, $d
+\ge 2$, such that for every $v \in {\Bbb F}_q^d$ with $v\not=(0, \dots,
+0)$, there exists $x \in {\Bbb F}_q^d$ so that $L(x,v) \subset K$. Then
+there exists $C>0$, independent of $q$, such that
+$$ \# K \ge Cq^d. \tag1.2$$ \endproclaim
+
+To put it simply, the Besicovitch/Kakeya conjecture says that if $K$
+contains a line with every possible slope, then this set occupies a
+positive proportion of the points in ${\Bbb F}_q^d$. In short,
+$$ \text{MANY SLOPES} \ \rightarrow \ \text{MANY POINTS} \ \tag1.3$$
+
+The Besicovitch/Kakeya conjecture is solved in two dimensions. However,
+in higher dimensions, it far from being resolved. For example, the best
+known result in three dimensions (see \cite{KLT00} is that
+$$ \# K \ge Cq^{\frac{5}{2}+{10}^{-10}}. \tag1.4$$
+
+One of the motivations behind this set of notes is to convince you to
+dive head first into this mysterious problem which is not terribly likely
+to be completely solved any time soon.
+
+Before we start proving results pertaining to the Besicovitch/Kakeya
+conjecture, we shall develop some preliminary concepts that will serve to
+build up the necessary technique and intuition for the results that come
+later.
+
+\vskip.125in
+
+\head Cauchy-Schwartz inequality and some
+simple consequences\footnote{Some people call this inequality the
+Cauchy-Schwartz-Buniakowski inequality. I have a suspicion that this
+inequality was known and relatively widely used long before any of the
+three individuals in question was born. I decided to stick with the
+"Cauchy-Schwartz" usage primarily out of habit.}
+\endhead
+
+\vskip.125in
+
+In this section we shall follow a procedure often considered nasty, but
+the one I hope to convince you to appreciate. We shall work backwards,
+discovering concepts as we go along, instead of stating them ahead of
+time. Let $a$ and $b$ denote two real numbers. Then
+$$ {(a-b)}^2 \ge 0. \tag2.1$$
+
+This statement is so vacuous, you are probably wondering why I am telling
+you this. Nevertheless, expland the left hand side of $(2.1)$. We get
+$$ a^2-2ab+b^2 \ge 0, \tag2.2$$ which implies that
+$$ ab \leq \frac{a^2+b^2}{2}. \tag2.3$$
+
+Now consider
+$$ A_N=\sum_{k=1}^N a_k=a_1+\dots+a_N, \ B_N=\sum_{k=1}^N
+b_k=b_1+\dots+b_N, \tag2.4$$ where
+$a_1, \dots, a_N$, and $b_1, \dots, b_N$ are real numbers. Let
+$$ X_N={\left(\sum_{k=1}^N a_k^2 \right)}^{\frac{1}{2}}, \
+Y_N={\left(\sum_{k=1}^N b_k^2 \right)}^{\frac{1}{2}}. \tag2.5$$
+
+Our goal is to take advantage of $(2.3)$. Let's take a look at
+$$ \sum_{k=1}^N a_kb_k=X_N Y_N \sum_{k=1}^N \frac{a_k}{X_N} \cdot
+\frac{b_k}{Y_N}$$
+$$ \leq X_NY_N \sum_{k=1}^N
+\left[\frac{1}{2}{\left(\frac{a_k}{X_N}\right)}^2+
+\frac{1}{2}{\left(\frac{b_k}{Y_N}\right)}^2\right]. \tag2.6$$
+
+\proclaim{Exercise 2.1} Explain using complete English sentences how
+$(2.6)$ follows from $(2.3)$. \endproclaim
+
+\proclaim{Exercise 2.2} Explain why if $C$ is a constant, then
+$\sum_{k=1}^N Ca_k=C\sum_{k=1}^N a_k$. \endproclaim
+
+\proclaim{Exercise 2.3} Explain why $\sum_{k=1}^N
+(a_k+b_k)=\sum_{k=1}^N a_k+\sum_{k=1}^N b_k$. \endproclaim
+
+We now use Exercise 2.2 and 2.3 to rewrite $(2.6)$ in the form
+$$ X_NY_N \frac{1}{2} \frac{1}{X^2_N} \sum_{k=1} a_k^2+X_NY_N
+\frac{1}{2} \frac{1}{Y^2_N}\sum_{k=1}^N b_k^2$$
+$$=X_NY_N \frac{1}{2} \frac{1}{X^2_N} X_N^2+X_NY_N
+\frac{1}{2} \frac{1}{Y^2_N}Y_N^2$$
+$$=\frac{1}{2}X_NY_N+\frac{1}{2}X_NY_N=X_NY_N. \tag2.7$$
+
+Putting everything together, we have shown that
+$$ \sum_{k=1}^N a_k b_k \leq {\left(\sum_{k=1}^N a_k^2
+\right)}^{\frac{1}{2}} {\left(\sum_{k=1}^N b_k^2
+\right)}^{\frac{1}{2}}. \tag2.8$$
+
+This is known as the Cauchy-Schwartz inequality.
+
+\proclaim{Exercise 2.4} (quite difficult if you do not know calculus) Let
+$1<p<\infty$ and define the exponent $p'$ by
+the equation $\frac{1}{p}+\frac{1}{p'}=1$. Then
+$$ \sum_{k=1}^N a_k b_k \leq {\left(\sum_{k=1}^N {|a_k|}^p
+\right)}^{\frac{1}{p}} {\left(\sum_{k=1}^N {|b_k|}^{p'}
+\right)}^{\frac{1}{p'}}. \tag2.9$$
+
+Observe that $(2.9)$ reduces to $(2.8)$ if $p=2$. Hint: prove that
+$ab \leq \frac{a^p}{p}+\frac{b^{p'}}{p'}$ and proceed as in the
+case $p=2$. One way to prove this inequality is to set $a^p=e^x$
+and $b^{p'}=e^y$ (why are we allowed to do that?). Let
+$\frac{1}{p}=t$ and observe that $0 \leq t \leq 1$. We are then
+reduced to showing that for any real valued $x,y$ and $t \in
+[0,1]$, $e^{tx+(1-t)y} \leq te^x+(1-t)e^y$. Let
+$f(t)=e^{tx+(1-t)y}$ and $g(t)=te^x+(1-t)e^y$. Observe that
+$f(0)=g(0)=e^y$ and $f(1)=g(1)=e^x$. Can you complete the
+argument?
+
+\endproclaim
+
+\subhead Box inequality \endsubhead Let's now try to see what
+Cauchy-Schwartz (C-S) inequaity is good for. Let $S_N$ be a finite set of
+$N$ points in ${\Bbb R}^3=\{(x_1,x_2,x_3): x_j \ \text{is a real
+number}\}$, the three-dimensional Euclidean space. Let $x=(x_1,x_2,x_3)
+\in {\Bbb R}^3$ and define
+$$ \pi_1(x)=(x_2,x_3), \ \pi_2(x)=(x_1,x_3), \ \text{and} \
+\pi_3(x)=(x_1,x_2). \tag2.10$$
+
+The question we ask is the following. We are assuming that $\# S_N=N$.
+What can we say about the size of $\pi_1(S_N), \pi_2(S_N)$, and
+$\pi_3(S_N)$? Before we do anything remotely complicated, let's make up
+some silly looking examples and see what we can learn from them.
+
+Let $S_N=\{(0,0,k): k \ \text{integer} \ k=0,1, \dots, N-1\}$. This set
+clearly has $N$ elements. What is $\pi_3(S_N)$ in this case. It is
+precisely the set $\{(0,0)\}$, a set consisting of one element. However,
+$\pi_2(S_N)$ and $\pi_1(S_N)$ are both $\{(0,k): k=0,1,\dots,N-1\}$,
+sets consisting of $N$ elements. In summary, one of the projections is
+really small and the others are as large as they can be.
+
+Let's be a bit more even handed. Let $S_N=\{(k,l,0): k,l \
+\text{integers} \ 1 \leq k \leq \sqrt{N}, 1 \leq l \leq \sqrt{N}\}$, where
+$\sqrt{N}$ is an integer. Again $\# S_N=N$. What do projections look
+like? Well, $S_N$ is already in the $(x_1,x_2)$-plane, so
+$\pi_3(S_N)=\{(k,l): k,l \
+\text{integers} \ 1 \leq k \leq \sqrt{N}, 1 \leq l \leq \sqrt{N}\}$. It
+follows that $\# \pi_3(S_N)=N$. On the other hand, $\pi_2(S_N)=\{(k,0):
+k \ \text{integer} \ 1 \leq k \leq \sqrt{N} \}$, and
+$\pi_1(S_N)=\{(l,0): l \ \text{integer} \ 1 \leq l \leq \sqrt{N} \}$,
+both containing $\sqrt{N}$ elements. Again we see that it is difficult for
+all the projections to be small.
+
+Let's think about our examples so far from a geometric point of view. The
+first example is "one-dimensional" since the points all lie on a line.
+The second example is "two-dimensional" since the points lie on a plane.
+Let's now build a truly "three-dimensional" example with as much symmetry
+as possible. Let $S_N=\{(k,l,m): k,l,m \ \text{integers} \ 1 \leq k,l,m
+\leq N^{\frac{1}{3}}\}$, where $N^{\frac{1}{3}}$ is an integer. Again,
+$\# S_N=N$, as required. The projections this time all look the same. We
+have $\pi_1(S_N)=\{(l,m): l,m \ \text{integers} \ 1 \leq l,m \leq
+N^{\frac{1}{3}}\}$, a set of size $N^{\frac{2}{3}}$, and the same is true
+of $\# \pi_2(S_N)$ and $\# \pi_3(S_N)$.
+
+Let's summarize what happened. In the case when all the projections have
+the same size, each projection has $N^{\frac{2}{3}}$ elements. We will
+see in a moment that for any $S_N$, one of the projections must of size
+at least $N^{\frac{2}{3}}$. We will see here and later in these notes
+that C-S inequality is very usefull in showing that the "symmetric" case
+is "optimal", whatever that means in a given instance.
+
+Before starting a more detailed investigation, consider the two
+dimensional case. Take a set of $N$ points in ${\Bbb R}^2$ and consider
+projections onto $x_1$-axis and $x_2$-axis, respectively. Can we prove
+by a simple geometric argument that one of these projections must contain
+at least $C\sqrt{N}$ points? Well, let $S_N$ be the set in
+question. Observe that $\chi_{S_N}(x_1,x_2) \leq \chi_{\pi_1(S_N)}(x_2)
+\cdot \chi_{\pi_2(S_N)}(x_1)$ (see Exercise 2.5 below). It follows that
+$\sum_{x_1,x_2} \chi_{S_N}(x_1,x_2)=\sum_{x_1,x_2} \chi_{\pi_1(S_N)}(x_2)
+\cdot \chi_{\pi_2(S_N)}(x_1)=\sum_{x_1} \chi_{\pi_2(S_N)}(x_1) \cdot
+\sum_{x_2} \chi_{\pi_1(S_N)}(x_2)$ (why?). It follows that $N=\# S_N \leq
+\# \pi_1(S_N) \cdot \# \pi_2(S_N) \leq {\left(\max_{j=1,2} \# \pi_j(S_N)
+\right)}^2$. We conclude that indeed $\max_{j=1,2} \pi_j(S_N) \ge
+\sqrt{N}$ as promised. 
+
+The point of considering the two-dimensional case is that while it does
+not entail any of the interesting complexities of the higher dimensional
+situation, it is based on the same intuition. Indeed, let us think about
+the two-dimensional case from a slightly different point of view. Suppose
+for a moment that $\# \pi_1(S_N)$ is smaller than $c\sqrt{N}$, where
+$c$ is a constant. Then $S_N$ must consist of at most $c \sqrt{N}$
+columns, by definition of $\pi_1$. On the other hand, the total number of
+points in all of those columns is $N$, by assumption. It follows that one
+of these columns has more than $\frac{N}{c\sqrt{N}}$ points. We conclude,
+by setting $c=1$, that either $\# \pi_1(S_N) \ge \sqrt{N}$, or $\#
+\pi_2(S_N) \ge \sqrt{N}$, since the latter is precisely what it means for
+a column to have more than $\sqrt{N}$ points. This gives an "alternate"
+argument for the two-dimensional case. Observe that the argument given in
+the previous paragraph is at leat superficially mechanical, while the
+argument we just went over is visual and conceptual. Are the arguments
+really different, however? As an informal exercise, cut through the
+mechanical non-sense of the first argument and explain why it is the same
+as the second one. 
+
+The three dimensional case is not going to fall quite so easily. To see
+this, let us try to run the argument of the previous paragraph. Suppose
+that $\# \pi_1(S_N) <N^{\frac{2}{3}}$. This means that $S_N$ consists of
+fewer than $N^{\frac{2}{3}}$ columns of points over the $(x_2,x_3)$-axis.
+Since the total number of points is $N$, this tells us that one of the
+columns has more than $N^{\frac{1}{3}}$ points. This is not enough,
+however, and more careful analysis is needed. The proof can be completed
+this way with some work and I urge you to try! We will take a slightly
+different road below in order to illustrate what a beautiful bookkeeping
+tool the C-S inequality often is. 
+
+To start our analysis of the three dimensional case we need the following
+basic definition. Let $S$ be any set. Define $\chi_S(x)=1$ if $x \in S$
+and $0$ otherwise.
+
+\proclaim{Exercise 2.5} Let $S_N$ be as above. Then
+$$\chi_{S_N}(x) \leq
+\chi_{\pi_1(S_N)}(x_2,x_3)\chi_{\pi_2(S_N)}(x_1,x_3)
+\chi_{\pi_3(S_N)}(x_1,x_2). \tag2.11$$
+\endproclaim
+
+With Exercise 2.5 in tow, we write
+$$ N=\# S_N=\sum_{x} \chi_{S_N}(x) \leq
+\sum_{x} \chi_{\pi_1(S_N)}(x_2,x_3)\chi_{\pi_2(S_N)}(x_1,x_3)
+\chi_{\pi_3(S_N)}(x_1,x_2)$$
+$$=\sum_{x_1,x_2} \chi_{\pi_3(S_N)}(x_1,x_2)
+\sum_{x_3} \chi_{\pi_1(S_N)}(x_2,x_3)\chi_{\pi_2(S_N)}(x_1,x_3)$$
+$$ \leq {\left(\sum_{x_1,x_2}
+\chi^2_{\pi_3(S_N)}(x_1,x_2)\right)}^{\frac{1}{2}}
+{\left(\sum_{x_1,x_2} {\left(\sum_{x_3}
+\chi_{\pi_1(S_N)}(x_2,x_3)\chi_{\pi_2(S_N)}(x_1,x_3)\right)}^2
+\right)}^{\frac{1}{2}}$$
+$$=I \times II. \tag2.12$$
+
+Now,
+$$ I={\left(\sum_{x_1,x_2}
+\chi^2_{\pi_3(S_N)}(x_1,x_2)\right)}^{\frac{1}{2}}={\left(\sum_{x_1,x_2}
+\chi_{\pi_3(S_N)}(x_1,x_2)\right)}^{\frac{1}{2}}={(\#
+\pi_3(S_N))}^{\frac{1}{2}}. \tag2.13$$
+
+On the other hand,
+$$ {II}^2=\sum_{x_1,x_2} {\left(\sum_{x_3}
+\chi_{\pi_1(S_N)}(x_2,x_3)\chi_{\pi_2(S_N)}(x_1,x_3)\right)}^2$$
+$$=\sum_{x_1,x_2} \sum_{x_3} \sum_{x'_3}
+\chi_{\pi_1(S_N)}(x_2,x_3)\chi_{\pi_2(S_N)}(x_1,x_3)
+\chi_{\pi_1(S_N)}(x_2,x'_3)\chi_{\pi_2(S_N)}(x_1,x'_3)$$
+$$ \leq \sum_{x_1,x_2} \sum_{x_3} \sum_{x'_3}
+\chi_{\pi_1(S_N)}(x_2,x_3)\chi_{\pi_2(S_N)}(x_1,x'_3)$$
+$$=\sum_{x_2,x_3}\chi_{\pi_1(S_N)}(x_2,x_3)
+\sum_{x_1,x'_3}\chi_{\pi_2(S_N)}(x_1,x'_3)=\# \pi_1(S_N) \cdot \#
+\pi_2(S_N). \tag2.14$$
+
+Putting everything together, we have proved that
+$$ \# S_N \leq \sqrt{\# \pi_1(S_N)}\sqrt{\# \pi_2(S_N)}\sqrt{\#
+\pi_3(S_N)}. \tag2.15$$
+
+\proclaim{Exercise 2.6} Verify each step above. Where was C-S inequality
+used? Why does $\chi^2_{\pi_j(S_N)}(x)=\chi_{\pi_j(S_N)}(x)$? \endproclaim
+
+The product of three positive numbers certainly does not exceed the
+largest of these numbers raised to the power of three. It follows from
+this and $(2.15)$ that
+$$ N=\# S_N \leq \max_{j=1,2,3} {(\# \pi_1(S_N))}^{\frac{3}{2}}.
+\tag2.16$$
+
+We conclude by raising both sides to the power of $\frac{2}{3}$ that
+$$ \# \max_{j=1,2,3} \pi_j(S_N) \ge N^{\frac{2}{3}} \tag2.17$$ as
+claimed.
+
+\proclaim{Exercise 2.7} Let $\Omega$ be a convex set in ${\Bbb R}^3$.
+This means that for any pair of points $x,y \in \Omega$, the line segment
+connecting $x$ and $y$ is entirely contained in $\Omega$. Prove that
+$vol(\Omega) \leq \sqrt{area(\pi_1(\Omega))} \cdot
+\sqrt{area(\pi_2(\Omega))} \cdot \sqrt{area(\pi_3(\Omega))}$.
+
+If you can't prove this exactly, can you at least prove using $(2.15)$
+and its proof that $\max_{j=1,2,3} area(\pi_j(\Omega)) \ge
+{(vol(\Omega))}^{\frac{2}{3}}$? This would say that a convex object of
+large volume has at least one large coordinate shadow. Using politically
+incorrect language this can be restated as saying that if a hyppopatamus
+is overweight, there must be a way to place a mirror to make this
+obvious... \endproclaim
+
+\proclaim{Exercise 2.8} (Project question) Generalize $(2.15)$. What do I
+mean, you ask... Replace three dimensions by $d$ dimensions. Replace
+projections onto two-dimensional coordinate planes by projections onto
+$k$-dimensional coordinate planes, with $1 \leq k \leq d-1$. Finally,
+replace the right hand side of $(2.15)$ by what it should be...
+\endproclaim
+
+\subhead Incidences and matrices \endsubhead Consider a set of $n$ lines
+and $n$ points in the plane. Define an incidence to be a pair $(p,l)$,
+where $p$ is one of the points in our point set, $l$ is one of the lines
+in our set of lines, and $p$ lies on $l$. Let $I(n)$ denote the total
+number of incidences determined by a given set of $n$ points and a given
+set of $n$ lines. In order to avoid needless headaches we assume that
+every point in our point set lies on at least one line in our set of
+lines, and every line in our line set contains at least one point in our
+point set.
+
+How large can $I(n)$ be? Well, it is clear that $I(n) \leq n^2$. This
+observation is not terribly valuable, however, since $I(n)$ cannot
+possibly be this large! I mean, how can every line contain every point,
+and every point lie on every line?! You might retort that maybe, just
+maybe, it is possible for about $n/10$ lines to contain about $n/100$
+points each, and for each of those points to be contain in about $n/1000$
+of those lines. We shall see that nothing like that can happen.
+
+Our main tools in this endeavor are matrices and the C-S inequaity. Recall
+that a $N$ by $N$ matrix $A$ is an array with $n$ rows and $n$ columns.
+The elements of $A$ are designated by $a_{ij}$, where $i$ determines the
+row and $j$ determines the column. Let's define $A$ as follows.
+Enumerate the $n$ points in our point set from $1$ to $n$, and do the
+same for lines in our set of lines. Let $a_{ij}=1$ if the $i$'th point
+lies on the $j$'th line, and $0$ otherwise. Observe that if $j$ and $j'$
+are fixed, with $j \not=j'$,
+$$ a_{ij} \cdot a_{ij'}=1 \tag2.18$$ for at most one value of $i$. This
+is because $a_{ij} \cdot a_{ij'}=1$ if and only if $a_{ij}=1$ and
+$a_{ij'}=1$. This means that the $i$'th point is on the $j$'th lines and
+also on the $j'$th line. Intersection of two distinct lines is either
+empty or consists of exactly one point. It follows that indeed the
+equality in $(2.18)$ can hold for at most one $i$.
+
+We are now ready for action. What is $I(n)$? It is nothing more than the
+total number of $1$s in $A$! Since $A$ consists of only $1$s and $0$s,
+$$ I(n)=\sum_{i=1}^n \sum_{j=1}^n a_{ij}=\sum_{i=1}^n \left(\sum_{j=1}^n
+a_{ij}\right) \cdot 1$$
+$$ \leq {\left(\sum_{i=1}^n 1 \right)}^{\frac{1}{2}} {\left( \sum_{i=1}^n
+{\left( \sum_{j=1}^n a_{ij} \right)}^2 \right)}^{\frac{1}{2}}=\sqrt{n}
+\cdot {\left( \sum_{i=1}^n
+{\left( \sum_{j=1}^n a_{ij} \right)}^2 \right)}^{\frac{1}{2}}. \tag2.19$$
+
+Now,
+$$ \sum_{i=1}^n
+{\left( \sum_{j=1}^n a_{ij} \right)}^2=\sum_{i=1}^n \sum_{j=1}^n
+\sum_{j'=1}^n a_{ij}a_{ij'}$$
+$$=\sum_{i=1}^n \sum_{1 \leq j,j' \leq n; j \not=j'}
+a_{ij}a_{ij'}+\sum_{i=1}^n \sum_{j=1}^n a_{ij}^2=apple+orange. \tag2.20$$
+
+To estimate apple we use $(2.18)$. Indeed, since $a_{ij} \cdot a_{ij'}=1$
+for at most one $i$,
+$$ apple \leq \# \{(j,j'): 1 \leq j,j' \leq n; j \not=j'\}=n^2-n.
+\tag2.21$$
+
+\proclaim{Exercise 2.9} Write out the details of the equality on the
+right hand side of $(2.21)$. \endproclaim
+
+
+On the other hand,
+$$ orange \leq \# \{(i,j): 1 \leq i,j \leq n\}=n^2. \tag2.22$$
+
+Putting everything together and using tthe fact that $n^2-n \leq n^2$, we
+see that
+$$ I(n)=\sum_{i=1}^n \sum_{j=1}^n a_{ij} \leq \sqrt{2} \cdot
+n^{\frac{3}{2}}. \tag2.23$$
+
+We conclude that the number of incidences between $n$ points and $n$
+lines in the plane is at most $\sqrt{2}n^{\frac{3}{2}}$. Can this
+estimate be improved? Sure it can... The sharp answer is $I(n) \leq
+Cn^{\frac{4}{3}}$, where $C$ is a fixed positive constant. This is the
+celebrated Szemeredi-Trotter incidence theorem (\cite{ST83}) and it is
+sharp in the sense that one can construct a set of $n$ lines and $n$
+points such that the number of incidences is approximately
+$n^{\frac{4}{3}}$, up to a constant. The proof of this result will appear
+in the second part of these notes.
+
+\proclaim{Exercise 2.10} Show that the estimate $I(n) \leq
+Cn^{\frac{3}{2}}$ we just obtained for points and lines in the plane is
+best possible for points and lines in ${\Bbb F}_q^2$. Hint: Take as your
+point set all the points in ${\Bbb F}_q^2$ and take as your line set all
+the lines in ${\Bbb F}_q^2$. \endproclaim
+
+\proclaim{Exercise 2.11} Let $S_N$ be a subset of the plane with $N$
+elements. Define $\Delta(S_N)=\{\sqrt{{(x_1-y_1)}^2+{(x_2-y_2)}^2}:
+x=(x_1,x_2) \in S_N, y=(y_1,y_2) \in S_N\}$. Use $(2.23)$ to show that
+$\# \Delta(S_N) \ge C \sqrt{N}$ for some constant $C$ independent of $N$.
+
+Can you do better? The conjectured asnwer is that $\# \Delta(S_N) \ge
+C\frac{N}{\sqrt{\log(N)}}$. The best known result to date, due to Katz
+and Tardos (\cite{KT04}), based on the previous result due to Solymosi and
+Toth (\cite{SoT01}) is $\# \Delta(S_N) \ge CN^{\beta}$, where $\beta
+\approx .86$. (See \cite{KT04}).
+
+What about higher dimensions? If $S_N \subset {\Bbb R}^d$ of size $N$,
+prove that $\# \Delta(S_N) \ge CN^{\frac{1}{d}}$. Can you do better? The
+conjectured answer here is $\# \Delta(S_N) \ge CN^{\frac{2}{d}}$ in
+dimensions three and higher. Do you see where the exponent $\frac{2}{d}$
+is coming from? Hint: Let $S_N=\{n=(n_1, \dots, n_d): n_j \in {\Bbb Z}; 1
+\leq n_j \leq N^{\frac{1}{d}} \}$.
+
+\endproclaim
+
+\proclaim{Exercise 2.12} Show that the number of incidences between $n$
+points and $n$ two-dimensional planes in ${\Bbb R}^3$ can be $n^2$.
+Suppose that we further insist that the intersection of any three planes
+in our collection contains at most one point. Prove that the number of
+incidences is $\leq Cn^{\frac{5}{3}}$.
+
+More generally, prove that if we have $n$ points and $n$
+$d-1$-dimensional planes in ${\Bbb R}^d$, then the number of incidences
+can be $n^2$. Show that the number of incidences is $\leq
+Cn^{2-\frac{1}{d}}$ if we further insist that the intersection of any $d$
+planes from our collection intersect at at most one point.
+\endproclaim
+
+\proclaim{Exercise 2.13} Prove that $n$ points and $n$ spheres of the
+same radius in ${\Bbb R}^d$, $d \ge 4$, can have $n^2$ incidences. Use
+the techniques of the chapter that when $d=2$ the number of incidences is
+$\leq Cn^{\frac{3}{2}}$. What can you say about the case
+$d=3$? \endproclaim
+
+\vskip.125in
+
+\head Besicovitch/Kakeya conjecture in two dimensions \endhead
+
+\vskip.125in
+
+In this section we verify $(1.2)$ in the case $d=2$. What you should be
+asking yourselves at every step, is where are we using the peculiarities
+of the two-dimensional space, and why this approach should be harder in
+higher dimensions.
+
+We have a set $K \subset {\Bbb F}_q^2$ which contains a line in every
+direction. This means that there exist lines $L_1, L_2, \dots, L_{q+1}$
+entirely contained in $K$ with the additional property that any pair of
+these lines intersects at exactly one point. How do we know this? An
+abnoxious answer is that you verified exactly this in Exercise 1.3 and
+1.4. Let's discuss it again, however. Consider $L(x,v)$ in two
+dimensions. How many choices are there for $v$? Well, $v=(v_1,v_2)$, so
+there are $q^2-1$ choices, since $v=(0,0)$ is forbidden. On the other
+hand, multiplying $v$ by $\lambda \in {\Bbb F}_q$ leads to the same line.
+How many $\lambda$s are there? Since it makes no sense to use
+$\lambda=0$, there are $q-1$ relevant $\lambda$s. It follows that $K$
+indeed contains $\frac{q^2-1}{q-1}=q+1$ lines with different "slopes". By
+Exercise 1.4 (not very difficult) each pair of such lines intersects at
+exactly one point.
+
+Before we get on with the precise calculations, let's try to understand
+why the Besicovitch/Kakeya conjecture should be true in two-dimensions.
+As we have just seen, $K$ contains $q+1$ lines of different "slopes".
+Choose one of these lines and call it the stem. The other $q$ lines
+intersect this stem forming a sort of a hairbrush. Since two of these
+lines intersect at exactly one point, it is pretty clear that the total
+number of points in $K$ is at least $(q+1) \cdot
+\frac{q}{2}=\frac{q(q+1)}{2}$. Of course, we need to make this argument
+precise, which is what we are about to do.
+
+All the tools are now in place. Let $K'=\cup_{i=1}^{q+1} L_i$. Since
+$K' \subset K$, it suffices to prove that $\# K' \ge Cq^2$. Let
+$\chi_{L_i}(x)=1$ if $x \in L_i$ and $0$ otherwise. We must somehow take
+advantage of the fact that we have $q+1$ lines with each pair
+intersecting at exactly one point. How do we "encode" intersections?
+Well,
+$$ \sum_{x \in K'} \chi_{L_i}(x)\chi_{L_j}(x)=\# \{x \in K': x \in L_i
+\ \text{and} \ x \in L_j\}=\# (L_i \cap L_j), \tag3.1$$ since $L_i
+\subset K'$ and $L_j \subset K'$ by assumption.
+
+With this observation in tow, consider
+$$ \sum_{x \in K'} {[\chi_{L_1}(x)+\dots+\chi_{L_{q+1}}(x)]}^2=\sum_{x
+\in K'} \sum_{i=1}^{q+1} \sum_{j=1}^{q+1} \chi_{L_i}(x)\chi_{L_j}(x)$$
+$$=\sum_{i=1}^{q+1} \sum_{j=1}^{q+1} \# (L_i \cap L_j)=2q(q+1), \tag3.2$$
+where to obtain the first line we used $(3.1)$ and to compute the second
+line we used the fact that $\# L_i \cap L_j=1$ if $i \not=j$.
+
+All this is very nice, but we need to somwhow get a hold on $\# K'$. This
+is where Section 2 comes in handy. The left hand side of the first line
+of $(3.2)$ is a sum of something squared. This immediately :) reminds us
+of the Cauchy-Schwartz inequaity! Indeed, C-S tells us that
+$$ {\left(\sum_{x \in K'} [\chi_{L_1}(x)+\dots+\chi_{L_{q+1}}(x)] \cdot 1
+\right)}^2 \leq \# K' \cdot \sum_{x \in K'}
+{[\chi_{L_1}(x)+\dots+\chi_{L_{q+1}}(x)]}^2. \tag3.3$$
+
+Plugging in $(3.2)$ we see that
+$$ {\left(\sum_{x \in K'} [\chi_{L_1}(x)+\dots+\chi_{L_{q+1}}(x)]
+\right)}^2 \leq \# K' \cdot 2q(q+1), \tag3.4$$ or, equivalently,
+$$ \# K' \ge \frac{{\left(\sum_{x \in K'}
+[\chi_{L_1}(x)+\dots+\chi_{L_{q+1}}(x)] \right)}^2}{2q(q+1)}. \tag3.5$$
+
+We seem to be getting somewhere provided we can evaluate the numerator of
+$(3.5)$. We have
+$$ \sum_{x \in K'} [\chi_{L_1}(x)+\dots+\chi_{L_{q+1}}(x)]=\sum_{x \in
+K'} \sum_{j=1}^{q+1} \chi_{L_j}(x)=\sum_{j=1}^{q+1} \sum_{x \in K'}
+\chi_{L_j}(x). \tag3.6$$
+
+Since $L_j \subset K'$,
+$$ \sum_{x \in K'} \chi_{L_j}(x)=\# L_j=q. \tag3.7$$
+
+We conclude that
+$$ {\left(\sum_{x \in K'} [\chi_{L_1}(x)+\dots+\chi_{L_{q+1}}(x)]
+\right)}^2=q^2{(q+1)}^2. \tag3.8$$
+
+Plugging this into $(3.5)$ yields
+$$ \# K' \ge \frac{q(q+1)}{2}, \tag3.9$$ as promised.
+
+The result we just presented was first proved in ${\Bbb R}^2$ (whatever
+that means :)) by R. Davies in 1971 (\cite{D71}), though the proof above
+is much closer to the one given for a related problem by A. Cordoba
+(\cite{C77}). 
+
+This seems to be the end of the story in two dimensions. Unfortunately,
+(or rather fortunately) mathematicians always find a way to complicate
+things. The following exercises give a taste of things to come in Part II
+of these notes where the level of fun (and pain) will get wretched up
+another notch.
+
+\proclaim{Exercise 3.1} Find the smallest possible Besicovitch/Kakeya
+subset of ${\Bbb F}_q^2$. We know that it contains at least
+$\frac{q(q+1)}{2}$ elements. Get as close to this number as you can.
+Hint: consider $S=\{(x_1,x_2) \in {\Bbb F}_q^2: x_1+x_2^2 \ \text{is a
+square in} \ {\Bbb F}_q\}$. (A number $s$ is a square in ${\Bbb F}_q$ if
+there exists $u \in {\Bbb F}_q$ such that $s=u^2$ in the world of ${\Bbb
+F}_q$). \endproclaim
+
+\proclaim{Exercise 3.2} Let $0<\alpha<1$. Suppose that we only assume
+that $K$ is a subset of ${\Bbb F}_q^2$ with the property that for every $v
+\not=(0,0)$, $v \in {\Bbb F}_q^2$, there exists an $x \in {\Bbb F}_q^2$
+such that more than $q^{\alpha}$ points of $L(x,v)$ are contained in
+$K'$. What can you say about $\# K$? Once you obtain an aswer, try to
+determine whether your estimate is "reasonable". More precisely, for
+various values of $\alpha<1$, experiment with constructions of subset of
+${\Bbb F}_q^2$ satisfying the required properties. This type
+of a formulation of the Kakeya problem is due to Hillel
+Furstenberg. See \cite{KT01} and the references contained
+therein. \endproclaim
+
+\vskip.125in
+
+\head A gentle entry into higher dimensions: bushes and hairbrushes
+\endhead
+
+\vskip.125in
+
+Higher dimensional space is very annoying. It is no longer true that two
+lines are either "parallel" or intersect at a single point. It is quite
+easy for two lines to simply be in "parallel" planes which makes the
+structure of Besicovitch/Kakeya sets much harder to understand.
+
+\subhead Bourgain's bush argument (late 80s) \endsubhead In this section
+we abandon our policy of systematically referencing the results we
+present. Instead, we refer the reader to Tom Wolff's beautiful survey
+article (\cite{W99}) where all the relevant references are present. 
+
+Let's start with the following simple observation. Let $K$ be a
+Besicovitch/Kakeya set in ${\Bbb F}_q^d$. How many lines must this set
+contain? Well, if have completed Exercise 1.3, we know that the answer is
+$\approx q^{d-1}$ (I am being obnoxious again...). Let's why that is.
+Consider a line $L(x,v)$. We have $q^d-1$ choices for $v$ since $v=(0,
+\dots, 0)$ is not allowed. As before, $v$ and $v'=\lambda v$, $\lambda
+\in {\Bbb F}_q$, $\lambda \not=0$, lead to the same line. It follows that
+the number of distinct lines in $K$ is at least $\frac{q^d-1}{q-1} \ge
+\frac{q^{d-1}}{2}$.
+
+Suppose that $\# K \leq \frac{q^{\frac{d+1}{2}}}{4}$. Then at least one
+point of $K$ must lie on at least
+$$L=\frac{q^{\frac{d-1}{2}}}{2} \tag4.1$$ lines
+entirely contained in $K$. To see this first observe the numbers of pairs
+$(p,l)$, where $p \in K$, $l$ is a line contained in $K$, and $p$ lies on
+$l$, is at least $q \cdot \frac{q^{d-1}}{2}=\frac{q^d}{2}$ by the
+argument in the previous paragraph. By assumption, the number of points
+in $K$ is $\leq \frac{q^{\frac{d+1}{2}}}{4}$. Then $(4.1)$ follows since
+$$ \frac{q^d}{2} \leq \# \cup_p \cup_l \{(p,l): p \in l\} \leq
+\frac{q^{\frac{d+1}{2}}}{4} \max_p \# \{(p,l): p \in l\}, \tag4.2$$ where
+$p$ is a point in $K$ and $l$ is a line in $K$. It follows that
+$$  \max_p \# \{(p,l): p \in l\} \ge \frac{q^{\frac{d-1}{2}}}{4},
+\tag4.3$$ as advertised. What we just proved is that there exists a point
+$p_0 \in K$ which belongs to at least $\frac{q^{\frac{d-1}{2}}}{4}$ lines
+in $K$. Since each of these lines contains $q-1$ points aside from
+$p_0$,
+$$ \# K \ge 1+L(q-1) \ge \frac{q^{\frac{d+1}{2}}}{4}. \tag4.4$$
+
+Thus we have shown that a Besicovitch/Kakeya sets in ${\Bbb F}_q^d$ are
+$\frac{d+1}{2}$ "dimensional". This is horribly unsatisfactory since our
+goal is $d$, not $\frac{d+1}{2}$, and we can already do better than
+$\frac{d+1}{2}$ when $d=2$. We did take an important step in the right
+direction, though, as the techniques we just developed will come in handy
+in a moment.
+
+\subhead Wolff's hairbrush argument (mid 90s) \endsubhead What was the
+essence of the bush argument? If lines do not intersect much, we win
+because there are points all over the place. If lines do intersect, we
+look for places where lots of lines intersect in the same place. We call
+such a happy meeting place a bush. What we did above is first argued that
+there must exist a fairly large bush. We then estimated the number of
+points in this bush and obtained the estimate $(4.41)$. As cute as this
+argument is, it is hopelessly naive if we are to get anywhere close to
+the full Besicovitch/Kakeya conjecture.
+
+Our next step in the direction of fame and glory (don't get too excited)
+is the hairbrush construction. Let $K$ be a Besicovitch/Kakeya set and
+suppose that $\# K
+\leq q^{\frac{d+2}{2}}$. We repeat the argument we used in the first line
+of $(3.2)$. We know by above that $K$ contains at least
+$\frac{q^{d-1}}{2}$ lines with distinct "slopes". Let $K'$ be the union of
+these lines. Reusing the proof of the two-dimensional Besicovitch/Kakeya
+conjecture, we have
+$$ q^2 k^2={\left( \sum_{x \in K'}
+[\chi_{L_1}(x)+\dots+\chi_{L_k}(x)] \right)}^2 \leq \# K' \cdot \sum_{x
+\in K'} {[\chi_{L_1}(x)+\dots+\chi_{L_{q+1}}(x)]}^2$$=$$ =\# K'
+\cdot \sum_{x \in K'} \sum_{i=1}^{q+1} \sum_{j=1}^{q+1}
+\chi_{L_i}(x)\chi_{L_j}(x)=\# K' \cdot \sum_{i=1}^k \sum_{j=1}^k \# (L_i
+\cap L_j), \tag4.5$$ where $k$ is the number of lines (which by above is
+$\ge \frac{q^{d-1}}{2}$).
+
+\proclaim{Exercise 4.1} Why is the first line in $(4.5)$ true? Did we use
+an inequality with a name in the second line? Which one? \endproclaim
+
+Since we have assumed that $\# K \leq q^{\frac{d+2}{2}}$, we also have
+$\# K' \leq q^{\frac{d+2}{2}}$. Plugging this into $(4.5)$ we get
+$$ \sum_{i=1}^k \sum_{j=1}^k \# (L_i \cap L_j) \ge
+\frac{q^{\frac{3d-2}{2}}}{2}. \tag4.6$$
+
+It follows that there exists $i=i_0$ such that
+$$ \sum_{1 \leq j \leq k; j \not=i_0} \# (L_j \cap L_{i_0}) \ge
+\frac{\frac{q^{\frac{3d-2}{2}}}{2}}{\frac{q^{d-1}}{2}}-q \ge
+\frac{q^{\frac{d}{2}}}{2}. \tag4.7$$
+
+\proclaim{Exercise 4.2} How did we go from $(4.6)$ to $(4.7)$?
+\endproclaim
+
+We just proved that there exists a line $L_{i_0}$, called the base of the
+hairbrush, such that at least $m=\frac{q^{\frac{d}{2}}}{2}$ other lines
+contained in $K'$ intersect it. We call this collection of these $m$ lines
+the hairbrush, denoted by $H$.
+
+Let $\Pi_j$ denote the two-plane determined by $L_{i_0}$ and $L_j$.
+Suppose that $\Pi_j$ contains $n_j \ge 1$ lines from the hairbrush. We
+want to estimate $\# (\Pi_j \cap H)$ from below. Since $\Pi_j$ is a
+two-dimensional plane, we should be able to use Section 3. Unfortunately,
+in that section we only learned to deal with sets containing
+approximately $q$ lines with different slopes. In this case we have $n_j$
+lines, which may be smaller than $q$. This predicament forces us to
+rewrite the argument in Section 3 for the purpose at hand. Let $L_1,
+\dots, L_{n_j}$ be the lines in the hairbrush (after possibly doing some
+relabeling) that are contained in $\Pi_j \cap H$. We have
+$$ q^2 {(n_j+1)}^2={\left( \sum_{x \in \Pi_j \cap H}
+[\chi_{L_1}(x)+\dots+\chi_{L_{n_j}}(x)] \right)}^2$$ $$ \leq \# (\Pi_j
+\cap H) \sum_{x \in \Pi_j \cap H}
+{[\chi_{L_1}(x)+\dots+\chi_{L_{n_j}}(x)]}^2$$ $$=\# (\Pi_j \cap H)
+\sum_{i=1}^{n_j+1} \sum_{j=1}^{n_j+1} \# (L_i \cap L_j)=\# (P_j \cap H)
+\cdot ((n_j+1)q+(n_j+1)(n_j))$$ $$\leq 2 \cdot \# (\Pi_j \cap H) \cdot
+(n_j+1)q.\tag4.8$$
+
+It follows that
+$$ \# (\Pi_j \cap H) \ge \frac{1}{2} (n_j+1)q \ge \frac{qn_j}{4}.
+\tag4.9$$
+
+\proclaim{Exercise 4.3} Why does $n_j+1$ appear all over the place in
+$(4.8)$ instead of $n_j$? Hint: Don't forget the base of the hairbrush...
+\endproclaim
+
+We are almost done since
+$$ \# K \ge \# H \ge \frac{q}{4} \sum_{j=1}^t n_j=\frac{qm}{4} \ge
+\frac{q^{\frac{d+2}{2}}}{8}. \tag4.10$$
+
+We just proved that if $K$ is a Besicovitch/Kakeya set in ${\Bbb F}_q^d$,
+then $\# K \ge \frac{q^{\frac{d+2}{2}}}{8}$. This is not quite the
+Besicovitch/Kakeya conjecture, but we are getting closer!
+
+We conclude these notes with an exercise which may well be a gateway to
+further progress on the Besicovitch/Kakeya conjecture.
+
+\proclaim{Exercise 4.4} Does a hairbrush in the argument above need to
+contain a line of every "slope"? Given an explicit examples proving that
+it does not. Now suppose that you have a Besicovitch/Kakeya set containing
+a hairbrush containing a line with every possible "slope". Prove that $\#
+K \ge Cq^d$. Prove that same conclusion follows if instead of asuming that
+the hairbrush contains a line with every possible "slope", it only
+contains $\ge cq^{d-1}$ lines with different "slopes".
+
+Can you construct and example of a Besicovitch/Kakeya set $K$ such that
+no hairbrush contains $\ge cq^{d-1}$ lines with different "slopes"?
+\endproclaim
+
+\newpage 
+
+\head References \endhead 
+
+\vskip.125in 
+
+\ref \key C77 \by A. Cordoba \paper The Kakeya maximal function and
+spherical summation multipliers \yr 1977 \jour Amer. J. Math. \vol 99
+\pages 1-22 \endref 
+
+\ref \key D71 \by R. Davies \paper Some remarks on the Kakeya problem
+\jour Proc. Camb. Phil. Soc. \vol 69 \yr 1971 \pages 417-421 \endref
+
+\ref \key I04 \by A. Iosevich \paper Geometric measure theory and Fourier
+analysis \jour Birkhauser; proceedings of the series of lectures
+delivered at Padova (Minicorsi) in 2002 \yr 2004 \endref
+
+\ref \key KT01 \by N. Katz and T. Tao \paper Some connections between the
+Falconer and Furstenburg conjectures \jour New York J. Math. \vol 7
+\yr 2001 \pages 148-187 \endref
+
+\ref \key KT04 \by N. Katz and G. Tardos \paper A new entropy inequality
+for the Erdos distance problem \jour Towards a Theory of Geometric
+Graphs. (ed.J Pach) Contemporary Mathematics \vol 342 \yr 2004 \endref
+
+\ref \key KLT00 \by N. Katz, I. Laba, and T. Tao \paper An improved bound
+on the Minkowski dimension of Besicovitch sets in ${\Bbb R}^3$ \jour
+Annals of Math. \vol 152 \yr 2000 \pages 383-446 \endref 
+
+\ref \key ST83 \by E. Szemeredi and W. Trotter \paper Extremal problems
+in discrete geometry \yr 1983 \jour Combinatorica \vol 3 \pages 381-392
+\endref
+
+\ref \key SoT01 \by J. Solymosi and C. Toth \paper Distinct
+distances in the plane \jour Discr. Comp. Jour. (Misha Sharir
+birthday issue) \vol 25 \yr 2001 \pages 629-634 \endref
+
+\ref \key W99 \by T. Wolff \paper Recent work connected with the Kakeya
+problem \jour Prospects in Mathematics (Princeton, NJ, 1996) Amer. Math.
+Soc., Providence, RI \yr 1999 \pages 129-162 \endref 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\enddocument
