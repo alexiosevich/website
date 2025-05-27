@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>projectssummer2023</title>
+  </head>
+  <body vlink="#551A8B" link="#0000EE" text="#000000" bgcolor="#999999"
+    alink="#EE0000">
+    <div align="center"><font size="+3" color="#ff0000"><b>Projects
+          Summer 2023<br>
+          <br>
+          <img moz-do-not-send="true" src="projects.jpg" alt="Cool
+            picture!" width="275" height="183"><br>
+        </b></font> </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <u><b>Buffon Needle Problem</b></u><br>
+    <br>
+    <b>Supervisors:</b> Matthew Dannenberg and Alex Iosevich <br>
+    <br>
+    <b>Prerequisites:</b> Honors multi-variable calculus and strong
+    python programming skills<br>
+    <br>
+    <b>Participants:</b> William Hagerstrom, Gabriel Hart, Tran Duy Anh
+    Le, Isaac Li, Nathan Skerett<br>
+    <br>
+    <b>Description:</b> This problem is related to the material that
+    will be touched upon in <b>probability</b> and <b>geometry</b>
+    mini-courses. Consider a bounded convex set K in the plane of fixed
+    perimeter. Drop a needle of length r such that one end is inside K
+    with equal probability and the orientation of the needle is random.
+    Let p(K,r) denote the probability that the other end of the needle
+    also lands inside K. Our goal is to prove that if r is small enough,
+    then among all the convex sets of a given perimeter, p(K,r) is
+    maximized if K is a disk. Furthermore, we will conduct computer
+    experiments to estimate the value of r for which the disk maximizes
+    the Buffon probability. Chat GPT will be used as an auxiliary tool.
+    <br>
+    <br>
+    <u><b>Suggested steps to understand this problem:</b></u> <br>
+    <br>
+    i) Compute p(K,r) when K is a disk of radius 1. <br>
+    <br>
+    ii) Compute p(K,r) when K is a square of the same perimeter as the
+    disk of radius 1. <br>
+    <br>
+    iii) Compute p(K,r) when K is an ellipse of the same perimeter as
+    the disk of radius 1. This calculation may need to be done
+    numerically. <br>
+    <br>
+    iv) Write python code that estimates p(K,r) with the input of K
+    accomplished in some reasonable way. <br>
+    <br>
+    v) Try to conceptualize the optimization of p(K,r) as a
+    reinforcement learning problem. <br>
+    <br>
+    vi) Look up and understand the Fourier series proof (due to
+    Hurewicz) of the iso-perimetric inequality in the plane. <br>
+    <br>
+    <u><b><br>
+        Systems of nonlinear equations: reinforcement learning versus
+        classical methods</b></u> <br>
+    <br>
+    <b>Supervisors:</b> Alex Iosevich and Azita Mayeli<br>
+    <br>
+    <b>Prerequisites:</b> Multi-variable calculus (not necessarily
+    honors) and strong python programming skills <br>
+    <br>
+    <b>Participants:</b> Xiaolu Chen, Joshua Iosevich, Stephanie Wang,
+    Tae Ho Yoo<br>
+    <br>
+    <b>Description: </b>This problem is related to the material from
+    the <b>geometry</b> mini-course. There is a variety of classical
+    methods for estimating solutions of systems of non-linear equations.
+    For example, in this case of a single equation, the Newton method
+    taught in most first calculus sequences is an example of such an
+    approach. For systems of equations, the Gauss-Newton method is
+    extremely effective. When the functions involved in a nonlinear
+    system are very rough, or discrete, which could mean a variety of
+    different things, classical methods tend to break down and other
+    approached are needed. One possible approach is reinforcement
+    learning. <br>
+    <br>
+    An example of a situation where reinforcement learning and classical
+    methods co-exist is the study of shortest paths in graphs. The
+    Dykstra algorithms yields the shortest path, but in many situations,
+    reinforcement learning based algorithms do better, and it would be
+    interesting to understand this phenomenon systematically.<br>
+    <br>
+    In this project, we are going to create a reinforcement learning
+    code for a variety of situation, including approximating solutions
+    to systems of nonlinear equations, grid search, graph algorithms,
+    and others, and compare the results to the classical techniques in
+    cases of overlap. Chat GPT will be used as an auxiliary tool.<br>
+    <br>
+    There is plenty of room for theoretical work on this problem as
+    well. <br>
+    <br>
+    <u><b>Suggested steps to understand this problem: </b></u><br>
+    <br>
+    i) Remind yourself exactly how the Newton method works. <br>
+    <br>
+    ii) Look up and understand related methods for estimating solutions
+    of systems of equations. <br>
+    <br>
+    iii) Write your own python code pertaining to i) and ii). <br>
+    <br>
+    iv) Read up on reinforcement learning. An excellent source is a
+    book, entitled "Reinforcement Learning" by Sutton and Barto. <br>
+    <br>
+    v) Write reinforcement learning code to estimate solutions of
+    systems of nonlinear equations. <br>
+    <br>
+    vi) Find a reasonable way to compare the performance of your code in
+    parts v) and iii). <br>
+    <br>
+    <u><b><br>
+        Geometric combinatorcs and complexity:</b></u><br>
+    <br>
+    <b>Supervisors: </b>Alex Iosevich and Azita Mayeli <br>
+    <br>
+    <b>Prerequisites:</b> Strong Python programming skills <br>
+    <br>
+    <b>Participants:</b> Joshua Iosevich, Alhussein Khalil, Anuurag
+    Kumar, Nathan Skerrett<br>
+    <br>
+    <b>Description:</b> The main thrust of this research group is to
+    investigate two concepts that keep arising in geometric
+    combinatorics. The first is understanding zeroes of the Fourier
+    transform of an indicator function of a set in vector spaces over
+    integers modulo a prime. The second is to understand the complexity
+    of graphs that arise in the study of finite point configurations in
+    vector spaces over finite fields. <br>
+    <br>
+    <br>
+    <br>
+    <u><b>Suggested steps to understand this problem:</b></u><u> </u><br>
+    <br>
+    i) Read the paper where the triangle result is proved. It can be
+    found on arxiv.org under the designation arXiv: 1311.4788. If you
+    run into questions, which is almost inevitable, please contact me
+    immediately and I will point you in the right direction. <br>
+    <br>
+    ii) Write a code that encodes triangles in a two-dimensional vector
+    spaces over integers modulo p, where p is a prime, as a python
+    class. Within that class, write a function that determines whether
+    two given triangles (with vertices as input) are or not are
+    congruent. Note that two triangles are congruent if one can map the
+    vertices of one onto the vertices of the other using a translation
+    and a rotation. What a translation is in this context is clear. For
+    the right notion of a rotation, read the paper mentioned above. <br>
+    <br>
+    iii) Consider the following theoretical exploration. One can find an
+    infinite sequences of primes p such that the two dimensional vector
+    space over the integer modulo p does not contain an equilateral
+    triangle. By the way, what an equilateral triangle means in this
+    context is in itself an interesting question. By following the same
+    idea, you can construct a prime p that excludes other congruence
+    classes of triangles. An interesting question is just how many
+    congruence classes (relative to p) can we exclude by imposing
+    conditions on the prime p? <br>
+    <br>
+    <br>
+    <u><b>Modeling seizures using machine learning:</b></u><br>
+    <br>
+    <b>Supervisors:</b> Svetlana Pack and Yujia Zhai <br>
+    <br>
+    <b>Prerequisites:</b> Good knowledge of statistics and strong Python
+    programming skills. <br>
+    <br>
+    <span><b>Participants:</b> </span><span>Andrew Isaacson,</span><span>
+      Ajax Benander, Xiangyi Chen, Wentao Jiang, Jenifer Kim, Svetlana
+      Pack, Yining Qian, Scott Sun, Gus Vietze, Matthew Xie, Jonathan
+      Zhang </span><span></span><br>
+    <br>
+    <b>Description:</b> <span> It is widely believed in the medical
+      community that epileptic seizures do not follow a particular daily
+      or weekly time patterns. We believe that the techniques of modern
+      data science have not yet been deployed in the study of this
+      problem in a systematic way. We are going to experiment with a
+      variety of techniques, including reinforcement learning, to look
+      for patterns in the commercially available data sets. </span><span>Chat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      GPT will be used as an auxiliary tool. <br>
+      <br>
+    </span><span><span><span><u><b>Suggested steps to understand this
+              problem:<br>
+              <br>
+            </b></u></span></span><span>i) Learn how to use TensorFlow
+        or similar to make time series forecasts. <br>
+        <br>
+        ii) Read up on what it means for a time series to be
+        forecastable. <br>
+        <br>
+        <br>
+        <u><b>Time series and retail analytics: </b></u><br>
+        <br>
+        <b>Supervisors:</b> Alex Iosevich, Azita Mayeli and Evan Witz <br>
+        <br>
+      </span></span><span><span><b>Prerequisites:</b> Good knowledge of
+        statistics and strong Python programming skills. </span> </span><span><br>
+      <br>
+      <b>Participants:</b> Moez Boussarsar, Colin Hascup, Jennifer Kim,
+      Jiaming Lyu, Peter MacNeil, </span><span><span>Cooper Orio, Jiamu
+        Tang, Yining Qian<br>
+        <br>
+      </span> <b>Description:</b> We are going to experiment with a
+      variety of methods of determining whether a time series can be
+      accurately predicted. We are also going set up retail forecasting
+      models using a variety of regressors. <br>
+      <br>
+      <u><b>Suggested steps to understand the problem:</b></u> You
+      should study the initial notebook for the Python sessions this
+      week carefully. It contains a variety of forecasting mechanisms
+      that will serve as the the basis for our analysis. <br>
+      <br>
+      <br>
+      <u><b>Fractal structures in large data sets: </b></u><br>
+      <br>
+      <b>Supervisors:</b> Alex Iosevich and Azita Mayelia <br>
+      <br>
+      <b>Prerequisites:</b> Good knowledge of analysis at the level of
+      Rudin's book and strong python programming skills <br>
+      <br>
+    </span><span><span><b>Participants: </b></span><span><span>Yuesong
+          Huang, Xinyi Liu, Peter MacNeil, Svetlana Pack, Zhelin Sheng,
+          Nathan Skerrett, <br>
+        </span></span>&nbsp;<br>
+      <b>Description:</b> This is a followup on one of the projects from
+      Tripods 2021 which resulted in a research paper which can be found
+      at https://arxiv.org/pdf/2209.12079.pdf. The paper describes an
+      approach to detecting fractal structures in large data sets using
+      discrete energy. In this project we are going to develop this
+      theory further and create synthetic data sets to test the results.
+      One of the applied avenues we may pursue is the idea of using the
+      Chaitin-Komogorov-Solomonoff complexity of a time series to
+      determined the degrrr yo which it can be accurately forecasted. </span><span>Chat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      GPT will be used as an auxiliary tool. <br>
+      <br>
+    </span><span><u><b>Suggested steps to understand this problem:<br>
+          <br>
+        </b></u></span><span>i) Read arxiv2209.12079 (the predecessor
+      paper from Tripods 2021) and start asking questions about anything
+      that is not clear. <br>
+      <br>
+      ii) At the </span><span>same time, read up on basic properties of
+      the Minkowski and Hausdorff dimension. <br>
+      <br>
+      iii) Try to duplicate the codes used to produce the diagrams in
+      the paper above. <br>
+    </span><span><span></span><b><span></span></b><br>
+      <br>
+      <u><b>VC dimension and applications:</b></u><u> </u><u><br>
+      </u><br>
+      <b>Supervisors:</b> Alex Iosevich, Donovan Snyder and Emmett Wyman
+      <br>
+      <br>
+      <b>Prerequisites:</b> Linear algebra, real analysis and elementary
+      probability <br>
+      <br>
+    </span><span><span><b>Participants:</b> </span></span><span><span>Xiaolu
+
+
+
+
+
+
+
+
+
+        Chen, Lily Testa,Tran Duy Anh Le, Scott Sun, Tae Ho Yoo</span></span><span><span><br>
+        <br>
+      </span> <b>Description:</b> Given a collection of subsets in the
+      plane, what is the smallest set which contains an element of each?
+      We use the notion of the VC-dimension to find such witness sets in
+      both the finite and infinite settings. One of the main focus for
+      this project will be the setting of fractal sets, though other
+      settings of interested are welcome! </span>Chat GPT will be used
+    as an auxiliary tool.<br>
+    <span>
+      <meta charset="utf-8">
+      <br>
+      <b>Suggested steps to understand this problem: </b><br>
+      <br>
+      i) Become familiar with the definition of VC Dimension and the
+      theory of epsilon nets (<a moz-do-not-send="true"
+        href="vcnotes.pdf">see the enclosed pdf</a>).<br>
+      <br>
+      ii) Be able to calculate the VC dimension of common hypothesis
+      classes.<br>
+      <br>
+      iii) Learn about fractal sets and the Minkowski dimension (example
+      notes are available).<br>
+      <br>
+    </span><br>
+    <span>
+      <meta charset="utf-8">
+    </span>
+    <div style="font-family: Calibri, Arial, Helvetica, sans-serif;
+      font-size: 12pt; color: rgb(0, 0, 0);"><u><b>Discrete Neural Nets<br>
+          <br>
+        </b></u><u><b><span><b>Supervisor: </b></span></b><span></span></u><span>Charlotte
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Aten <br>
+        <br>
+        <b>Prerequisites:</b> Good programming skills and ability to
+        write rigorous arguments <br>
+        <br>
+        <b>Participants:</b> </span><span>Karam Aldahleh, Ajax
+        Benander, Alhussein Khalil, Jennifer Kim, Isaac Li, Lilian
+        Stolberg, TJ Weaver, Kevin Xue<br>
+      </span><u><span></span><b><span><b></b></span></b></u></div>
+    <div style="font-family: Calibri, Arial, Helvetica, sans-serif;
+      font-size: 12pt; color: rgb(0, 0, 0);"><br>
+    </div>
+    <div style="font-family: Calibri, Arial, Helvetica, sans-serif;
+      font-size: 12pt; color: rgb(0, 0, 0);"><b>Description:</b> This
+      project is a follow-up of the discrete neural nets project from
+      the 2021 Tripods REU. That project, which is introduced in a video
+      linked below, was finally coded and tested (with promising
+      results) as part of Rachel Dennis's 2023 senior thesis, also
+      linked below. Discrete neural nets are neural nets whose
+      activation functions can only take on a finite set of values. This
+      prevents us from using established techniques like gradient
+      descent but opens up new avenues not available for continuous
+      functions. In this year's project, we will explore how well this
+      technique can be extended from classifying/transforming
+      black-and-white images to arbitrary data types (such as images
+      with color).<br>
+    </div>
+    <div style="font-family: Calibri, Arial, Helvetica, sans-serif;
+      font-size: 12pt; color: rgb(0, 0, 0);"><br>
+      <span><b>Suggested steps to understand this problem: <br>
+          <br>
+        </b> </span></div>
+    <div style="font-family: Calibri, Arial, Helvetica, sans-serif;
+      font-size: 12pt; color: rgb(0, 0, 0);">
+      <p style="margin-top: 0px; margin-bottom: 0px; font-family:
+        Calibri; font-size: 11pt;"><span><span>i) Watch the initial
+            video pitch (https://youtu.be/nr0KbcloYW4) for the discrete
+            neural nets project from the 2021 Tripods REU.<br>
+          </span></span></p>
+      <p style="margin-top: 0px; margin-bottom: 0px; font-family:
+        Calibri; font-size: 11pt;"><span><span><br>
+            ii) Read Rachel Dennis's 2023 senior thesis
+            (https://www.sas.rochester.edu/mth/undergraduate/honorspaperspdfs/r_dennis23.pdf).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Start asking questions about any parts you don't understand.<br>
+            &nbsp;&nbsp;&nbsp; <br>
+            iii) A preprint of a paper will be posted soon, and a
+            cleaned-up version of the code will be available to examine,
+            as well. Take a look at these and start playing around when
+            they appear.<br>
+            &nbsp;&nbsp;&nbsp; <br>
+            Don't worry if some of the category theory or
+            universal/abstract algebra language is a bit intimidating.
+            All the necessary algebra will be introduced during the
+            abstract algebra mini-course.<br>
+          </span></span></p>
+      <p style="margin-top: 0px; margin-bottom: 0px; font-family:
+        Calibri; font-size: 11pt;"><span><span><font size="+1"><br>
+            </font><br>
+          </span></span></p>
+    </div>
+    <div style="font-family: Calibri, Arial, Helvetica, sans-serif;
+      font-size: 12pt; color: rgb(0, 0, 0);"><br
+        class="Apple-interchange-newline">
+    </div>
+    <span> <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </span><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </body>
+</html>

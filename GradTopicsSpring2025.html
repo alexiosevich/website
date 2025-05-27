@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>GradTopicsSpring2025</title>
+  </head>
+  <body link="#0000EE" vlink="#551A8B" text="#000000" bgcolor="#c0c0c0"
+    alink="#EE0000">
+    <div align="center"><font size="+3" color="#cc0000"><b>Signal
+          recovery and harmonic analysis, </b></font><font size="+3"
+        color="#cc0000"><b>Spring 2025 </b></font><br>
+    </div>
+    <font size="+3" color="#cc0000"><b> <br>
+      </b><font size="+1"><font color="#333333"><b>Course: </b>Math 578
+          Topics in Harmonic Analysis <br>
+          <b>Instructor:</b> Alex Iosevich <br>
+          <b>Meeting time:</b> Mondays 6.00-8.30 p.m. 1106A <br>
+          <b>Grading:</b> Based on in-class presentations and attendance
+          <br>
+          <br>
+          <b>Syllabus:</b> <br>
+          <br>
+        </font></font><font size="+1"><font color="#333333"><font
+            face="Arial Black"><font face="Arial">-<u>Signal Recovery: </u><br>
+              <br>
+              The basic question here is the following. Let</font></font></font></font><b><font
+          size="+1"><font color="#333333"><font face="Arial Black"><font
+                face="Arial">
+                <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><msubsup><mi>ℤ</mi><mi>N</mi><mi>d</mi></msubsup><mo
+                        stretchy="false">→</mo><mi>ℂ</mi></mrow><annotation
+                      encoding="TeX">f:{\mathbb Z}_N^d \to {\mathbb
+                      C}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </annotation></semantics></math><math
+                  xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow></mrow><annotation
+                      encoding="TeX">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    </annotation></semantics></math>. </font></font></font></font></b><font
+        size="+1"><font color="#333333"><font face="Arial Black"><font
+              face="Arial">Let</font></font></font></font><b><font
+          size="+1"><font color="#333333"><font face="Arial Black"><font
+                face="Arial">
+                <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>f</mi><mo>^</mo></mover><mo
+                        stretchy="false">(</mo><mi>m</mi><mo
+                        stretchy="false">)</mo><mo>=</mo><msup><mi>N</mi><mrow><mo>−</mo><mfrac><mi>d</mi><mn>2</mn></mfrac></mrow></msup><munder><mo>∑</mo><mrow><mi>x</mi><mo>∊</mo><msubsup><mi>ℤ</mi><mi>N</mi><mi>d</mi></msubsup></mrow></munder><mi>χ</mi><mo
+                        stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo>⋅</mo><mi>m</mi><mo
+                        stretchy="false">)</mo><mi>f</mi><mo
+                        stretchy="false">(</mo><mi>x</mi><mo
+                        stretchy="false">)</mo><mo>,</mo></mrow><annotation
+                      encoding="TeX">\widehat{f}(m)=N^{-\frac{d}{2}}
+                      \sum_{x \in {\mathbb Z}_N^d} \chi(-x \cdot m)
+                      f(x), </annotation></semantics></math></font></font></font></font></b><font
+        size="+1"><font color="#333333"><font face="Arial Black"><font
+              face="Arial">where</font></font></font></font><b><font
+          size="+1"><font color="#333333"><font face="Arial Black"><font
+                face="Arial">&nbsp;<math
+                  xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>⊂</mo><msubsup><mi>ℤ</mi><mi>N</mi><mi>d</mi></msubsup><mo>.</mo></mrow><annotation
+                      encoding="TeX">S \subset {\mathbb Z}_N^d. </annotation></semantics></math></font></font></font></font></b><font
+        size="+1"><font color="#333333"><font face="Arial Black"><font
+              face="Arial">Is it possible to recover the values of&nbsp;<math
+                xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo
+                      stretchy="false">(</mo><mi>x</mi><mo
+                      stretchy="false">)</mo><mi>&nbsp; <b>exactly</b>
+                      from this information? We shall see that under a
+                      variety of assumptions, such a recovery is
+                      possible and explicit recovery mechanisms are
+                      available. <br>
+                    </mi><mi></mi><mi></mi><mi></mi><mi></mi><mi></mi><mi></mi></mrow><annotation
+                    encoding="TeX">f(x) exa</annotation></semantics></math></font></font></font></font><b><font
+          size="+1"><font color="#333333"><font face="Arial Black"><font
+                face="Arial"><br>
+              </font></font> <br>
+          </font></font></b></font><br>
+    <font size="+3" color="#cc0000"><font size="+1"><font
+          color="#333333"><font size="+3" color="#cc0000"><font
+              size="+1"><font color="#333333"><font face="Arial Black"><font
+                    face="Arial">We shall implement several of these
+                    mechanisms using Python. We shall develop a variety
+                    of analytic tools to study this problem, and this is
+                    where we now turn our attention. <br>
+                    <br>
+                    <br>
+                    - <u>Bourgain's&nbsp;</u><math
+                      xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><u><msub><mi
+                                mathvariant="normal">Λ</mi><mi>q</mi></msub></u><mi><u>&nbsp;
+
+                              problem:</u> <br>
+                          </mi></mrow><annotation encoding="TeX">\Lambda_q
+
+                          p</annotation></semantics></math><br>
+                  </font></font></font></font></font><br>
+          One of the tools we are going to use to study signal recovery
+          is a celebrated theorem due to Jean Bourgain (1989). In this
+          context, he proved that if
+          <math display="block"
+            xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>⊂</mo><msubsup><mi>ℤ</mi><mi>N</mi><mi>d</mi></msubsup><mo>,</mo><mo
+                  stretchy="false">|</mo><mi>S</mi><mo stretchy="false">|</mo><mo>=</mo><mo
+                  stretchy="false">⌈</mo><msup><mi>N</mi><mfrac><mrow><mn>2</mn><mi>d</mi></mrow><mi>q</mi></mfrac></msup><mo
+                  stretchy="false">⌉</mo><mo>,</mo><mi>q</mi><mo>&gt;</mo><mn>2</mn><mo>,
+                  then</mo></mrow><annotation encoding="TeX">S \subset
+                {\mathbb Z}_N^d, |S|=\lceil N^{\frac{2d}{q}} \rceil,
+                q&gt;2, </annotation></semantics></math><br>
+          <math display="block"
+            xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><msup><mi>N</mi><mi>d</mi></msup></mfrac><munder><mo>∑</mo><mi>x</mi></munder><msup><mrow><mo
+                            stretchy="false">|</mo><mi>f</mi><mo
+                            stretchy="false">(</mo><mi>x</mi><mo
+                            stretchy="false">)</mo><mo stretchy="false">|</mo></mrow><mi>q</mi></msup></mrow><mo>)</mo></mrow><mfrac><mn>1</mn><mi>q</mi></mfrac></msup><mo>≤</mo><mi>C</mi><mo
+                  stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo><msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><msup><mi>N</mi><mi>d</mi></msup></mfrac><munder><mo>∑</mo><mi>x</mi></munder><msup><mrow><mo
+                            stretchy="false">|</mo><mi>f</mi><mo
+                            stretchy="false">(</mo><mi>x</mi><mo
+                            stretchy="false">)</mo><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo>)</mo></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></msup><mo>,</mo></mrow><annotation
+                encoding="TeX">{\left( \frac{1}{N^d} \sum_x {|f(x)|}^q
+                \right)}^{\frac{1}{q}} \leq C(q) {\left( \frac{1}{N^d}
+                \sum_x {|f(x)|}^2 \right)}^{\frac{1}{2}}, </annotation></semantics></math><br>
+          <br>
+          provided the Fourier transform of f vanishes outside of S and
+          S is suitably generic. The proof uses some very clever and
+          intricate probabilistic tools. <br>
+          <br>
+          <br>
+          - <u>Restriction theory: </u><br>
+          <br>
+          Bourgain's result above is an example of a class of important
+          problems in analysis called restriction/extension inequalities
+          for the Fourier transform. We are going to develop some basic
+          skills in analyzing such inequalities in a discrete setting,
+          Euclidean space, and, if time permits, on Riemannian
+          manifolds. <br>
+          <br>
+          - <u>Real-life applications:</u><br>
+          <br>
+          Towards the end of the course, we are going to combine the
+          methods of signal recovery and the reinforcement learning
+          techniques to impute missing values in time series, study
+          inventory problems in data science, and similar questions. <br>
+        </font></font><b><font size="+1"><font color="#333333"></font></font></b><font
+        color="#333333"><font size="+1"></font></font></font>
+    <div align="center"><br>
+      <br>
+    </div>
+  </body>
+</html>

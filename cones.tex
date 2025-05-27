@@ -1,0 +1,2030 @@
+\documentstyle{amsppt}
+
+\magnification=\magstep1
+
+\pagewidth{5.5in}
+
+\vsize=7in
+
+%
+
+\def\n#1{\left\vert\,{#1}\,\right\vert}
+
+\def\N#1{\left\Vert\,{#1}\,\right\Vert}
+
+\def\d#1#2{{{\partial^{#1}}\over{\partial{#2}}}}
+
+%
+
+\def\R{{\Bbb R}}
+
+\def\C{{\Bbb C}}
+
+%
+
+\def\cal{\Cal}
+
+%
+
+\topmatter    
+
+\title     $L^p$ estimates for the Cauchy kernel with respect to convex cones 
+
+\endtitle
+
+\author Laura De Carli and Alex Iosevich 
+
+\endauthor
+
+\endtopmatter
+
+\document
+
+%
+
+\noindent{\bf Introduction}:
+
+Let $\Gamma$  be an open and convex cone in $\R^{n+1} $ with vertex at $0$. 
+
+Define the {\it dual cone of $\Gamma$} as 
+
+$$ \Gamma ^0 =\lbrace \ y \in \R^{n+1}
+
+\,: \langle y,\zeta \rangle > 0 \quad \forall \zeta \in
+
+\Gamma\, \rbrace, 
+
+\tag 0.1
+
+$$
+
+where $\langle\ ,\ \rangle$ denotes the usual scalar product in $\R^{n+1}$.
+
+
+
+If we assume that $\Gamma$    
+
+does not contain any straight line, $\Gamma^0\ne \emptyset$.
+
+%
+
+We define  the {\it Cauchy kernel with respect to  $\Gamma$ } as the 
+
+holomorphic function
+
+$ 
+
+K_{\Gamma} : \R^{n+1}+i\Gamma \rightarrow  \C$,
+
+$$
+
+K_{\Gamma} (x+iy) = {\strut \int_{\Gamma^0}  e^{i\langle x+iy,\ \zeta 
+
+\rangle}\,d\zeta.} \tag 0.2
+
+$$
+
+Let $f\in {\Cal S}( \R^{n+1}) $. Define the 
+
+{\it Cauchy transform  of $f$ with respect to $\Gamma$ } 
+
+as the  holomorphic function 
+
+$
+
+T_{\Gamma}(f): \R^{n+1}+i\Gamma  \rightarrow  \C,
+
+$ 
+
+$$
+
+T_{\Gamma}f\,(x+iy)  =  (2\pi)^{-n-1}\,\int_{\Gamma^0} \, \hat f(\zeta) e^
+
+{i\langle  x+iy,\,\zeta \rangle} \, d\zeta,  \tag 0.3
+
+$$
+
+where $\hat f$ denotes the Fourier transform of $f$. The definitions and the
+
+basic properties of the Cauchy kernels and  the Cauchy transform with respect to
+
+a convex cone can be found in [V].   Let $T_{\Gamma,\,y}f(x)= T_\Gamma f(x+iy)$.
+
+Observe that
+
+$T_{\Gamma}f(x+iy)= (K_{\Gamma,y}*f)(x)$, where
+
+$*$ denotes the  usual convolution, and we have set $K_{\Gamma,y}(x)=
+
+K_\Gamma(x+iy)$. Observe also that  
+
+$$
+
+\lim_{{y\to 0}\atop{y\in \Gamma^0}}T_{\Gamma,\,y}f =
+
+f*\widehat{\chi_{\Gamma}},\qquad f \in {\Cal S}(\R^{n+1}),
+
+$$
+
+where  $\chi_\Gamma(x)$ is the characteristic function of  $\Gamma$,
+
+and the above limit is intended in distribution sense. We wish to find optimal
+
+ranges of exponents  $(p,\,q)$ such that  
+
+$$
+
+\N{T_{\Gamma,\,y}f}_q\leq C(y,\,\Gamma)\N f_p
+
+, \qquad f \in {\Cal S}(\R^{n+1}),
+
+\tag 0.4
+
+$$
+
+where $\dsize C(y,\, \Gamma)= \sup_{||f||_p=1}\N{T_{\Gamma,\,y}f}_q< 
+
+\infty$ is a positive constant which depends on
+
+$\Gamma$ and on
+
+$|y|$, and we have denoted by $\N{\ }_r$ the usual norm on $L^r(\R^{n+1})$. 
+
+
+
+An easy scaling argument  shows that if
+
+$(0.4)$ holds, then $q\ge p$ and $C(y,\, \Gamma)\leq$ \newline$
+
+|y|^{-(n+1)\left|\frac 1q-\frac 1p\right|}C(\Gamma,\, \frac{y}{|y|})$.   See also
+
+[H]. Let
+
+${\cal T}_\Gamma$ be the set of the $\left(\frac 1p,\,  \frac 1q\right)$'s such
+
+that $(0.4)$ holds.  Let ${\Cal Q}$ be the closed  square of  vertices $(\frac 12,
+
+\,0)$, $(1,\, 0)$, $(\frac 12,\, \frac 12)$, $(1,\,\frac 12)$, and let ${\Cal T} $
+
+be  the  closed triangle of vertices $(0,\,0)$, $(1,\,1)$, $(1,\, 0)$.  In the next
+
+section we will show that, for every cone $\Gamma$,  ${\Cal Q}\subset {\cal
+
+T}_\Gamma\subset {\Cal T}$. These results can be summarized in the following 
+
+
+
+\proclaim{Proposition 0.1} 
+
+${\cal T}_\Gamma \supset \left\{\left(\frac 1 p,\, \frac 1 q\right) : q\ge 2\
+
+\hbox{and}\  p\leq 2\right\}$  for every convex cone  $\Gamma\subset \R^n$. 
+
+Moreover, if  $\left(\frac 1 p,\, \frac 1 q\right)\in {\cal T}_\Gamma$, then 
+
+$q\ge p$ and 
+
+$$C(y,\, \Gamma)\leq
+
+|y|^{-(n+1)\left|\frac 1q-\frac 1p\right|}C\left(\Gamma, 
+
+\frac{y}{|y|}\right). $$
+
+\endproclaim
+
+%
+
+We will prove Proposition $0.1$ in the next section.
+
+When  $\Gamma$ is  the intersection of a finite number of 
+
+half spaces passing through the origin of $\R^{n+1}$, one can easily see that 
+
+$\chi_\Gamma(x)$ is a $L^p$ Fourier multiplier for $p\in (1,\, \infty)$.
+
+Moreover, $\ K_{\Gamma ,y}  
+
+\in L^r\,(\R^{n+1})$ for $ r\in (1,\, \infty]$, 
+
+$y \in \Gamma$,  and
+
+$$ 
+
+\N{K_{\Gamma,y}}_r  \leq   C\,\hbox{dist}\,(y,\,\partial\Gamma)^{-(n+1)(1-\frac 1
+
+r)}\qquad
+
+\hbox{for all}
+
+\quad y\in \Gamma.
+
+
+\tag 0.5
+
+$$
+
+The  proof is  in [D1]. Using   Young's inequality for
+
+convolution and $(0.5)$ we can prove  the following.   
+
+\proclaim{Theorem 0.2}
+
+Let  $\Gamma$ be as above. 
+
+Then  $T_{\Gamma,y}(f)(x) \in L^{q}(\R^{n+1})$  for every $ y \in \Gamma$,  
+
+$ q \in (1, \, + \infty]$ and   $ f  \in  {\Cal S}(\R^n)$, and, for 
+
+every $p \leq q$, $p \ne \infty$,  
+
+$$
+
+\N{T_{\Gamma ,y} f}_q  \leq   C(\Gamma)\,\hbox{dist}\,(y,\,\partial\Gamma)
+
+^{-(n+1)\left|\frac 1q-\frac 1p\right|} 
+
+\N{ f}_p.
+
+\tag 0.6
+
+$$
+
+\endproclaim 
+
+\medskip 
+
+\noindent
+
+Thus, ${\Cal T}_\Gamma= {\Cal T}$ if $\Gamma$ is as in Theorem $0.2$. $(0.6)$ does
+
+not hold when 
+
+$p=\infty$, (and consequently $q=\infty$).  Let for
+
+example $\Gamma =(0,\,+\infty)$, and  let $f(x)=\chi_{(a,\,b)}$, where $0<
+
+a<b$.  Then one can check that 
+
+$T_\Gamma f(x+iy)= \int_a^b\frac{1}{t-x-iy}\,dt
+
+=\log\left(\frac{b-\zeta}{a-x-iy}\right)$, which is not uniformly bounded with
+
+respect to 
+
+$y$.
+
+\medskip
+
+It is well known that nothing as strong as 
+
+Theorem $0.2$ can hold when $\Gamma$ is not the intersection of half spaces.
+
+However, the following result is proved in [D1].
+
+%
+
+\proclaim{ Proposition 0.3} Suppose that, after perhaps a rotation and dilation
+
+of coordinates,  
+
+$\Gamma$  is  the "light cone"  $\{ (x_0,\,x_1,\,\cdots, x_n)\in \R^{n+1} :
+
+x_0^2\ge x_1^2+\cdots x_n^2\}$. Then $K_{\Gamma ,y}  
+
+\in L^r\,(\R^{n+1})$ for $ r >\frac{ 2n}{n+1}$, 
+
+$y \in \Gamma$,  and 
+
+$$ \N{K_{\Gamma,y}}_r  \leq   C(\Gamma)|y|^{-(n+1)\left|1-\frac 1 r\right|}.
+
+$$
+
+The above range of exponents for $r$ is sharp.
+
+\endproclaim
+
+The following Proposition is an easy consequence of  Proposition $0.3$
+
+and Young inequality for convolution.   
+
+
+
+
+\proclaim{Proposition 0.4} Let $\Gamma$ be as in Proposition $0.3$.
+
+Then, for every $(p,\,q)$ 
+
+satisfying \newline $\frac 1p> \frac{n-1}{2n} + \frac 1q$ 
+
+$$ 
+
+\N{T_{\Gamma,y} f}_q  \leq  C(\Gamma)\,
+
+|y|^{-(n+1)\left|\frac1p-\frac1q\right|}\,\N{ f}_p.    \tag 0.7
+
+$$ 
+
+\endproclaim
+
+If $\Gamma$ is as in Proposition $0.4$, ${\cal T}_\Gamma$ contains 
+
+the open triangle of vertices
+
+$(1,\,0)$, $(\frac 12 - \frac 1{2n}, \, 0)$, $(0,\, \frac 12 + \frac 1{2n})$.
+
+Since ${\cal T}_\Gamma$ contains ${\Cal Q}$, by the M. Riesz interpolation theorem
+
+${\cal T}_\Gamma$ contains the open 
+
+trapezoid  ${\Cal Q}_n$ of vertices
+
+$(1,\,0)$, $(\frac 12 - \frac 1{2n}, \, 0)$, $(0,\, \frac 12 + \frac 1{2n})$,
+
+$(\frac 12,\, \frac 12)$. 
+
+\medskip
+
+Our main aim is to generalize
+
+Proposition $0.4$ to more general cones. We recall the following definitions. 
+
+Let $\Sigma$ be a submanifold of 
+
+${\R}^{N+1}$ 
+
+of codimension $1$ equipped with a smooth compactly supported measure $d\mu$.
+
+Let $J:\Sigma \to S^{N}$ be the usual Gauss map taking each point on 
+
+$\Sigma$ to the outward  unit normal of $\Sigma$ at that point. We say that
+
+$\Sigma$ has everywhere {\it nonvanishing Gaussian curvature} if the differential
+
+of the  Gauss map $dJ$ is always nonsingular.
+
+The {\it principal curvatures} of  $\Sigma$ are the eigenvalues of $dJ$.
+
+
+
+In Section $1$ we will extend  Proposition $0.4$  to cones
+
+whose boundaries have  $n-1$  everywhere  nonvanishing
+
+principal curvature. 
+
+\vskip.25in
+
+\centerline{SECTION  1} 
+
+\bigskip
+
+The main aim of this section is to prove Proposition $0.1$ and  generalize
+
+Proposition  $0.4$. We begin with the proof of Proposition $0.1$. 
+
+
+
+\medskip
+
+\noindent
+
+{\it Proof of Proposition $0.1$.} We first prove that if $\Gamma$ is a  convex
+
+cone, and if
+
+$(0.4)$ holds for $(p,\, q)$, then     $C(y,\,
+
+\Gamma)\leq 
+
+
+|y|^{-(n+1)\left|\frac 1q-\frac 1p\right|}C(\Gamma,\, \frac{y}{|y|})$. For  
+
+this purpose we use a classical scaling argument.
+
+
+
+Let $y  \in \Gamma$, with   $|y|=\epsilon$.
+
+
+Let
+
+$f_\epsilon(x)= f(\epsilon^{-1} x)$. It is not difficult to see that
+
+$T_\Gamma f_\epsilon(x+iy)= T_\Gamma f(\epsilon^{-1} (x+i y))$, and hence
+
+$\N{T_{\Gamma,\,y} f_\epsilon }_q= \epsilon^{\frac{n+1}{q}}\N{T_{\Gamma,
+
+\epsilon^{-1}y} f }_q$. Moreover, $\N{f_\epsilon }_p =
+
+\epsilon^{\frac{n+1}{p}}\N f_p$. By $(0.4)$, 
+
+$$
+
+\N{T_{\Gamma,\,\epsilon^{-1}y} f }_q\leq C(\epsilon^{-1}y,\, \Gamma) 
+
+\N{f}_p, $$
+
+which is equivalent to  
+
+$$
+
+\frac{\N{T_{\Gamma, \, y}\, f_\epsilon  }_q}{\N{f_\epsilon}_p}\leq
+
+\epsilon^{-(n+1)\left|\frac{1}{q}-\frac{1}{p}\right|}C( \epsilon^{-1}y,\,
+
+\Gamma).
+
+$$
+
+By assumption,
+
+$\dsize 
+
+\sup_{||f||_p=1} \N{T_{\Gamma, \, y}\, f }_q=
+
+C(y,\,\Gamma)
+
+$
+
+and thus $$
+
+ C(y,\,\Gamma)\leq 
+
+\epsilon^{-(n+1)\left|\frac{1}{q}-\frac{1}{p}\right|}\,C( 
+
+
+\epsilon^{-1}y,\, \Gamma),
+
+$$
+
+as required.
+
+
+
+
+
+\medskip
+
+Let ${\Cal Q}$ be the closed  square of  vertices $(\frac 12,\,
+
+0)$, $(1,\, 0)$, $(1,\, \frac 12)$, $(\frac 12,\, \frac 12)$, and let ${\Cal T} $
+
+be  the  closed triangle of vertices $(0,\,0)$, $(1,\,1)$, $(1, 0)$.
+
+We show that ${\Cal T}_\Gamma$ contains ${\Cal Q}$. If $q\ge 2$ and $y\in
+
+\Gamma$, by  the Hausdorff-Young inequality 
+
+$$\N{T_{\Gamma,\,y} f}_q\leq \N{
+
+e^{-\langle y, \, .\rangle }\hat f }_{L^{q^\prime}(\Gamma^0)},
+
+\tag 1.2
+
+$$ where $q^\prime$
+
+denotes the dual exponent of $q$.  Note that $q^\prime \leq 2$. Take  $p\leq
+
+2$. Let $\frac 1r$ $=$ $\frac{1}{q^\prime} - \frac {1}{p^\prime}$ $=$ $\frac
+
+1p - \frac 1q$. By the H\"older inequality, 
+
+$$
+
+\N{
+
+e^{-\langle y, \, .\rangle }\hat f }_{L^{q^\prime}(\Gamma^0)} \leq 
+
+\N{ e^{-\langle y, \, .\rangle }}_{L^r(\Gamma^0)}\N{\hat f }_{p^\prime}.
+
+\tag 1.3
+
+$$
+
+It is not difficult to see  that $\dsize\left(\int_{\Gamma^0}e^{-r\langle y, \,
+
+\zeta\rangle }d\zeta\right)^{\frac1r} = C(\Gamma)|y|^{-\frac{n+1}r}$. By the
+
+Hausdorff-Young inequality,
+
+$(1.2)$,
+
+$(1.3)$, and the above observation, we obtain  
+
+$$
+
+\N{T_{\Gamma,\,y} f}_q \leq C(\Gamma)|y|^{-(n+1)\left|\frac 1q-\frac1p\right |}\N
+
+f_p,
+
+$$
+
+as required.
+
+
+
+
+
+To prove that ${\Cal T}_\Gamma\subset {\Cal T}$ we  
+
+consider the quadrant 
+
+$L = \{x= (x_0, \, \cdots, \, x_n)  : x_j > 0 \}$. It is not difficult to see
+
+that $L= L^0$, and that $K_L(x+iy)= \Pi_{j=0}^{n}\frac{i}{x_j+iy_j}$. Let $e_0=
+
+(1,\, 1,\, \cdots,\, 1)$. Let
+
+$\hat f(\zeta)=e^{-\langle \zeta ,\, \epsilon e_0\rangle }\chi 
+
+_{L}(\zeta)$, whith $\epsilon >0$. Then,
+
+$
+
+f(x)= K_L(x+i\epsilon e_0)$ and 
+
+$T_Lf(x+i\epsilon e_0)=   K_L(x+2i\epsilon e_0)
+
+$.
+
+A direct computation shows that 
+
+$\N f_p= c(p) \epsilon^{-\frac{n+1}{p}}$, and $\N{T_{L,
+
+\,\epsilon e_0}f}_q =  c(q) \epsilon^{-\frac{n+1}{q}}$,
+
+where $c(p)$ and $c(q)$ are positive constants that depend only on  $p$ and $q$.
+
+Thus, 
+
+$$
+
+\frac{\N{T_{L, \,\epsilon e_0}f}_q}{\N f_p}= O\left( 
+
+\epsilon^{\frac{n+1}{p}- \frac{n+1}{q}}\right).
+
+\tag 1.4
+
+$$
+
+When $p>q$ the power of $\epsilon $ in $(1.4)$ is negative. Since $\epsilon $
+
+can be taken arbitrarily small, $(0.4)$ does not  hold. 
+
+ 
+
+We state and prove the main result of this paper.
+
+\proclaim{Theorem 1.1} 
+
+Let $\Gamma$ be a convex cone in  $\R^{n+1} $. 
+
+Suppose that   $\partial \Gamma\slash \{0\}$   has  
+
+$n-1$  everywhere  nonvanishing principal curvatures. 
+
+Then, for every $(\frac 1p,\,\frac 1q)\in {\Cal Q}_n$,  
+
+$$ 
+
+\N{T_{\Gamma,y} f}_q  \leq  C(\Gamma) |y|^{-(n+1)\left|\frac 1p-\frac
+
+1q\right|}\,\N{ f}_p.    \tag 1.5
+
+$$ 
+
+\endproclaim
+
+We will prove Theorem 
+
+$1.1$ using Young inequality for convolution and the following
+
+$L^p$ estimates for the  norm of the Cauchy kernel with respect to $\Gamma$.   
+
+
+
+\proclaim{  Theorem 1.2} Let $\Gamma$ be as in Proposition $1.1$ Then $
+
+K_{\Gamma,y} \in L^r(\R^{n+1})$ for $\frac{ 2n}{n+1}< r <\infty$,
+
+$y \in \Gamma$,  and   
+
+$$ 
+
+\N{K_{\Gamma,y}}_{r}  \leq  C(\Gamma) 
+
+ |y|^{-(n+1)(1-\frac 1r)}.
+
+$$ 
+
+The above range of exponents for $r$ is sharp.
+
+\endproclaim
+
+
+
+To prove Theorem $1.2$  we shall use the classical sharp estimates for 
+
+the Fourier 
+
+transform of the surface-carried measure that we recall here. 
+
+%
+
+\proclaim{ Lemma 1.3}
+
+Let $S$ be a smooth hypersurface in $\R^{n}$ 
+
+with nonvanishing Gaussian curvature, and let 
+
+$d\sigma $
+
+be a $ C^\infty$ measure  on $S$.
+
+Then
+
+$$
+
+\n{\widehat{ d\mu}(\xi)} \leq C(1+\n\xi)^{-\frac {n-1}{2}} .
+
+\tag 1.6
+
+$$
+
+Moreover suppose that $\Gamma\subset \R^{n}\backslash\{0\} $ is the cone
+
+consisting of all $\xi$ which are normal to some point $x\in S$ belonging to
+
+some compact neighborhood ${\Cal N}$ of support$(d\mu)$. Then,
+
+$$
+
+\d{\alpha}{\xi}\widehat{ d\mu}(\xi) = {\Cal O}\left((1+\n\xi)^{-N}\right), 
+
+\qquad \forall N, \text{ if }
+
+\xi\not\in\Gamma,
+
+$$
+
+$$
+
+\widehat{ d\mu}(\xi) =\sum
+
+b_j(\xi)e^{i\langle x_j,\,\xi\rangle},\qquad \text{ if }\xi\in\Gamma,
+
+$$
+
+where the finite sum is taken over all points $x_j\in {\Cal N}$ having
+
+$\xi$ as a normal, and 
+
+$$
+
+\n{\d{\alpha}{\xi} b_j(\xi)} \leq C_\alpha(1+\n\xi)^
+
+{-\frac {n-1}{2}-\n\alpha}.
+
+\tag 1.7
+
+$$
+
+\endproclaim
+
+\bigskip
+
+\noindent
+
+{\it Proof.} See  [So] pg. 50-51.
+
+\bigskip
+
+\noindent
+
+Before proving  Theorem $1.2$ we shall prove the following
+
+technical lemma.
+
+\proclaim{ Lemma 1.4} 
+
+Let $\Gamma \subset \R^{n+1}$ be a convex cone. Then    
+
+$\partial \Gamma\slash \{0\}$ is  smooth and  has 
+
+$n-1$  everywhere  nonvanishing principal curvatures if and only if $\partial
+
+\Gamma^0\slash
+
+\{0\}$   is  smooth and has   $n-1$  everywhere  nonvanishing
+
+principal curvatures.
+
+\endproclaim
+
+\bigskip
+
+\noindent
+
+{\it Proof.} Since 
+
+$\Gamma= (\Gamma^0)^0$  for every   convex cone $\Gamma$, we need only to
+
+prove that  when   
+
+$\partial \Gamma\slash \{0\}$ is  smooth and has  $n-1$  everywhere 
+
+nonvanishing principal curvatures,  then  also  
+
+$\partial \Gamma^0 \slash \{0\}$ is smooth and has  $n-1$  everywhere 
+
+nonvanishing principal curvatures.
+
+
+
+Suppose for now that $\Gamma = \{ (x_0, x) :x_0 \ge \phi(x)\}$, where $\phi\in
+
+C^{\infty}(\R^n\slash\{0\})$ is a homogeneous function of degree $1$ that
+
+vanishes only at the origin. Without loss of generality,  
+
+$\phi(x) >0$ when $x \ne 0$. Then, $\Gamma
+
+\subset \{ x_0 \ge 0\}$. Since $\Gamma$ is convex and
+
+$\partial \Gamma\slash \{0\}$  has $n-1$  everywhere 
+
+nonvanishing principal curvatures, the level set $S= \{x\in \R^n :
+
+\phi(x) \leq 1\}$ is  convex, (and also compact), and the  Hessian matrix of
+
+$\phi$ has $n-1$ nonvanishing eigenvalues on $\R^n\slash \{0\}$. 
+
+We recall that 
+
+
+$$
+
+\Gamma^0 =\{(\zeta_0, \, \zeta)\in\R\times\R^{n} : x_0 \zeta_0 + \langle
+
+x,\, \zeta\rangle \ge 0 \ \forall (x_0, \, x) \in \Gamma\},
+
+\tag 1.8 $$
+
+where $\langle \ ,\ \rangle$  denotes the scalar product in $\R^n$. 
+
+Thus, one can  see that   $\Gamma^0\subset\{\zeta_0\ge 0\}$. Moreover, $(0, \,
+
+\zeta)\in\Gamma^0$ if and only if $\zeta =0$, and 
+
+$(\zeta_0,\,\zeta)\in \Gamma^0 $ if and only if  
+
+$$
+
+\min_{x \in S}\left(1+\left\langle
+
+\frac x{x_0},\, \frac\zeta{\zeta_0}\right\rangle\right) \ge 0
+
+\tag 1.9
+
+$$
+
+for  $x_0>0$, $\zeta_0 >0$. Without loss of generality we can let
+
+$x_0=\zeta_0 =1$. 
+
+We shall  find the minimum of  $F_\zeta(x)=1+ \langle x,\, \zeta
+
+\rangle$ on  $S$.  Since the gradient of $F_\zeta(x)$
+
+vanishes in the interior of $S$ if and only if $\zeta =0$, we shall find the 
+
+stationary points of $F_\zeta(x)$ on the boundary of $S$. By the  Lagrange
+
+multiplier theorem, these points are the solutions of  the system
+
+$$
+
+\cases \zeta = \lambda \nabla \phi(x)
+
+\cr
+
+\phi(x)=1 
+
+\endcases
+
+\tag 1.10
+
+$$
+
+for some $\lambda \ne 0$. By the Bolzano-Weirstrass
+
+theorem $F_\zeta$ has a minimum and a maximum on $S$, and hence the system 
+
+$(1.10)$ has two solutions.  Let  $(x_1(\zeta),\, \lambda_1(\zeta))$ be one of
+
+these solutions. Let
+
+$\Sigma =
+
+\{Êx : \phi(x)=1\}$. If $\lambda_1(\zeta)>0$,
+
+$x_1(\zeta)$ is the point of $\Sigma$ having $\frac\zeta {\n \zeta}$ as the
+
+outward unit normal. Since $S$ is convex, there exists 
+
+$x_2(\zeta)\in \Sigma$ having $-\frac\zeta {\n \zeta}$ as the
+
+outward unit normal. The second solution of $(1.10)$ is thus $(x_2(\zeta), \,
+
+\lambda_2(\zeta))$, with $\lambda_2(\zeta) < 0$.  Thus,
+
+$$
+
+F_\zeta(x_j(\zeta)) = 1+\lambda_j(\zeta)\langle \nabla \phi(x_j(\zeta)),\,
+
+x_j(\zeta)\rangle, \qquad j=1,\ 2.
+
+$$  
+
+Since $\phi$ is homogeneous of degree $1$, by  Euler's homogeneity relation, 
+
+$$
+
+F_\zeta(x_j(\zeta)) = 1+\lambda_j(\zeta)\phi(x_j(\zeta))= 1+\lambda_j(\zeta). 
+
+$$
+
+Then, $\zeta$ satisfies $(1.9)$ if and only if 
+
+$$
+
+1+\lambda_j(\zeta) \ge 0, \qquad j=1,\ 2.
+
+\tag 1.11
+
+$$
+
+Since $\lambda_1(\zeta)>0$, $(1.11)$ is satisfied if and only if
+
+$1+\lambda_2(\zeta)
+
+\ge 0$.  We will denote $(x_2(\zeta), \,
+
+\lambda_2(\zeta))$ by $(x(\zeta), \,\lambda(\zeta))$ from now on. We show
+
+that
+
+$\lambda(\zeta)$ is a homogeneous function of degree
+
+$1$ and is smooth away from the origin. If we  scalar multiply  both
+
+sides of the first equation of $(1.10)$ by  $x(\zeta)$, by  Euler's homogeneity
+
+relation, 
+
+$$
+
+\lambda = \langle x(\zeta), \, \zeta\rangle.
+
+\tag 1.12
+
+$$
+
+After differentiating both sides of $(1.12)$,
+
+$$
+
+\nabla\lambda(\zeta) = x(\zeta) + Dx(\zeta)\zeta,
+
+\tag 1.13
+
+$$
+
+where $Dx(\zeta)$ denotes the differential of $x(\zeta)$. Since one can
+
+easily see that  
+
+$$
+
+0 = \nabla_\zeta(\phi(x(\zeta)) = \lambda^{-1}Dx(\zeta)\zeta,
+
+\tag 1.14
+
+$$
+
+from $(1.14)$ and Euler's homogeneity relation follows that 
+
+$x(\zeta)$ is homogeneous of degree $0$, and from $(1.12)$ and  $(1.13)$ that 
+
+$\lambda(\zeta)$ is homogeneous of degree $1$.  Observe that  $(1.13)$ and the
+
+fact that
+
+$Dx(\zeta)\zeta=0$ yields  $\nabla\lambda(\zeta) = x(\zeta)$. 
+
+
+
+Until now  we have  not used the assumption that $\Sigma$ has
+
+nonvanishing Gaussian curvature. This assumption will turn out to be
+
+necessary to prove that $\lambda$ is smooth away from the origin. We recall
+
+in fact  that $\dsize {x(\zeta)_\vert}_{S^{n-1}}$ is the inverse of the Gauss map
+
+of $\Sigma$, which is smooth and nonsingular by assumption. Then $x(\zeta)$ is
+
+also smooth and nonsingular on $\R^{n}\slash \{0\}$, being homogeneous of
+
+degree $0$. By $(1.12)$, $\lambda(\zeta)$ is also smooth on $\R^{n}\slash
+
+\{0\}$. Since $\nabla\lambda(\zeta) = x(\zeta)$, the Gauss map of the set 
+
+$\Sigma^0 =\{ \zeta : \lambda(\zeta) =1\}$ is $Dx(\zeta)$, which is
+
+nonsingular. This concludes the proof of the Lemma.
+
+\bigskip
+
+\noindent{\it Remark:} Consider the  cone
+
+$$
+
+\Gamma = \{ x \in \R^{3} : x_0 \ge (x_1^4+x_2^4)^{\frac 14}\}.
+
+$$
+
+The curvature of  $\Sigma= \{x_1^4+x_2^4 =1\}$ vanishes at $(0,\, \pm 1)$ and 
+
+$(\pm 1,\, 0)$. To compute $\Gamma^0$ we  repeat the argument that we used to
+
+prove   Lemma $1.4$. We obtain   
+
+$$
+
+\Gamma^0 = \{ \zeta \in \R^{3} : \zeta_0 \ge (\zeta_1^{\frac43}
+
++\zeta_2^{\frac43})^{\frac 34}\},
+
+$$
+
+and $\Sigma^0 = \{ \zeta_1^{\frac43}+\zeta_2^{\frac43}=1\}$ is not
+
+everywhere smooth.  \bigskip
+
+\noindent
+
+{\it Proof of Theorem $1.2$.} Since $\Gamma$ is convex, there is not loss of
+
+generality to assume that the "light cone" $\{x : x_0 \ge (x_1^2 + \cdots +
+
+x_n^2)^{\frac 12}\}$ contains $\Gamma$.  Let 
+
+$y\in\Gamma$. Let $L$ be the Lorentz transformation that maps  
+
+$ y$ to  $(y_0,\, 0,\, \cdots ,  \, 0)$, $y_0 > 0 $. Let 
+
+$L(\Gamma)=\Gamma^\prime$. One can easily see that $\Gamma^\prime$ is a convex cone
+
+and  $\partial \Gamma^\prime
+
+\slash \{0\}$ has everywhere $n-1$ nonvanishing principal curvatures. Moreover, 
+
+$(\Gamma^\prime)^0 = L(\Gamma^0)$. In fact, $\zeta \in (\Gamma^\prime)^0 $ if
+
+and only if $\langle x^\prime,\, \zeta\rangle \ge 0$ for every $x^\prime \in
+
+\Gamma^\prime$. Since $x^\prime = L(x)$ for some  $x \in \Gamma$, we have
+
+that $\zeta
+
+\in (\Gamma^\prime)^0 $ if and only if $L^*(\zeta) \in \Gamma^0$, where $L^*$
+
+denotes the adjoint of $L$. Since $L^* = L^{-1}$,  $\zeta \in
+
+L(\Gamma^0)$. 
+
+
+
+The above argument shows that there is not loss of generality to replace
+
+$\Gamma$ by $\Gamma^\prime$ and to assume $y= (y_0, \, 0, \, \cdots 0)$. In order
+
+to  simplify notation, $\Gamma^\prime=\Gamma$. 
+
+
+
+In what follows we will always set   $ x=(x_0,\, x^\prime ) $, $x_0\in \R$,
+
+$x^\prime\in \R^n$. We  will also use the convention that $C$ denotes a
+
+constant that can vary from line to line.  With the above notation, 
+
+$$
+
+K_\Gamma (x+iy) = 
+
+\int_{\Gamma^0}e^{i(\zeta_0(x_0+iy_0)+\langle \zeta^\prime, \, x^\prime\rangle)}
+
+d\zeta^\prime\, d\zeta_0.
+
+\tag 1.15
+
+$$
+
+Let   $h(\zeta)\in C^\infty(\R^{n+1})$ be  $\equiv 0$  when $\n\zeta\leq 1$ and 
+
+$\equiv 1$ when
+
+$\n \zeta\ge 2$. Let
+
+$$
+
+L_\Gamma(x+iy)=  \int_{\Gamma^0}e^{i(\zeta_0(x_0+iy_0)+\langle
+
+\zeta^\prime,
+
+\, x^\prime\rangle)}h(\zeta) d\zeta^\prime\, d\zeta_0,
+
+\tag 1.16
+
+$$  
+
+We first show that Theorem $1.2$ follows if we prove   
+
+$$
+
+\N{L_{\Gamma,y}}_{r}  \leq  C(\Gamma)\, 
+
+ |y|^{-(n+1)(1-\frac 1r)}.
+
+\tag 1.17
+
+$$ 
+
+Let 
+
+$$
+
+L_{\epsilon}(x+iy)=  \int_{\Gamma^0}e^{i(\zeta_0(x_0+iy_0)+\langle
+
+\zeta^\prime,
+
+\, x^\prime\rangle)} h(\epsilon^{-1}\zeta)d\zeta^\prime\, d\zeta_0,
+
+\qquad
+
+\epsilon > 0.
+
+$$  
+
+An easy   change of variables shows that 
+
+$  L_{\epsilon}(x+iy)=\epsilon^{n+1}L_\Gamma((x+iy)\epsilon).
+
+$
+
+Then, 
+
+$$
+
+\N{L_{\epsilon,\,y}}_r= \epsilon^{(n+1)(1-\frac 1r)}\N{L_{\Gamma,\,
+
+y\epsilon}}_{r},
+
+\tag 1.18
+
+$$
+
+and, by  $(1.17)$,
+
+
+$$
+
+\N{L_{\epsilon,\,y}}_r
+
+\leq  C(\Gamma) 
+
+ |y|^{-(n+1)(1-\frac 1r)}.
+
+\tag 1.19
+
+
+$$ 
+
+The $\{L_{\epsilon,\,y}\}$'s are thus uniformly bounded in
+
+$L^r(\R^{n+1})$ by a constant which  depends only on $y$. Since the unit ball of 
+
+$L^r(\R^{n+1})$ is weakly compact, there exists a subsequence of 
+
+$\{L_{\epsilon,\,y}\}_{\epsilon >0}$ that  converges  to a function $F_y(x)$ in
+
+the weak topology of $L^r(\R^{n+1})$. Then, $F_y\in L^r(\R^{n+1})$, and 
+
+$\N{F_y}_r\leq   C(\Gamma) |y|^{-(n+1)(1-\frac 1r)}$.  Since  
+
+$L_{\epsilon,\,y}(x)\to K_{\Gamma,\,y}(x)$ as
+
+$\epsilon \to 0$, by the Lebesgue dominated convergence theorem, we can conclude that  
+
+$K_{\Gamma,\,y}(x) = F_y(x)$, $K_{\Gamma,\,y}(x)\in L^r(\R^{n+1})$, and 
+
+$\N{K_{\Gamma,\,y}}_r \leq  C(\Gamma) |y|^{-(n+1)(1-\frac 1r)}$.
+
+
+
+\medskip
+
+We shall then prove $(1.17)$. Observe first that
+
+$$ 
+
+L_\Gamma (x+iy) = 
+
+\int_1^{+\infty}\int_{\Gamma^0 \cap \{\zeta_0=t\}}
+
+e^{i(t(x_0+iy_0)+\langle \zeta^\prime \, x^\prime\rangle)}\,h(\zeta)
+
+d\zeta^\prime\, dt. 
+
+$$
+
+if we make the change of variables  $\zeta^\prime \to t\zeta^\prime$, 
+
+$$
+
+L_\Gamma (x+iy)= 
+
+\int_1^{+\infty}t^n\int_{\Gamma^0 \cap \{\zeta_0=1\}}
+
+e^{i(t(x_0+iy_0)+t\langle \zeta^\prime \, x^\prime\rangle)}h(t,\,
+
+t\zeta^\prime) d\zeta^\prime\, dt.
+
+\tag 1.20
+
+$$
+
+Let $S^0 = {\Gamma^0}\cap\{\zeta_0 =1\}\ $, and let $\Sigma^0 =  \partial S^0$.
+
+Let  $\chi \in C^\infty_0(\R^{n})$ which is $\equiv 0$ on 
+
+\newline $\{ \zeta \in S^0 : {\text dist}(\zeta,\, \Sigma^0) \ge \frac 12\}$ and is 
+
+$\equiv 1$ on $\{ \zeta \in S^0 : {\text dist}(\zeta,\, \Sigma^0) \leq  \frac 14\}$.   
+
+Then,
+
+$$
+
+\align
+
+L_\Gamma (x+iy) &=\int^{+\infty}_0 \,t^n \,e^{it(x_0+iy_0)}  
+
+\int_{S^0}
+
+\chi(\zeta^\prime)e^{it\langle \zeta^\prime, \, x^\prime\rangle} \, h(t,\,
+
+t\zeta^\prime)
+
+d\zeta^\prime\,dt 
+
+\\
+
+&+ 
+
+\int^{+\infty}_0 \,t^n \,e^{it(x_0+iy_0)}  
+
+\int_{S^0}
+
+
+(1-\chi(\zeta^\prime))e^{it\langle \zeta^\prime, \, x^\prime\rangle}\,h(t,\,
+
+t\zeta^\prime)
+
+d\zeta^\prime 
+
+\\&= I(x+iy)+I^\prime(x+iy).
+
+\endalign
+
+$$
+
+Without loss of generality, $h(t,\, t\zeta^\prime)= h(t)h(\zeta^\prime)$. 
+
+Let $\dsize \psi(\eta) = 
+
+\int_{S^0} e^{i\langle \zeta^\prime, \, \eta\rangle}h(\zeta^\prime) 
+
+\chi(\zeta^\prime)\, d\zeta^\prime $. Since
+
+$\psi(\eta)$  is the Fourier transform of 
+
+$\chi(\zeta^\prime)h(\zeta^\prime)$, and
+
+$\chi(\zeta^\prime)$ is supported in $S^0$, then 
+
+$ \psi(\eta)\in {\Cal S}(\R^n)$, and   hence
+
+$\n{\d{j}{t^j}\,t^k\,\psi(tx)}\leq C_{N,\,j,\,k}(1+t\n x)^{-N}$ \ 
+
+$ \forall j$, $N$, $k \ge 0$ and $t\ge 1$. With the above notation, 
+
+$$
+
+I(x+iy) = \int^{+\infty}_0 \,t^n \psi (tx^\prime)\,e^{it(x_0+iy_0)}\, h(t)\,dt.  
+
+$$
+
+After integrating by parts,
+
+$$
+
+\align
+
+I(x+iy) &= \frac{i}{x_0+iy_0} 
+
+\int^{+\infty}_0 
+
+e^{it(x_0+iy_0)}\d{}{t}\left(t^n\psi (tx^\prime)\,h(t)\right)\,dt
+
+\\
+
+&=
+
+\frac{i}{x_0+iy_0} \int^{+\infty}_0 e^{it(x_0+iy_0)}\,t^{n-1}\left(t\d{}{ t}
+
+(h(t)\psi (tx^\prime))
+
++n \psi (tx^\prime)\,h(t)\right)\,dt. 
+
+\endalign
+
+$$ 
+
+Let $\N{I (x_0+iy_0, \, . )}_{L^r(\R^n)}= 
+
+\left( \int_{\R^n}\n{I(x_0+iy_0, \, x^\prime )}^{r}\,dx^\prime\right)^{\frac
+
+1r}$. Recalling that $h(t) \equiv 0$ if $t\leq 1$
+
+and  $ x^\prime\to t\d{}{ t}
+
+(h(t)\psi (tx^\prime)) +n \psi (tx^\prime)\,h(t) \in {\Cal S}(\R^n)$, by 
+
+Minkowsky's inequality,
+
+$$
+
+\N{I(x_0+iy_0, \, . )}_{L^r(\R^n)} \leq  
+
+\frac{1}{\n{x_0+iy_0}} \int^{+\infty}_1\, e^{-ty_0}\,t^{n-1}
+
+\left( \int_{\R^n}\,{{C\,dx^\prime}\over{1+t\n{x^\prime}}^{Nr}} \right)^{\frac 1r}
+
+\,dt,
+
+\tag 1.21$$
+
+Since $(1.21)$ holds for every  $N\ge 1$,  we can take $N > n$. After the change
+
+of  variables $x^\prime\to\frac 1t x^\prime$,  
+
+$$
+
+\align
+
+\N{I(x_0+iy_0, \, . )}_{L^r(\R^n)} &\leq  
+
+\frac{1}{\n{x_0+iy_0}} \int^{+\infty}_1\, e^{-ty_0}\,t^{n-1-\frac nr}
+
+\left( \int_{\R^n}{{C\,dx^\prime}\over{(1+\n{x^\prime})}^{Nr}} 
+
+\right)^{\frac 1r} \,dt 
+
+\\
+
+&\leq
+
+C\frac{1}{\n{x_0+iy_0}} \int^{+\infty}_0 e^{-ty_0}\,t^{n-1 -\frac nr}\,dt.
+
+\endalign
+
+$$
+
+We recall that $r>1$. After the change of variables $t  \to \frac {t}{y_0}$, 
+
+$$
+
+\N{I(x_0+iy_0, \, . )}_{L^r(\R^n)} \leq 
+
+C\frac{y_0^{-n+\frac nr}}{\n{x_0+iy_0}} \int^{+\infty}_0\, e^{-t}\,t^{n-1
+
+-\frac nr}\,dt 
+
+= C\frac{y_0^{-n+\frac nr}}{\n{x_0+iy_0}}. 
+
+$$
+
+Then, 
+
+$$
+
+\align
+
+
+\N{I(.+iy_0)}_r &= \left(\int_\R \N{I(x_0+iy_0, \, . )}^r_{L^r(\R^n)}
+
+\, dx_0 \right)^{\frac 1r}\\
+
+&\leq C y_0^{-n+\frac nr}
+
+\left( \int_{\R}{{dx_0}\over{(x_0^2 +y_0^2)^{\frac r2}}}
+
+\right)^{\frac 1r} 
+
+= C\,y_0^{-(n+1)(1-\frac 1r)}.
+
+\endalign
+
+$$
+
+We are left with estimating the $L^r$ norm of $I^\prime$. 
+
+We recall that 
+
+$$ 
+
+I^\prime(x+iy) = \int^{+\infty}_0 \,t^n h(t) \,e^{it(x_0+iy_0)}  
+
+\int_{S^0}
+
+(1-\chi(\zeta^\prime))h(\zeta^\prime)e^{it\langle \zeta^\prime, \, 
+
+x^\prime\rangle}\, d\zeta^\prime
+
+$$
+
+Since  $S^0$ is convex, it is also star shaped with respect to the origin. 
+
+In the polar coordinates associated to $S^0$, 
+
+$$
+
+I^\prime(x+iy) =  \int^{+\infty}_0 \!t^nh(t)
+
+\,e^{it(x_0+iy_0)}\!\int^{1}_0\,s^{n-1}\! \int_{\Sigma^0} e^{its\langle \omega, \,
+
+x^\prime\rangle} (1-\chi(s\omega))h(s\omega) d\omega \,ds\,dt.   \tag 
+
+1.22 $$
+
+Without loss of generality, $\chi$  and $h$ depend only on $s$.
+
+By Lemma $1.3$,   
+
+$$\int_{\Sigma^0}
+
+e^{its\langle \omega, \, x^\prime\rangle} \, d\omega = 
+
+b_1(tsx^\prime)\,e^{its\phi_1(x^\prime)} + 
+
+b_2(tsx^\prime)\,e^{its\phi_2(x^\prime)}, 
+
+\tag 1.23 $$
+
+where  $\phi_1$ and $\phi_2$ are homogeneous of degree $1$
+
+and smooth away from the origin, and  $b_1$ and $b_2$
+
+satisfy  $(1.7)$.
+
+If we let
+
+
+$$ I_j (x_0+iy_0,\,x^\prime) =  \int^{+\infty}_0 \,t^n
+
+h(t)\,e^{it(x_0+iy_0)}\,f_j(tx^\prime)
+
+\,dt \qquad j = 1, \ 2,
+
+$$
+
+with 
+
+$\dsize f_j(\eta) = 
+
+\int^{1}_{0}s^{n-1}(1-\chi(s))b_j(s\eta)e^{is\phi_j(\eta)}ds$, then
+
+$I^\prime(x+iy)$= $I_1(x+iy)+$ $I_2(x+iy)$.
+
+
+
+
+
+We will need the following technical lemma, 
+
+whose proof will be postponed until the end of the section.
+
+\proclaim{Lemma 1.5}
+
+Let   $\phi(\eta) \in C^\infty(\R^n)$. Suppose that $\phi$ never vanishes on
+
+$S^{n-1}$. Suppose that  $\n{\phi(\eta)} ={\Cal O}(\n \eta)$ for large $\n
+
+\eta$. Let $ B(\eta) \in C^\infty(\R^n) $ be a smooth
+
+function  satisfying:
+
+$$
+
+\n{\d{\alpha}{\eta^\alpha} B(\eta)}  \leq  C(\alpha) 
+
+(1+\n{ \eta}) ^{-m-\n\alpha} \qquad \forall  \alpha \in {\Bbb N}^n,
+
+\tag 1.24
+
+$$
+
+where  $ m$ is a  nonnegative real number. Let $\beta(s) \in C^\infty(0,\,1)$
+
+be a cutoff function which is $\equiv 0$ in a neighborhood of $0$ and is 
+
+$\equiv 1$ in a neighborhood of $1$.
+
+Then, $$
+
+\int^{1}_{0}\beta(s)B(s\eta)e^{is\phi(\eta)}ds = 
+
+h(\eta)e^{i\phi(\eta)},
+
+$$
+
+where  
+
+$$
+
+h(\eta)= -\sum^N_{j=1} 
+
+\strut{\d{j-1}{s^{j-1}}B(s\eta)_{\vert_{s=1}}} + {\Cal O}(\n
+
+\eta^{-m - N-1}).
+
+\tag 1.25
+
+$$
+
+\endproclaim
+
+\noindent
+
+{\it End of the proof of Theorem $1.2$.} We recall that 
+
+$\dsize f_j(\eta) = 
+
+\int^{1}_{0}s^{n-1}(1-\chi(s))b_j(s\eta)e^{is\phi_j(\eta)}ds$, where  
+
+$b_j$ and $\phi_j$  are defined as in  $(1.23)$ and $b_j$ satisfies $(1.7)$. For
+
+every multiindex $\alpha\in {\Bbb N}$,  
+
+$$
+
+\d{\alpha}{\eta^\alpha} f_j(\eta) \leq 
+
+\int^{1}_{0}s^{n-1+|\alpha|}(1-\chi(s))\left|\d{\alpha}{\eta^\alpha}
+
+b_j(s\eta)\right| ds
+
+$$
+
+$$\leq 
+
+C_\alpha 
+
+\int^{1}_{0}s^{n-1+|\alpha|}(1-\chi(s)) (1+|s\eta|)^{-\frac{n-1}{2}-|\alpha|} ds
+
+$$
+
+$$
+
+=
+
+C_\alpha |\eta|^{-\frac{n-1}{2}-|\alpha|}
+
+
+\int^{1}_{0}(|\eta|s)^{\frac{n-1}{2}+|\alpha|}
+
+(1+|s\eta|)^{-\frac{n-1}{2}-|\alpha|}
+
+s^{\frac{n-1}{2}}(1-\chi(s))
+
+ds \leq C^\prime_\alpha |\eta|^{-\frac{n-1}{2}-|\alpha|}.
+
+
+$$
+
+Thus,  we can apply  Lemma $1.5$ to $f_j$ with $m=\frac{n-1}{2}$ obtaining  
+
+$$
+
+ f_j(tx^\prime) = a_j(tx^\prime)\,e^{i\phi_j(tx^\prime)},
+
+$$
+
+where $ \ a_j$ is as in  $(1.25)$ with $ m = \frac {n-1}2
+
+$. Then, 
+
+$$ I_j (x_0+iy_0,\, x^\prime) =  \int^{+\infty}_0 \!\!\!t^n h(t)
+
+\,e^{it(x_0+iy_0)}\,f_j(tx^\prime) \,dt = \int^{+\infty}_0 \!\!\!t^n  h(t)
+
+\,a_j(tx^\prime)e^{it\phi_j(x^\prime)+it(x_0+iy_0)}\,dt. $$
+
+If we let $\dsize  \widetilde{\phi_j}(x_0+iy_0, x^\prime)=
+
+\phi_j(x^\prime)+x_0+iy_0$  and  we integrate by parts,
+
+$$ 
+
+\align
+
+ I_j &(x_0+iy_0,\, x^\prime) =\frac{i}{\widetilde \phi_j(x_0+iy_0, x^\prime) }
+
+\int^{+\infty}_0 e^{it\widetilde \phi_j(x_0+iy_0, x^\prime)}\d{}{t}\left(t^nh(t)
+
+a_j(tx^\prime)\right)dt 
+
+\\
+
+&= \frac{i}{\widetilde \phi_j(x_0+iy_0, x^\prime)}\int^{+\infty}_0
+
+e^{it\widetilde \phi_j(x_0+iy_0, \,x^\prime)}
+
+t^{n-1}\left \{ na(tx^\prime)h(t) +t\d{}{t} 
+
+\left(\,h(t)a_j(tx^\prime)\,\right) \right \}dt. 
+
+\tag 1.26
+
+
+\endalign
+
+$$
+
+Observe that 
+
+$$
+
+\N{I_j (.+iy)}_r = 
+
+\N{\left(\int_\R \n{I_j (x_0+iy_0,\, x^\prime)}^r\,dx_0\right)^{\frac
+
+1r}}_{L^r(\R^n)},
+
+\tag 1.27
+
+$$
+
+where the last norm is computed with respect to $x^\prime$. Let 
+
+$\left(\int_\R \n{I_j (x_0+iy_0,\, x^\prime)}^r\, dx_0\right)^{\frac 1r}=  \N{I_j
+
+(.+iy_0,\, x^\prime)}_{L^r(\R)}$. By H\"older's inequality and $(1.26)$, 
+
+$$
+
+\align
+
+\N{I_j (.+iy_0,\, x^\prime)}_{L^r(\R)}&\leq 
+
+\left(\int_\R  \frac{dx_0}{\n{\widetilde \phi_j(x_0+iy_0, x^\prime)}^r}\right)^{\frac 1r}
+
+\\ 
+
+\times&\sup_{x_0\in \R}\n{\int^{+\infty}_0\!\!\!
+
+e^{it\widetilde \phi_j(x_0+iy_0, x^\prime)}t^{n-1}\left \{ na_j(tx^\prime)h(t)
+
++t\d{}{t} 
+
+\left(a_j(tx^\prime)h(t)\right) \right
+
+\}dt}.
+
+\tag 1.28
+
+\endalign
+
+$$  
+
+Recalling that $h(t)\equiv 0 $ when $t\leq 1$, by Lemma $1.5$
+
+$\left
+
+\{ na(tx^\prime) +t\d{}{t}  a(tx^\prime) \right\}=$\newline
+
+$ O\left((1+t\n{ x^\prime})^{-\frac{n-1}{2} -1}\right) =
+
+O\left((1+t\n{ x^\prime})^{-\frac{n+1}{2}}\right) $.
+
+Then,
+
+$$
+
+\align
+
+\N{I_j (.+iy_0,\, x^\prime)}_{L^r(\R)}&\leq C
+
+\left(\int_\R  \frac{dx_0}{\n{\widetilde \phi_j(x_0+iy_0, x^\prime)}^r}\right)^{\frac 1r}
+
+\\
+
+ &\times\int^{+\infty}_1 e^{-y_0t}t^{n-1}\frac{1}{
+
+(1+t\n{ x^\prime})^{-\frac{n+1}{2}}}\, dt
+
+\endalign
+
+$$
+
+Since $\widetilde\phi_j(x_0+iy_0, x^\prime)= \phi_j(x^\prime)+x_0+iy_0$, 
+
+$$
+
+\N{\frac1{\widetilde \phi_j(.+iy_0, x^\prime)}}_{L^{r}(\R)} =
+
+\left(\int_\R\frac{dx_0}{((\phi_j(x^\prime)+x_0)^2+ 
+
+y_0^2)^{\frac r2}}\right)^{\frac1r}.
+
+$$
+
+If we let $x_0 = sy_0-\phi_j(x^\prime)$,
+
+$$
+
+\N{\frac1{\widetilde \phi_j(.+iy_0, x^\prime)}}_{L^{r}(\R)} = 
+
+y_0^{-1+\frac 1r}\left(\int_\R\frac{ds}{(s^2+1)^{\frac r2}}\right)^{\frac1r}.
+
+$$
+
+Since $r>1$, the above integral is finite. Consequently, 
+
+$$
+
+\N{\frac1{\widetilde \phi_j(.+iy_0, x^\prime)}}_{L^{r}(\R)} = Cy_0^{-1+\frac 1r}.
+
+\tag 1.29
+
+$$
+
+By $(1.27)$, $(1.28)$ and $(1.29)$, 
+
+$$
+
+\N{I_j (.+iy)}_r \leq C y_0^{-1+\frac 1r}\left( \int_{\R^n}\n{\int^{+\infty}_1
+
+e^{-y_0t}t^{n-1}\frac{1}{ (1+t\n{ x^\prime})^{-\frac{n+1}{2}}}\,
+
+dt}^r\,dx\right)^{\frac1r}.
+
+\tag 1.30
+
+$$
+
+Let $G(y_0)$ be the integral on the right-hand side of $(1.30)$.
+
+By Minkowski's inequality,  
+
+$$
+
+G(y_0)\leq C\int^{+\infty}_0 e^{-y_Ot}t^{n-1}\left (\int_{\R^n}\frac{dx^\prime}{
+
+(1+t\n{ x^\prime})^{-\frac{r(n+1)}{2} }}\right)^{\frac 1{r}}\,dt.
+
+\tag 1.31
+
+$$
+
+If $r > \frac {2n}{n+1}$, the integral with respect to $x^\prime$ is  finite.
+
+After the change of variables $x^\prime \to t^{-1}x^\prime$, 
+
+$$
+
+G(y_0)\leq C\int^{+\infty}_0 e^{-y_0t}t^{n-1-\frac n{r}}, 
+
+$$
+
+and after the change of variables $t \to y_0^{-1}t$, 
+
+
+$G(y_0)\leq C y_0^{-n+\frac n{r}}$. 
+
+>From the above argument and $(1.31)$ we obtain  
+
+$$
+
+\N{I_j (.+iy) }_{r} 
+
+\leq C y_0^{-(n+1)(1-\frac {1}{r})}.
+
+$$
+
+This concludes the proof of Theorem $1.2$.
+
+
+
+
+
+\bigskip
+
+
+\noindent{\it Proof of Lemma 1.5 }
+
+Let $\dsize I(\eta) = 
+
+\int^{1}_{0}\beta(s)B(s\eta)e^{is\phi(\eta)}ds$.
+
+After an integration by parts,
+
+$$
+
+\align
+
+I(\eta) &= \frac{1}{i\phi(\eta)}e^{i\phi(\eta)}B(\eta)
+
+\\ 
+
+-&\frac{1}{i\phi(\eta)}
+
+\int^{1}_{0}e^{is\phi(\eta)}\beta^\prime(s)B(s\eta)ds-
+
+\frac{1}{i\phi(\eta)}\int^{1}_{0}e^{is\phi(\eta)}\beta(s)\d{}{s}B(s\eta)ds. 
+
+\tag 1.32
+
+\endalign
+
+$$
+
+Since $\beta^\prime(s)$ has compact support, and since $\n {\phi(\eta)}= {\Cal
+
+
+O}(\n \eta)$,  the first integral on the right-hand side of $(1.32)$ is 
+
+${\Cal O}(\n \eta^{-M})$ for all $M\in {\Bbb N}$. Then, 
+
+$$
+
+I(\eta) = \frac{1}{i\phi(\eta)}e^{i\phi(\eta)}B(\eta)-
+
+\frac{1}{i\phi(\eta)}\int_0^1e^{is\phi(\eta)}\beta(s)B_1(s\eta)ds + {\Cal 0}(\n
+
+\eta^{- N}),
+
+$$
+
+where $B_1(\eta)= \d{}{s}B(s\eta) = \sum_{j=1}^n\eta_j\d{}{\eta_j}B(s\eta)$. 
+
+By H\"older's inequality and (1.24), 
+
+$\dsize B_1(\eta)\leq  C|\eta|(1+|\eta s|)^{-m-1}$; since 
+
+$\beta$ is supported away from a neighborhood of the  origin, say a ball of radius
+
+$\delta$, then 
+
+$$
+
+\left|
+
+\int_0^1e^{is\phi(\eta)}\beta(s)B_1(s\eta)ds\right|  \leq  C\int_0^1
+
+\beta(s)(1+|\eta s|)^{-m-1}ds\leq C(1+\delta|\eta|)^{-m-1}. 
+
+$$
+
+Since  $1+\delta|\eta| \ge \delta |\eta|$, this concludes the proof of the lemma
+
+when $N=1$. 
+
+If we iterate the above argument we obtain $(1.25)$.
+
+\bigskip
+
+Proposition $1.1$ easily follows  from  Theorem $1.2$ and  Young
+
+inequality for convolution. As a consequence of 
+
+Proposition $1.1$, Proposition $0.1$ and  M. Riesz interpolation theorem, 
+
+we  have
+
+that  the set ${\cal T}_\Gamma$ of the 
+
+$\left(\frac 1p,\,  \frac 1q\right)$'s for
+
+which
+
+$(0.4)$ holds contains  the open trapezoid  ${\Cal Q}_n$ of vertices
+
+$(1,\,0)$, $(\frac 12 - \frac 1{2n}, \, 0)$, $(0,\, \frac 12 + \frac 1{2n})$,
+
+$(\frac 12,\, \frac 12)$. Perhaps ${\cal T}_\Gamma = {\Cal  Q}_\Gamma$. At 
+
+the moment we can
+
+only prove the following inclusions.  Let  ${\Cal Q}^\prime_n$ be the open
+
+trapezoid  of vertices $(1,\,0)$, 
+
+$(\frac 12 - \frac 1{2n}, \, 0)$, $(0,\, \frac 12 + \frac 1{2n})$,
+
+$(\frac 12 - \frac 1{2n}, \, \frac 12 - \frac 1{2n})$, 
+
+$(\frac 12 + \frac 1{2n}, \, \frac 12 + \frac 1{2n})$.
+
+\proclaim
+
+{Proposition 1.6} Let $\Gamma$ be as in Proposition $1.1$. Let 
+
+${\Cal T}_\Gamma$, 
+
+${\Cal Q}^\prime_n$ and ${\Cal Q}_n$ be as above. Then
+
+$$
+
+{\Cal Q}_\Gamma\subset {\Cal T}_\Gamma \subset {\Cal Q}^\prime_\Gamma
+
+$$
+
+\endproclaim
+
+\bigskip
+
+\noindent
+
+{\it Proof.}  
+
+Let ${\Cal T} $ be  the  closed triangle of vertices $(0,\,0)$, $(1,\,1)$, $(1,
+
+0)$. Recall that  ${\Cal T}_\Gamma \subset 
+
+{\Cal T}$. We  show that $\left(\frac 1p,\, \frac 1p\right)\in {\Cal T}_\Gamma $
+
+if and only if $p=2$. 
+
+
+
+Let $\Gamma$ be the  " light cone". Then,
+
+$\Gamma = \Gamma^0$. Let $y= (y_0,\, 0,\, \cdots,\, 0)$.
+
+Suppose that  $\left(\frac 1p,\, \frac 1p\right)\in {\Cal T}_\Gamma $ for some
+
+$p\ge 1$.  Then,  $e^{-y_0 \zeta_0}
+
+\chi_\Gamma(\zeta)$ is a $L^p(\R^{n+1})$ Fourier  multiplier. By  de Leeuw's 
+
+theorem,  (see e.g. [SW]), the characteristic function of the
+
+unit ball of $\R^n$ times  $e^{-y_0}$   is a  $L^p(\R^n)$  Fourier
+
+multiplier, and this is possible if and only if $p=2$,  as  C. Fefferman's
+
+counterexample in [F] shows. 
+
+
+
+We shall prove that if  $\left(\frac 1p,\, \frac 1q\right)\in {\Cal T}_\Gamma $,
+
+then $p<\frac{ 2n}{n-1} $ and $q>\frac{ 2n}{n+1}$.  Indeed, let $G\supset \Gamma^0$
+
+be the intersection of a
+
+finite number of half spaces. Let $\overline y\in
+
+\Gamma$ and  let 
+
+$\hat f(\zeta)= e^{-\langle
+
+\overline y,\,
+
+\zeta\rangle}\chi_{G}(\zeta)$, where $\chi_{G }(\zeta)$ is the
+
+characteristic function  of $G$. Since  $f(x)= K_{G^0}(x+i\overline y)$, by
+
+
+Proposition $0.2$ $f \in L^p(\R^{n+1})$ for every  $p >1$. Since  
+
+$T_\Gamma(f)(x+i \overline y)=\int_{\Gamma^0} e^{-2\langle \overline y,\,
+
+\zeta\rangle+i
+
+\langle x,\, \zeta\rangle}\, d\zeta$ $=$ $K_\Gamma(x+2i\overline y)$,  by
+
+Theorem  $1.2$  $ T_{\Gamma,\,\overline y}(f) \in
+
+L^q(\R^{n+1})$ if and only if $q >\frac{ 2n}{n+1}$. Thus, if  
+
+$\left(\frac 1p,\,
+
+\frac 1q\right)\in {\Cal T}_\Gamma $, then  $q>\frac{ 2n}{n+1}$.  It follows by
+
+duality that  if $\left(\frac 1p,\, \frac 1q\right)\in {\Cal T}_\Gamma $, then 
+
+
+$p<\frac{ 2n}{n-1} $. This concludes the proof of Proposition $1.6$.
+
+\bigskip
+
+\bigskip
+
+\centerline{REFERENCES}
+
+\bigskip
+
+\item{{\bf [C]}} M.  Christ,\quad {\it Restriction of the Fourier transform to 
+
+submanifolds of low codimension}, Thesis, University of Chicago (1982). 
+
+
+
+\item{{\bf [D1]}} L. De Carli,\quad{\it Funzioni generalizzate e problemi non
+
+lineari }, Tesi, Universita' \newline "La Sapienza", Roma, (1993). 
+
+
+
+\item{{\bf [D2]}} L. De Carli, \quad {\it $L^p$ estimates for the Cauchy
+
+transform of distributions with respect to convex cones}, Rend.Sem. Mat. Univ.
+
+Padova, {\bf 88} (1992), 35-53. 
+
+
+
+\item{\bf{[DI]}}  L. De Carli and A. Iosevich, 
+
+{\it some sharp restriction theorem for homogeneous manifolds}
+
+(1995) (to appear).
+
+
+
+\item{{\bf [F]}}  C. Fefferman, \quad {\it The multiplier problem for the ball},
+
+Ann.  Math. (2) {\bf 94},  (1971) 330-336.
+
+
+
+\item{{\bf [G]}} A. Greenleaf,\quad {\it Principal curvatures in harmonic analysis},
+
+Ind. Univ. Math. J.  {\bf 30}  (1981), 519-537.
+
+
+
+\item{{\bf [H]}} L. H\"ormander,\quad {\it Estimates for translation invariant
+
+operators in $L^p$ spaces}, Acta Math. 104 (1960), 93-140.
+
+
+
+\item{\bf [L]} W. Littman,\quad {\it Fourier transforms of surface-carried
+
+measures  and differentiability of surface averages}, Bull. Am. Math. Soc.  {\bf
+
+69} (1963), 766-770.
+
+
+
+\item{{\bf [So]}} C.D.Sogge,\quad 
+
+{\it Fourier integrals in classical analysis}, 
+
+Cambridge  University Press,  Cambridge, 1993.
+
+
+
+\item{{\bf [SW]}} E. M. Stein , G. Weiss: \quad {\it Introduction to Fourier
+
+Analysis on Euclidean Spaces }, Princeton University Press,  1971
+
+
+
+
+\item{{\bf [V]}} V.S. Vladimirov, \quad {\it Le
+
+distribuzioni nella Fisica Matematica},  MIR, Mosca,  1981
+
+\end
+
+ 
+
+
+

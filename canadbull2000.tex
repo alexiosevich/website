@@ -1,0 +1,372 @@
+\documentstyle{amsppt}
+\tolerance 3000
+\pagewidth{5.5in}
+\vsize7.0in
+\magnification=\magstep1
+\widestnumber \key{AAAAAAA}
+\topmatter
+\author Alex Iosevich and Guozhen Lu    
+\endauthor
+\title Sharpness results and Knapp's homogeneity argument*  
+\endtitle
+\endtopmatter 
+
+\head Introduction \endhead 
+\vskip.125in 
+
+Let $S$ be a smooth compact hypersurface in ${\Bbb R}^n$. Let 
+$$ F_S(\xi)=\int_S e^{i\langle x,\xi \rangle} d\sigma(x) \tag1$$ denote the
+Fourier transform of the surface measure carried by $S$. 
+
+Let ${\Cal R}f=\hat{f}{|}_{S}$, the restriction operator. It is well known
+(see \cite{T}, \cite{G}, \cite{S}) that if 
+$$|F_S(\xi)| \leq C{(1+|\xi|)}^{-r}, \ \ r>0, \tag2$$ then 
+$$ {||{\Cal R}f||}_2 \leq C_p {||f||}_p, \ \ f\in {\Cal S}({\Bbb R}^n), 
+\ \ \text{for} \ \ p\leq p_0=\frac{2(r+1)}{r+2}, \tag3$$ where 
+${\Cal S}({\Bbb R}^n)$ is the standard Schwartz class. 
+
+However, it is not in general known whether this result is sharp. More 
+precisely, it is natural to ask the following.  
+\proclaim{Question A} Does the estimate $(3)$ imply the estimate $(2)$?  
+\endproclaim 
+\vskip.125in
+
+Let   
+$$Tf(x,x_n)=\int f(x-y,x_n-\Phi(y)) \psi(y)dy, \tag4$$ where 
+$x,y \in {\Bbb R}^{n-1}$, $\psi$ is a smooth cutoff function, $\Phi$ is 
+smooth, $\Phi(0,...,0)=0$, and $\bigtriangledown \Phi(0,...,0)=(0,...,0).$
+
+It is well known (see \cite{Str}) that if the estimate $(2)$ holds, then
+$$ {||Tf||}_{p^{\prime}} \leq C_p{||f||}_p, \ \ \text{where} \ \ 
+\frac{1}{p}-\frac{1}{2}\leq \frac{r}{2(r+1)}, \tag5$$ where  
+$p^{\prime}$ denotes the conjugate exponent of $p$. 
+
+The key estimate here is 
+$$ {||Tf||}_{2(r+1)} \leq C{||f||}_{\frac{2(r+1)}{2r+1}}; \tag6$$ the
+rest follows by interpolation. It is then natural to ask the following. 
+\proclaim{Question B} Does the estimate $(5)$ imply the estimate $(2)$? 
+\endproclaim  
+
+The purpose of this paper is to answer questions $(A)$ and $B$ affirmitively 
+in the case of the optimal exponents. 
+We shall employ a multiparameter version of Knapp's homogeneity argument. 
+(See e.g \cite{C} for a similar argument). 
+
+More precisely, we will show that if the  
+the estimate $(3)$ holds with $p=\frac{2(n+1)}{n+3}$, then the hypersurface
+has everywhere non-vanishing Gaussian curvature. Similarly, we will show that
+if the estimate $(5)$ holds with $p=\frac{n+1}{n}$, then the hypersurface 
+has non-vanishing Gaussian curvature. 
+
+We remark here, on the other hand,  that  non-vanishing Gaussian curvature implies that the estimate
+$(2)$ holds with $r=\frac{n-1}{2}$ (see e.g. \cite{S}). Thus Question (A) 
+is answered  affirmatively in the case $r=\frac{n-1}{2}$. Since the estimate 
+$(2)$ with $r=\frac{n-1}{2}$ implies the estimate $(3)$ with 
+$p=\frac{2(n+1)}{n+3}$, Theorem 2 below shows that the optimal decay of 
+the Fourier transform (i.e. $r=\frac{n-1}{2}$) implies that the hypersurface
+has non-vanishing Gaussian curvature. 
+
+
+
+
+We will also see that if a hypersurface has $\leq k$ non-vanishing 
+principal curvatures at each point, then the exponent $p$ in the estimate
+$(3)$ can never exceed $\frac{2n+k-2}{6}$. Consequently, the estimate 
+$(3)$ with $p\ge \frac{2n+k-2}{6}$ implies that at least $k$ principal 
+curvatures are non-zero at each point. (See Theorem 3 below). Similarly, we  
+will show that if the estimate $(5)$ holds with 
+$p\ge \frac{2n+k+4}{2n+k+1}$, then at least $k$ principal curvatures are
+non-zero at each point.  
+
+
+The sharpness of the estimate $(3)$ is known in some cases. For example, if
+the hypersurface has non-vanishing Gaussian curvature, Knapp's homogeneity 
+argument can be used to show that the exponent $p=\frac{2(n+1)}{n+3}$ is the 
+best possible. Indeed, non-vanishing Gaussian curvature 
+implies that the hypersurface has contact of order two with its 
+tangent plane at every point. Let 
+$f_{\delta}(x)=g({\delta}^{-1}x, {\delta}^{-2}x_n)$, where 
+$x=(x_1,...,x_{n-1})$, and $g$ is the characteristic function 
+of the rectangle with sides $(1,...,1,C)$, $C$ large, with the long side
+normal to the hypersurface. 
+
+It is not hard to check that 
+${||f_{\delta}||}_p \approx {\delta}^{(1-\frac{1}{p})(n+1)}$, whereas 
+${||{\Cal R}f_{\delta}||}_2 \approx {\delta}^{\frac{n-1}{2}}$. The    
+comparison yields $p\leq \frac{2(n+1)}{n+3}$.  
+
+It should be noted that the above example does not verify even a special  
+case of question $(A)$. For example, the above argument does not prove that 
+if the estimate $(3)$ holds with $p=\frac{2(n+1)}{n+3}$, then the estimate  
+$(2)$ holds with $r=\frac{n-1}{2}$. We will show (see Theorem 2 below) that 
+this is indeed the case. 
+
+The sharpness of the estimate $(5)$ can also be verified in some cases. 
+By testing $T$ against a characteristic function of a small ball it is not
+hard to check that if $T$ is bounded from $L^p({\Bbb R}^n)$ to 
+$L^q({\Bbb R}^n)$, then $(\frac{1}{p}, \frac{1}{q})$ must be contained in
+the triangle with the endpoints $(0,0)$, $(1,1)$, and 
+$(\frac{n}{n+1}, \frac{1}{n+1})$. However, as before this does not prove that
+if the estimate $(5)$ holds with $p=\frac{n+1}{n}$, then the estimate 
+$(2)$ holds with $r=\frac{n-1}{2}$. We will show (see Theorem 5 below) that
+this is indeed the case. 
+
+\head Statement of results \endhead 
+\vskip.125in
+
+\proclaim{Theorem 1} Let $S=\{(x,x_n) \in {\Bbb R}^n: x_n=\Phi(x)\}$, 
+where $x=(x_1,...,x_{n-1})$, 
+$\Phi$ is a smooth function which does not vanish on a set of 
+positive measure, $\Phi(0,...,0)=0$, and 
+$\bigtriangledown \Phi(0,...,0)=(0,...,0)$.  Suppose that the estimate $(3)$
+holds. Let $G$ be any continuous function which does not vanish on a set of 
+positive measure satisfying $G(0,...,0)=0$. Then  
+$${(|G(\delta)|)}^r \ge CR(\delta)^{r+1} 
+|{\delta}_1{\delta}_2...{\delta}_{n-1}|, \tag7$$ where 
+$R(\delta)=|\{x \in {[-1,1]}^{n-1}: 
+|\Phi({\delta}_1x_1,...,{\delta}_{n-1}x_{n-1})| \leq C|G(\delta)| \}|$. 
+\endproclaim   
+
+\remark{Remark} If $G(\delta)$ is chosen to be $\Phi(\delta)$, and $\Phi$ 
+is increasing in each variable separately, Theorem 1 says that the estimate
+$(3)$ implies that 
+${(|\Phi(\delta)|)}^r \ge C{\delta}_1{\delta}_2...{\delta}_{n-1}.$ The same
+estimate would be true, of course, if we just assume that 
+$R(\delta)$ is bounded below, which is a much weaker assumption. To prove 
+Theorem 2, Theorem 3, Theorem 5, and Theorem 6  below we shall use Theorem 1  
+with $$G(\delta)=\sup_{\{x \in {[-1,1]}^{n-1}\}}   
+|\Phi(x_1{\delta}_1,...,x_{n-1}{\delta}_{n-1})|.\tag8$$  
+\endremark 
+
+\proclaim{Theorem 2} Suppose that  the estimate $(3)$ holds with 
+$p=\frac{2(n+1)}{n+3}$. Then the hypersurface $S$ has everywhere non-vanishing
+Gaussian curvature. 
+\endproclaim  
+
+\proclaim{Theorem 3} Suppose that the estimate $(3)$ holds with 
+$p\ge \frac{2n+k-2}{6}$. Then the hypersurface $S$ has at least $k$ 
+non-vanishing principal curvatures at each point. 
+\endproclaim 
+
+\remark{Remark} The conclusion of Theorem 3 can be motivated as follows. If 
+the hypersurface has exactly $k$ non-vanishing principal curvatures at a
+point, then after perhaps applying a rotation we can write it as a 
+graph of the function $x_1^2+...+x_k^2+A(x)$, where $A$ is a higher order
+remainder. It is not hard to believe that the best possible estimate 
+$(2)$ is obtained if $A(x)={|x^{\prime \prime}|}^3$, where 
+$x^{\prime \prime}=(x_{k+1},...,x_{n-1})$. This gives us the estimate
+$(2)$ with $r=\frac{k}{2}+\frac{n-1-k}{3}$. The conclusion of Theorem 3
+is the consequence of the fact that $\frac{2(r+1)}{r+2}=
+\frac{2n+k-2}{6}$. 
+
+\proclaim{Theorem 4} Let  
+$\delta y=({\delta}_1y_1,...,{\delta}_{n-1}y_{n-1})$ and 
+$g_{\delta}(s)=|\{y \in supp(\psi): 
+|s-|\Phi(\delta y)/ \Phi(\delta)||\leq C \}|$.  
+Suppose that the estimate $(5)$ holds. Then for $|\delta|$ sufficiently small,
+$$ {(|\Phi(\delta)|)}^r \ge CP_{\delta}{||g_{\delta}||}_{L^{p^{\prime}}(ds)}. 
+\tag9$$ 
+\endproclaim  
+
+\proclaim{Theorem 5} Suppose that the estimate $(5)$ holds with 
+$r=\frac{n-1}{2}$. Let $S=\{(x,x_n): x\in supp(\psi), x_n=\Phi(x)\}$. Then 
+$S$ has everywhere non-vanishing Gaussian curvature. 
+\endproclaim 
+
+\proclaim{Theorem 6} Suppose that the estimate $(5)$ holds with 
+$p\ge \frac{2n+k+4}{2n+k+1}$. Then the hypersurface has at least $k$ 
+non-vanishing principal curvatures at each point. 
+\endproclaim 
+
+(See the remark after Theorem 3 for the motivation of the conclusion of
+Theorem 6). 
+
+\head Proof of Theorem 1 \endhead 
+\vskip.125in
+
+Let ${\delta}x=({\delta}_1x_1,...,{\delta}_{n-1}x_{n-1})$, and 
+${\delta}^{-1}x=({\delta}^{-1}_1x_1,...,{\delta}^{-1}_{n-1} x_{n-1})$. Let 
+$\hat{f}_{\delta}(x,x_n)=g({\delta}^{-1}x, \frac{x_n}{|G(\delta)|})$,
+where $g$ is the characteristic function of a rectangle with sides of length
+$(1,1,...,1,C)$. Let $P_{\delta}=|{\delta}_1{\delta}_2...{\delta}_{n-1}|$. 
+It is not hard to see that 
+$$ {||f_{\delta}||}_p \approx {(P_{\delta}|G(\delta)|)}^{(1-1/p)}. \tag10$$ 
+
+On the other hand, 
+$$ {||{\Cal R}f_{\delta}||}^2_2=\int 
+{ \left|g\left({\delta}^{-1}x, 
+\frac{\Phi(x)}{|G(\delta)|}\right)\right|}^2 dx=$$
+$$ P_{\delta} \int 
+{ \left|g\left(x,\frac{\Phi(\delta x)}{|G(\delta)|}\right) \right|}^2 dx
+\approx CP_{\delta}R(\delta), \tag11$$ where 
+$R(\delta)$ is defined in the statement of the theorem. 
+
+Comparing the estimates $(10)$ and $(11)$ we see that $(3)$ can hold only if
+$$ {(|G(\delta)|)}^r \ge CP_{\delta}R^{r+1}(\delta), \tag12$$ for 
+$|\delta|$ sufficiently small. This completes the proof of Theorem 1.  
+
+\head Proof of Theorem 2 \endhead 
+\vskip.125in 
+
+Let $G(\delta)=\sup_{ \{x \in {[-1,1]}^{n-1} \}} 
+|\Phi({\delta}_1 x_1,...,{\delta}_{n-1} x_{n-1})|.$ It follows that 
+$R(\delta)\equiv 1$, and so 
+$$ {(G(\delta))}^r \ge CP_{\delta}, \tag13$$ where 
+$r=\frac{n-1}{2}$ by assumption. 
+
+After perhaps applying a rotation, we can use Taylor's theorem to write  
+$$ \Phi(x)=a_1x_1^2+a_2x_2^2+...+a_kx_k^2+A(x), \tag14$$ where $A(x)$ is a
+higher order remainder term, and $k \leq n-1$. If $k=n-1$, then in a 
+sufficiently small neighborhood of the origin the determinant of the 
+Hessian matrix of $\Phi$ never vanishes, which would verify the claim of 
+Theorem 2. We shall henceforth assume that $k<n-1$. 
+
+It is not hard to check that 
+$$ {(G(\delta))}^{\frac{n-1}{2}} \leq 
+{(a_1{\delta}_1^2+...+a_k{\delta}_k^2+C{|\delta|}^3)}^{\frac{n-1}{2}}, \tag15$$
+$|\delta|$ small. 
+
+We must show that the estimate $(13)$ cannot hold if $k<n-1$. It suffices to
+show that the right hand side of $(15)$   
+is not bounded below by $CP_{\delta}$. We may assume that $A(x)$ is not 
+identically $0$, and that $A(x)$ depends on $x_{n-1}$, for otherwise the
+contradiction is immediate. Let  
+${\delta}_j={\delta}_{n-1}^{\frac{3}{2}}$. If the right hand side were 
+bounded below by $CP_{\delta}$, we could use the fact that $A(x)$ is a higher
+order remainder term to force an inequality 
+$$ {|{\delta}_{n-1}|}^{\frac{3(n-1)}{2}} \ge 
+C{|{\delta}_{n-1}|}^{\frac{3n-4}{2}}, 
+\tag16$$ ${\delta}_{n-1}$ small, which is not true. This shows that the 
+estimate $(8)$ cannot hold unless $k=n-1$. This implies that there exists 
+a small neighborhood of the origin where $S$ has non-vanishing Gaussian 
+curvature. This completes the proof. 
+\vskip.125in 
+
+\head Proof of Theorem 3 \endhead 
+\vskip.125in 
+
+We must show that if $\Phi$ is as in the estimate $(14)$ above, with 
+$k$ denoting the number of non-vanishing principal curvatures, then the 
+estimate 
+$$ {(G(\delta))}^r \ge CP_{\delta} \tag17$$ can only hold if 
+$r \leq \frac{k}{2}+\frac{n-1-k}{3}=\frac{2n+k-2}{6}$. 
+
+Let ${\delta}=({\delta}^{\prime}, {\delta}^{\prime \prime})$, where
+${\delta}^{\prime}=({\delta}_1,...,{\delta}_k)$, and 
+${\delta}^{\prime \prime}=({\delta}_{k+1},...,{\delta}_{n-1})$. 
+
+Let ${\delta}_j={|{\delta}^{\prime \prime}|}^{\frac{3}{2}}$.
+The estimate $(16)$ cannot hold if the inequality 
+$$ {|{\delta}^{\prime \prime}|}^{3r} \ge C  
+{|{\delta}^{\prime \prime}|}^{(\frac{3k}{2}+(n-1-k))} \tag18$$ is not 
+satisfied. However, the estimate $(17)$ can only hold if 
+$r \leq \frac{k}{2}+\frac{n-1-k}{3}=\frac{2n+k-2}{6}$. This completes the
+proof. 
+\vskip.125in 
+
+\head Proof of Theorem 4 \endhead 
+\vskip.125in  
+
+Let ${\delta}^{-1}y=({\delta}^{-1}_1y_1,...,{\delta}^{-1}_{n-1}y_{n-1})$. Let
+$f$ denote the characteristic function of the rectangle with sides of 
+length $(1,1,...,1,C)$, $C$ large. Let ${\tau}_{\delta}f(x,x_n)=
+f({\delta}x, |\Phi(\delta)|x_n)$, and ${\tau}^{-1}_{\delta}f(x,x_n)=
+f({\delta}^{-1}x, {|\Phi(\delta)|}^{-1}x_n)$. Let $f_{\delta}(x,x_n)=
+{\tau}^{-1}_{\delta}f(x,x_n)$. Let  
+$$ T_{\delta}f(x,x_n)=\int f(x-y,x_n-\Phi(y)) \psi({\delta}^{-1}y)dy. 
+\tag19$$ 
+
+After making a change of variables we see that 
+$$ T_{\delta}f_{\delta}(x,x_n)=P_{\delta}{\tau}^{-1}_{\delta} 
+T^{*}_{\delta}f(x,x_n), \tag20$$ where 
+$$ T^{*}_{\delta}f(x,x_n)=\int f(x-y,x_n-\Phi(\delta y)/ |\Phi(\delta)|) 
+\psi(y)dy. \tag21$$ 
+
+It is not hard to see that 
+$$ {||f_{\delta}||}_p \approx P^{\frac{1}{p}}_{\delta} 
+{(|\Phi(\delta)|)}^{\frac{1}{p}}. \tag22$$ 
+
+Also, 
+$$ {||T_{\delta}f_{\delta}||}_{p^{\prime}}={||P_{\delta}{\tau}^{-1}_{\delta}
+T^{*}_{\delta}f||}_{p^{\prime}}=
+P_{\delta} P^{\frac{1}{p^{\prime}}}_{\delta} 
+{(|\Phi(\delta)|)}^{\frac{1}{p^{\prime}}} 
+{||T^{*}_{\delta}f||}_{p^{\prime}}\approx$$ 
+$$ P_{\delta}P^{\frac{1}{p^{\prime}}}_{\delta} 
+{(|\Phi(\delta)|)}^{\frac{1}{p^{\prime}}} 
+{||g_{\delta}||}_{L^{p^{\prime}}(ds)}, \tag23$$
+where $g_{\delta}$ is defined above. 
+
+Comparing the estimates $(22)$ and $(23)$ yields the assertion of the theorem.
+\vskip.125in 
+
+\head Proof of Theorem 5 and Theorem 6 \endhead 
+
+Let $G(\delta)=\sup_{x \in {[-1,1]}^{n-1}} |\Phi(\delta x)|$. The proof of
+Theorem 4 shows that if the estimate $(5)$ holds then 
+$$ {(G(\delta))}^r \ge CP_{\delta}. \tag24$$ 
+
+The proof of Theorem 5 and Theorem 6 now follows in the same way as the 
+proofs of Theorem 2 and Theorem 3. 
+\vskip.125in 
+
+\remark{Acknowledgments} This note was first written and circulated in February 
+of 1996. We wish to thank Michael Christ for pointing out that the 
+multiparameter version of Knapp's homogeneity argument was used in his thesis, as
+well as other helpful suggestions. We also wish to  thank Tom Wolff, 
+ Allan Greenleaf, Chris Sogge, Eric Sawyer and Jim Vance
+for many helpful discussions and conversations.  
+\endremark
+\vskip.25in 
+
+\newpage 
+
+\head References \endhead
+\vskip.125in 
+
+\ref \key C \by M. Christ 
+\paper Restriction of the Fourier transform
+to submanifolds of low codimension \jour Ph.D thesis; U. of Chicago  
+\yr 1982 \endref 
+
+\ref \key G \by A. Greenleaf 
+\paper Principal curvature in harmonic analysis 
+\jour Indiana U. Math. J. \vol 30 \pages 519-537 \yr 1981 
+\endref 
+
+\ref \key I \by A. Iosevich \paper Sharpness of $(L^p,L^q)$ bounds 
+of averaging operators (preprint) \yr 1994 \endref 
+
+\ref \key IS \by A. Iosevich and E. Sawyer 
+\paper Oscillatory integrals and maximal averages over homogeneous surfaces
+\jour Duke Math. J. \yr 1996 \endref 
+
+\ref \key S \by E. M. Stein \paper Harmonic Analysis 
+\jour Princeton Univ. Press \yr 1993 \endref 
+
+\ref \key Str \by R. Strichartz 
+\paper Convolutions with kernels having singularities on the sphere 
+\jour Trans. Amer. Math. Soc. \vol 148 \pages 461-471 \endref 
+
+\ref \key T \by P. Tomas \paper A restriction theorem for the Fourier 
+transform \jour Bull. Amer. Math. Soc. \vol 81 \pages 477-478 \yr 1975 
+\endref 
+\vskip.25in
+
+----------------------------------- \newline
+Department of Mathematics \newline
+Wright State University \newline 
+Dayton, Ohio 45435 \newline 
+iosevich \@zara.math.wright.edu \newline 
+gzlu \@euler.math.wright.edu 
+
+\vskip.125in 
+
+(*) Both authors were supported in part by NSF grants. 
+
+
+
+
+\bye
+\enddocument
+

@@ -1,0 +1,536 @@
+\documentstyle{amsppt}
+\tolerance 3000 \pagewidth{5.5in} \vsize7.0in
+\magnification=\magstep1 \widestnumber \key{AAAAAAAAAAA}
+\NoRunningHeads \topmatter
+\author
+\endauthor
+\title Distance sets
+\endtitle
+\date July 21, 2002
+\enddate
+\address A. Iosevich, University of Missouri
+\ email: iosevich \@ math.missouri.edu
+\endaddress
+\thanks The research of the authors is partially supported by NSF
+grant \endthanks
+\endtopmatter
+\document
+
+\head Chapter I: Erdos distance problem for general metrics
+\endhead
+
+\vskip.125in
+
+In this chapter we begin discussing a beautiful problem introduced
+by Paul Erdos (\cite{Erdos45}). The basic idea is to determine the
+smallest number of distinct distances determined by a set of
+points in a Euclidean space. In order to state the problem
+precisely, we need the following definitions.
+
+\definition{Definition 1.1} We say that a set $K \subset {\Bbb R}^d$ is
+bounded if it is contained in a ball of finite radius.
+\enddefinition
+
+\definition{Definition 1.2} We say that a set $K \subset {\Bbb R}^d$ is
+symmetric with respect to the origin if $-x \in K$ whenever $x \in
+K$.
+\enddefinition
+
+\definition{Definition 1.3} We say that a set $K \subset {\Bbb R}^d$ is
+convex if the line segment connecting points $x$ and $y$ is
+contained in $K$ whenever $x$ and $y$ are both contained in $K$.
+\enddefinition
+
+\definition{Definition 1.4} We say that ${||\cdot||}_K$ is the norm
+induced by a bounded convex set $K$, symmetric with respect to the
+origin, if ${||x||}_K=\inf \{t: tx \in K\}$. \enddefinition
+
+\definition{Definition 1.5} The cardinality of a finite set $S \subset
+{\Bbb R}^d$ is the number of points it contains. \enddefinition
+
+We are now ready to formulate the Erdos Distance Problem (EDP).
+Let $S$ be a finite subset of ${\Bbb R}^d$, $d \ge 2$. Let
+$$\Delta_K(S)=\# \{{||x-y||}_K: x,y \in S\}, \tag1.1$$ where
+${||\cdot||}_K$ is the norm induced by a bounded convex set $K$,
+symmetric with respect to the origin. The question we ask is, what
+is the smallest possible cardinality of $\Delta_K(S)$,
+$$ g_K(n,d)=\inf_{\# S=n} \# \Delta_K(S)? \tag1.2$$
+
+\proclaim{Lemma 1.1} There exists a bounded symmetric convex set
+$K$ such that
+$$ g_K(n,d) \leq n^{\frac{1}{d}}. \tag1.3$$
+\endproclaim
+
+Indeed, let $S={[0,n^{\frac{1}{d}}]}^d \cap {\Bbb Z}^d$, and there
+is no harm in assuming that $n^{\frac{1}{d}}$ is an integer. Let
+$K={[-1,1]}^d$. Since the difference of two vectors in ${\Bbb
+Z}^d$ is a vector in ${\Bbb Z}^d$, $\# \Delta_K(S)=\# \{{||x||}_K:
+x \in S\}$. Observe that ${||x||}_K=\max \{x_1, \dots, x_d\}$,
+where $x_j$ is the $j$th component of the vector $x \in S$. It
+follows that $\# \{{||x||}_K: x \in S\} \leq n^{\frac{1}{d}}$, as
+claimed.
+
+Next we shall see that without further assumptions on $K$, Lemma
+1.3 gives the best possible estimate for $g_K(n,d)$. More
+previsely, \proclaim{Theorem 1.2} (\cite{Erdos45}) Without any
+further assumptions on $K$,
+$$ g_K(n,d) \ge C{(n-1)}^{\frac{1}{d}}. \tag1.4$$
+\endproclaim
+
+The proof is by induction on the dimension. We first prove the
+result in two dimensions. Fix any point of $S$ and observe that
+the remaining $n-1$ points of $S$ are located on $t$ circles
+centered at that point. What $t$ is a bit of a mystery, but it is
+an integer between $1$ and $n-1$. Let $N$ denote the largest
+number of points of $S$ among those circles. It follows that
+$$ Nt \ge n-1. \tag1.5$$
+
+Consider the circle containing $N$ points of $S$. At least
+$\frac{N}{2}$ of these points must lie on the same semi-circle. If
+we fix one of these points, and measure distances to the other
+points on the same semi-circle, we see that the number of distinct
+distances is at least $\frac{N}{2}$. It follows that in two
+dimensions,
+$$ \# \Delta_K(S) \ge \max \left\{\frac{N}{2}, \frac{n-1}{N} \right\}.
+\tag1.6$$
+
+It follows that
+$$ \# \Delta_K(S) \ge \sqrt{\frac{n-1}{2}}. \tag1.7$$
+
+This completes the proof of the two-dimensional case of Theorem
+1.2. We now observe that the proof above works just as well if we
+replace ${\Bbb R}^2$ by the boundary of a bounded convex set in
+${\Bbb R}^3$. This allows us to proceed by induction. Suppose that
+Theorem 0.2 holds on ${\Bbb R}^{d-1}$ and also on the boundary of
+a bounded convex set in ${\Bbb R}^d$. We must now prove that
+Theorem 0.2 holds in ${\Bbb R}^d$. Fix a point of $S$ and observe
+that the remaining $n-1$ points are located on $t$ spheres
+centered at that point. As before, the positive integer $t$ is a
+mystery to be resolved. Let $N$ again denote the largest number of
+points of $S$ among those spheres. As before, $(1.5)$ holds. By
+the induction hypothesis, the sphere with $N$ points determines at
+least $C_dN^{\frac{1}{d-1}}$ distances for some $C_d>0$. It
+follows that
+$$ \# \Delta_K(S) \ge \max \left\{C_dN^{\frac{1}{d-1}}, \frac{n-1}{N}
+\right\}. \tag1.8$$
+
+It follows that
+$$ \# \Delta_K(S) \ge C_d^{\frac{d-1}{d}} {(n-1)}^{\frac{1}{d}},
+\tag1.9$$ and the proof of Theorem 0.2 is complete.
+
+Before concluding this chapter, let us summarize what happened. We
+posed the Erdos Distance Problem for metrics that come from
+bounded convex sets. We saw that the number of distances
+determined by $n$ points in $d$ dimensions is at least a constant
+multiple of $n^{\frac{1}{d}}$, and we saw that for at least one
+metric, the one that comes from $K={[-1.1]}^d$, this result is
+best possible.
+
+Where do we go from here? In order to get a hint, let us
+re-examine the proof of Lemma 1.1. We saw that if $K={[-1,1]}^d$,
+then $\# \Delta_K({[0,n^{\frac{1}{d}}]}^d \cap {\Bbb
+Z}^d)=n^{\frac{1}{d}}.$ On the other hand, suppose that $K=\{x \in
+{\Bbb R}^d: |x| \leq 1\}$. Then $\#
+\Delta_K({[0,n^{\frac{1}{d}}]}^d \cap {\Bbb Z}^d)=\# \{(x_1,
+\dots, x_d): x_1^2+x_2^2+\dots+x_d^2 \leq m; m=1,2, \dots,
+n^{\frac{2}{d}}\}$. We shall see that the size of this set is very
+close $n^{\frac{2}{d}}$ in all dimensions. This leads one to the
+following conjecture due to Paul Erdos:
+
+\proclaim{Erdos Distance Conjecture} With the notation above, for
+any $\epsilon>0$, there exists $C_{\epsilon}>0$ such that
+$$ g_{B_d}(n,d)=\inf_{\# S=n } \Delta_{B_d}(S) \ge C_{\epsilon}
+n^{\frac{2}{d}-\epsilon}, \tag1.10$$ where $B_d$ is the unit ball
+in ${\Bbb R}^d$. \endproclaim
+
+In plain language, Erdos' conjecture says that the number of
+standard Euclidean distances determined by $n$ points is nearly a
+constant multiple of $n^{\frac{2}{d}}$. If anything like this
+conjecture is true, and we are to understand why, we will need to
+grasp the essential geometric difference between the metric that
+comes from the cube ${[-1,1]}^d$, and the one that comes from the
+unit ball $B_d$.
+
+\vskip.125in
+
+\head Exercises \endhead
+
+\vskip.125in
+
+\proclaim{Exercise 1.1} Explicitly compute the constant in front
+of $n^{\frac{1}{d}}$ in Theorem 0.2. Is the resulting constant
+best possible in the sense that there exists a set of $n$ points
+and a convex set $K$ such that this constant is achieved?
+\endproclaim
+
+\proclaim{Exercise 1.2} A general positive-definite metric on
+${\Bbb R}^d$ is a function $\rho: {\Bbb R}^d \times {\Bbb R}^d \to
+{\Bbb R}$ that satisfies the following aximoms: \roster \item
+$\rho(x,y) \ge 0$ and $\rho(x,y)=0$ if and only if $x=y$. \item
+$\rho(x,y)=\rho(y,x)$. \item $\rho(x,y) \leq \rho(x,z)+\rho(y,z)$.
+\endroster
+
+Does Theorem 0.2 hold for such general metrics? Prove it or give a
+counter-example. \endproclaim
+
+\proclaim{Exercise 1.3} Prove that $g_{B_d}(n,d) \leq
+Cn^{\frac{2}{d}}$ for some $C>0$. In fact, prove that $g_{K}(n,d)
+\leq Cn^{\frac{2}{d}}$ for any $K$. \endproclaim
+
+\proclaim{Exercise 1.4} Give an alternative proof of Theorem 0.2
+in the case $K=B_d$ as follows. Let $S$ be a set of cardinality
+$n$ in ${\Bbb R}^2$. Number these points from $1$ to $n$. Draw a
+circle of radius $R$ around each point and number these circles
+from $1$ to $n$. Consider an $n$ by $n$ matrix with entries
+$I_{ij}$ such that $I_{ij}=1$ if the $i$th points lies on the
+$j$th sphere, and $0$ otherwise.
+
+Our first step is to prove that $I=\sum_{i,j}I_{ij} \leq
+Cn^{\frac{3}{2}}$ for some $C>0$. Apply Cauchy-Scwartz, expand the
+$2$ond power, and think about what it means for $I_{ij}I_{ij'}=1$
+for many values of $i$ given fixed $(j,j')$.
+
+Now observe that you have shown that a single distance cannot
+repeat more than $Cn^{\frac{3}{2}}$ times. Since the total number
+of distances (possibly repeating) is $\frac{n(n-1)}{2}$, conclude
+that the number of distinct distances is at least
+$Cn^{\frac{1}{2}}$ for some $C>0$. Now apply induction on the
+dimension as in the proof of Theorem 1.2.
+
+Can you carry out the same argument with $B_d$ replaced by an
+arbitrary bounded symmetric convex set? If so, carry out the
+details, otherwise explain why the proof of Theorem 1.2 given
+above seems to give us more flexibility.
+
+\endproclaim
+
+\vskip.125in
+
+\head Chapter II: Incidence theorems and applications to distance
+sets
+\endhead
+
+\vskip.125in
+
+In Chapter I we saw that there exists a bounded symmetric convex
+set $K$ such that $g_K(n,d) \leq Cn^{\frac{1}{d}}$. We also proved
+that $g_K(n,d) \ge Cn^{\frac{1}{d}}$ for any bounded symmetric
+convex set $K$. However, the dicussion at the end of that chapter
+suggests that this estimate may improve if we make appropriate
+assumption on $K$. In this chapter we shall see that this is
+indeed the case. Before we proceed to state the precise version of
+this idea, let us explore further some of the ideas introduced in
+the previous chapter.
+
+\definition{Definition 2.1} We say that the pair $(p,l)$ is an incidence
+of the point $p$ and the curve $l$ if $p$ is contained in $l$.
+\enddefinition
+
+In Exercise 1.4 we gave an alternate proof of Theorem 1.2 in the
+case $K=B_d$. We recall that the basic idea was to show that a
+single distance cannot repeat more than $Cn^{\frac{1}{2}}$ times
+in two dimensions and then use induction on the dimension. The
+argument requires one to observe that the intersection of $2$
+circles with the same radius and different centers contains at
+most two points. The method can be restated in the language of
+incidences as follows.
+
+\proclaim{Lemma 2.1} Let $S$ denote a set of $n$ points in ${\Bbb
+R}^2$. Let $L$ denote the set of $n$ curves in ${\Bbb R}^2$
+satisfying the condition that the intersection of any $2$ of these
+curves contains at most $M$ points. Then then number of incidences
+among the points of $S$ and curves in $L$ is at most
+$C_Mn^{\frac{3}{2}}$. \endproclaim
+
+A reasonable question to ask at this point is whether the
+conclusion of Lemma 2.1 is sharp. The answer turns out to be no in
+two dimensions, as demonstrated by the following celebrated result
+due to Szemeredi and Trotter.
+
+\proclaim{Theorem 2.2} Let $S$ be a set of $n$ points on ${\Bbb
+R}^2$ or the boundary of a convex bounded set in ${\Bbb R}^3$. Let
+$L$ be a set of lines in ${\Bbb R}^2$, or curves on ${\Bbb R}^2$
+(or the boundary of a convex bounded set in ${\Bbb R}^3$
+satisfying the following axioms: \roster
+\item The intersection of any two curves in $L$ consists of at most
+$\alpha$ points. \item No more than $\beta$ curves in $L$ pass
+through any pair of points of $S$. \endroster
+
+Then the number of incidences among the points of $S$ and curves
+in $L$ is at most $C(n+m+{(nm)}^{\frac{2}{3}}{(\alpha
+\beta)}^{\frac{1}{3}})$.
+
+Moreover, this result is sharp, at least in the case
+$\alpha=\beta=1$, in the sense that for every $n,m$, there exists
+a set $S$ with $n$ points, and the set $L$ with $m$ lines (or
+curves) in ${\Bbb R}^2$ satisfying the conditions above such that
+the number of incidences is comparable to
+$n+m+{(nm)}^{\frac{2}{3}}$. (See Exercise 2.1 below).
+\endproclaim
+
+Using Theorem 2.1 and induction on the dimension, we shall prove
+the following result.
+
+\definition{Definition 2.2} A translate of a convex body $K$ in ${\Bbb
+R}^d$ is the set $x+K$ for some $x \in {\Bbb R}^d$. A dilate of a
+convex body $K$ is the set $\lambda K$ for some $\lambda \in {\Bbb
+R}^{+}$.
+\enddefinition
+
+\proclaim{Theorem 2.3} Let $K$ be a bounded symmetric convex set
+in ${\Bbb R}^d$ such that the intersection of any $d$ translates
+of arbitrary dilates of $\partial K$ contains at most $2$ points.
+Then
+$$ g_K(n,d) \ge Cn^{\frac{1}{d-\frac{1}{2}}}. \tag2.1$$ \endproclaim
+
+We assume Theorem 2.2 for a moment and prove Theorem 2.3 in the
+two-dimensional case. The extension to higher dimensions is
+outlined in Exercise 2.2.
+
+Let $S$ be a set of $n$ points in ${\Bbb R}^2$ (or a boundary of a
+convex set in ${\Bbb R}^3$. Let $L$ be the set $\{x+\partial RK: x
+\in S\}$. By Theorem 2.2, the number of incidences between points
+in $S$ and curves in $L$ is at most $Cn^{\frac{4}{3}}$. It follows
+that a single distance cannot repeat more than $Cn^{\frac{4}{3}}$
+times, so the number of distinct distances is at least
+$Cn^{\frac{2}{3}}$.
+
+Before we turn to the proof of Theorem 2.2, we observe that so far
+our approach to estimating the number of distinct distances has
+been to show that a single distance cannot repeat very many times.
+In fact, the following stronger version of the Erdos Distance
+Conjecture has been posed.
+
+\definition{Definition 2.3} We say that a convex curve in ${\Bbb R}^2$ is
+strictly convex if it does not contain any straight line segments.
+\enddefinition
+
+\proclaim{Single Distance Conjecture (SDC)} Let $S$ be a subset of
+${\Bbb R}^2$ containing $n$ points. Then for every $\epsilon>0$
+there exists $C_{\epsilon}>0$ such that
+$$ \# \{(x,y) \in S \times S: |x-y|=R\}
+\leq C_{\epsilon}n^{1+\epsilon}, \tag2.2$$ where $|\cdot|$ denotes
+the standard Euclidean distance.
+\endproclaim
+
+We shall see that SDC is false if we replace the Euclidean
+distance by an arbitrary distance that comes from a bounded
+symmetric convex set whose boundary has everywhere non-vanishing
+curvature. See Exercise 2.3.
+
+The best known result in the direction of solving the Single
+Distance Conjecture is the one implied by Theorem 2.2, namely that
+the left hand side of $(2.2)$ is bounded by $Cn^{\frac{4}{3}}$.
+This implies, as we note above, that the number of Euclidean
+distances determined by $n$ points in the plane is at least
+$Cn^{\frac{2}{3}}$. We shall see that this latter estimate has
+been strengthened considerably, while the estimate on the number
+of repetitions of a single distance has so far resisted efforts to
+improve it.
+
+We now turn to the proof of Theorem 2.2.
+
+\definition{Definition 2.4} A graph $G$ with $n$ vertiices and $e$ edges
+is a set $G$ of cardinality $n$ equipped with a map $E: G \times G
+\to \{0,1\}$. If $E(x,y)=1$, we say that $x$ and $y$ are connected
+by an edge. \enddefinition
+
+\definition{Definition 2.5} A planar drawing of a graph $G$ is a drawing
+in the plane where elements of $G$ are represented by points
+(called vertices) in the plane, and edges, connecting pairs of
+points, are represented by piece-wise $C^1$ curves. \enddefinition
+
+\definition{Definition 2.6} A crossing of a planar drawing of a graph is
+an intersection of two edges not at a vertex. The crossing number
+of a graph $G$ (denoted by $cr(G)$) is the minimum of crossings
+over all the planar drawings of $G$. \enddefinition
+
+\definition{Definition 2.7} We say that a graph $G$ is planar if it can
+be drawn in the plane without any crossings. \enddefinition
+
+\definition{Definition 2.8} We say that a graph $G$ is connected if one
+can reach every vertex from any other vertex by following edges in
+some planar drawing of $G$. \enddefinition
+
+\definition{Definition 2.9} We say that a graph $G$ is simple if
+every pair of vertices is connected by at most $1$ edge.
+\enddefinition
+
+\definition{Definition 2.10} The maximum edge multiplicity of a graph
+with finitely many vertices and edges is the positive integer $m$
+such that every pair of vertices is connected by at most $m$
+vertices. \enddefinition
+
+We shall deduce Theorem 2.2 from the following graph theoretic
+estimate. \proclaim{Lemma 2.4} Let $G$ be a connected graph with
+$n$ vertices and $e$ edges. Suppose that $e \ge 4n$. Suppose that
+the maximum edge multiplicity of $G$ is $M$. Then
+$$ cr(G) \ge C\frac{e^3}{Mn^2}. \tag2.3$$ \endproclaim
+
+We shall prove Lemma 2.4 in the case $M=1$. The reader is then
+asked to recover the general case in Exercise 2.3 below.
+
+We need the following fact whose proof is outlined in the Exercise
+2.4. Let $H$ be a planar graph with $n$ vertices and $e$ edges.
+Then
+$$ e \leq 3n-6. \tag2.4$$
+
+It follows that if $G$ is any connected graph, then
+$$ cr(G) \ge e-3n. \tag2.5$$
+
+
+If the last claim is not transparent, play the following game with
+an "oracle". You give the oracle a connected graph and ask him if
+it is planar. The oracle responds by asking you if $(2.4)$ holds
+since it is after all a criterion for planarity. If the answer is
+no, there must be a crossing which can only be removed by removing
+an edge. This game must be played until the graph is planar, at
+which point at least $e-3n$ edges have been removed.
+
+Now let $H$ be a random graph constructed by choosing each vertex
+of $G$ (here $G$ is from the statement of Lemma 2.4) with
+probability $p$. Keep an edge if both vertices are kept. It
+follows that the expected number of vertices is $np$, the expected
+number of edges is $ep^2$, and the expected value of the crossing
+number of $H$ is at most $cr(G)p^4$. Since expectation is linear,
+it follows from $(2.5)$ that
+$$ cr(G) \ge \frac{e}{p^2}-\frac{3n}{p^3}. \tag2.6$$
+
+Lemma 2.4 follows by choosing $p=\frac{e}{4n}$, as we may since $e
+\ge 4n$ by assumption. For those not familiar with expectations,
+just think of the expected value of the number of vertices in $H$,
+for instance, as the average number of vertices in $H$ over all
+possible outcomes of the coin flip with probability $p$. More
+precisely, for each possible subgraph of $G$, count the number of
+vertices and multiply the resulting number by the probability that
+this given subgraph arises if the vertices are kept with
+probability $p$. The sum of all these numbers is the expected
+value of the number of vertices in $H$. The expected number of
+edges and the expected value of the crossing number is computed in
+the same way.
+
+We are now ready to prove Theorem 2.2, which we do in the case
+$\alpha=\beta=1$. The reader is asked to carry out the details of
+the proof of the general case in Exercise 2.3 below. Let the
+elements of $S$ be the vertices of $G$. Connect two vertices by
+and edge if the corresponding points are consecutive on some curve
+in $L$. Then $e=I-m$ (think about it...). If $e<4n$, then $I<m+4n$
+and we are done. If $e \ge 4n$, then Lemma 2.4 kicks in and we
+have $cr(G) \ge C\frac{e^3}{n^2} \ge C' \frac{{(I-m)}^3}{n^2}$. On
+the other hand, an incidence cannot in our graph unless two lines
+from our collection intersect. It follows that $cr(G) \leq m^2$.
+Combining the two estimates yields Theorem 2.2 in the case
+$\alpha=\beta=1$.
+
+\head Exercises \endhead
+
+\vskip.125in
+
+\proclaim{Exercise 2.1} Prove that Theorem 2.2 is sharp. In the
+case $n=m$, suppose that $n=4k^3$ for a positive integer $k$. Let
+$S=\{(i,j): 0 \leq i \leq k-1; 0 \leq j \leq 4k^2-1\}$. Let $L$ be
+the set of lines with equation $y=ax+b$, $a=0,1, \dots, 2k-1$,
+$b=0, 1, \dots, 2k^2-1$. Check that there is $n$ points and $n$
+lines, and the number of incidences is $\approx n^{\frac{4}{3}}$.
+Generalize this example to arbitrary $n$ and $m$. \endproclaim
+
+\proclaim{Exercise 2.2} Carry out the details of the induction on
+dimension in the proof of Theorem 2.3. You should end up with the
+recursion $\frac{1}{\alpha_d}-\frac{1}{\alpha_{d-1}}=1$, where the
+number of distinct distances in $d$ dimensions determined by $N$
+points is at least $N^{\alpha_d}$. \endproclaim
+
+\proclaim{Exercise 2.3} Carry out the details of proof of Lemma
+2.4 for the general multiplicty $m$. Use this result to deduce the
+general version of Theorem 2.2 \endproclaim
+
+\proclaim{Exercise 2.4} Construct a convex curve $\Gamma$, of
+diameter $\approx N^3$, symmetric with respect to the origin, with
+everywhere non-vanishing curvature, such that $\# \Gamma \cap
+{\Bbb Z}^2 \approx N^2$. Let $K$ denote the interior of $\Gamma$.
+Show that there exists a set $S$ of cardinality $n$ such that $\#
+\{(x,y) \in S \times S: {||x-y||}_K=1\} \approx n^{\frac{4}{3}}$.
+Conclude that the Single Distance Conjecture is in general false
+for convex sets $K$ whose boundary has everywhere non-vanishing
+Gaussian curvature. \endproclaim
+
+\proclaim{Exercise 2.5} Prove $(2.4)$, i.e that if $H$ is a
+connected planar graph with $n$ vertices and $e$ edges, then $e
+\leq 3n-6$. First prove by induction that $n-e+f=2$, where $f$ is
+the number of faces. Here a face is defined as a connected
+component of a drawing of $H$, viewed as a subset of the
+two-dimensional sphere. Then prove that $3f \leq 2e$. Conclude
+that $e \leq 3n-6$, as advertised. \endproclaim
+
+\proclaim{Exercise 2.6} Let $K$ be a convex domain in ${\Bbb
+R}^d$, $d \ge 2$. We say that $K$ is spectral if $L^2(K)$ has an
+orthogonal basis of the form ${\{e(x \cdot a)\}}_{a \in A}$, with
+$\int_K e(x \cdot (a-a')) dx=0$ for $a \not=a'$, where $A$ is a
+subset of ${\Bbb R}^d$ and $e(t)=e^{2 \pi it}$.
+
+Prove that $B_d$ is not spectral by following the following
+outline. Let $A$ be the putative spectrum of $B_d$. First prove
+that $A$ is separated, i.e there exists $c>0$ such that $|a-a'|
+\ge c$ for all $a \not=a'$. Then prove that $A$ is
+well-distributed in the sense that there exists $r_0>0$ such that
+every cube of side-length $r_0$ contains at least one point from
+$A$. Now consider a ball of radius $R$ in ${\Bbb R}^d$. By
+well-distributivity this ball contains $\approx R^d$ points of
+$A$. Denote this subset of $A$ by $A_R$. On the other hand
+$\int_{B_d} e(x \cdot (a-a')) dx=C_d {|a-a'|}^{-\frac{d-2}{2}}
+J_{\frac{d}{2}}(2 \pi |a-a'|)$, where $J_{\frac{d}{2}}$ denotes
+the Bessel function of order $\frac{d}{2}$. Use properties of
+Bessel functions and this formula to see that there exists an
+absolute constant $C>0$ such that $\# \Delta_{B_d}(A_R) \leq CR$.
+Use Theorem 2.3 to derive a contradiction. Can you derive a
+contradiction by using Theorem 1.2 instead? Calculate all the
+constants carefully before you answer.
+\endproclaim
+
+\proclaim{Exercise 2.7} Let $P$ be a convex polygon in the plane
+whose vertices have integer coordinates. Use the Szemeredi-Trotter
+incidence theorem to prove that the number of vertices of $P$ is
+bounded from below by a constant times the cube root of the area
+of $P$. \endproclaim
+
+\vskip.125in
+
+\head Chapter III: In the realm of the Euclidean metric? \endhead
+
+\vskip.125in
+
+Let us briefly summarize what happened in the previous two
+chapters. We first proved that for any distance induced by a
+bounded symmetric convex set $K$, $g_K(n,d) \ge Cn^{\frac{1}{d}}$
+and one cannot in general do better. However, in the following
+chapter we saw that if the boundary of $K$ is sufficiently well
+"curved" in the sense of intersection properties, then the
+estimate for $g_K(n,d)$ improves considerably.
+
+In this chapter we shall obtain better estimates on $g_K(n,d)$
+under the assumption that $K=B_d$. At the end of the chapter we
+shall take a small step towards extending this result to other
+metrics by introducing some basic technology from algebraic
+geometry.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\enddocument
