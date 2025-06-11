@@ -1,0 +1,67 @@
+\documentstyle{amsppt}
+\tolerance 3000 \pagewidth{5.5in} \vsize7.0in
+\magnification=\magstep1 \widestnumber \key{AAAAAAAAAAA}
+\NoRunningHeads \NoPageNumbers \topmatter
+\title Practice Test $\#4$
+\endtitle
+\date December 3, 2002
+\enddate
+\endtopmatter
+\document
+
+\proclaim{Problem \#1}
+
+\vskip.125in
+
+i) State the Fundamental Theorem of Calculus.
+
+\vskip.125in
+
+ii) Define an anti-derivative of a continuous function.
+
+\vskip.125in
+
+iii) Compute an anti-derivative of $\sin(x), \sec^2(x)$, and
+$\frac{x}{1+x^2}$.
+
+\vskip.125in
+
+\endproclaim
+
+\proclaim{Problem \#2} Differentiate the following functions and
+explain precisely which concepts from class and/or the text you
+are using.
+
+$$ f(x)=\int_3^{sin^2(x)} {(1+s^3)}^{\frac{1}{3}} ds $$
+
+$$ h(x)=\int_{x^5}^{\tan(x)} \frac{1+t^2}{5+t^4} dt $$
+
+\endproclaim
+
+\proclaim{Problem \#3} State the substitution rule and use it to
+compute the following integrals.
+
+$$ \int_0^{\frac{\pi}{4}} \sin^2(u) \cos(u)du $$
+$$ \int_1^3 \frac{h^2}{{(5+2h^3)}^2} dh $$
+
+\endproclaim
+
+\proclaim{Problem \#4} Verify that the volume of a cone of radius
+$r$ and height $h$ is $\frac{1}{3} \pi r^2h$. \endproclaim
+
+\vskip.125in
+
+\proclaim{Problem \#5} Compute the area bounded by the following
+curves:
+
+\vskip.125in
+
+i) $y=|x|$, $y=x^2-2$.
+
+\vskip.125in
+
+ii) $y=\sin(x)$, $y=\sin(2x)$, $x=0$, $x=\frac{\pi}{2}$.
+
+\endproclaim
+
+\enddocument

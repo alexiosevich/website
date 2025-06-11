@@ -1,0 +1,4 @@
+AuthName "Restricted"
+AuthType Basic
+AuthUserFile /home/grok/iosevich/.htpasswd
+require valid-user

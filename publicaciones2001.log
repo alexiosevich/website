@@ -1,0 +1,42 @@
+This is pdfTeX, Version 3.14159-13d (Web2C 7.3.1) (format=amstex 2001.10.23)  11 JUL 2002 16:35
+**publicaciones2001
+(publicaciones2001.tex[/usr/local/share/texmf/pdftex/config/pdftex.cfg]
+
+AmS-TeX- Version 2.1
+COPYRIGHT 1985, 1990, 1991 - AMERICAN MATHEMATICAL SOCIETY
+Use of this macro package is not restricted provided
+each use is acknowledged upon publication.
+
+
+(/usr/local/share/texmf/tex/amstex/base/amsppt.sty version 2.1h (1997/02/02):
+Loading utility definitions, more fonts, page dimension settings, top matter,
+section heads, theorems/proofs/definitions/remarks, rosters, footnotes,
+figures and captions, miscellaneous, references, end of document,
+output routine,
+\copyins=\insert252
+ hyphenation exceptions (U.S. English)
+(/usr/local/share/texmf/tex/amstex/config/amsppt.sti symbol names
+(/usr/local/share/texmf/tex/plain/amsfonts/amssym.tex) ,)
+
+) [1[/usr/local/share/texmf/dvips/config/pdftex.map]] [2] [3] [4] [5] [6]
+Underfull \hbox (badness 2626) in paragraph at lines 688--692
+\tenrm belong to a class $\teneufm S[]\tenrm (\teni b\tenrm (\teni w\tenrm )\te
+ni ; M\tenrm (\teni w\tenrm )\teni ; \teneufm V\tenrm (\teni w\tenrm )\teni ; m
+\tenrm (\teni w\tenrm )\teni ; N\tenrm )$ so that $\teni a[]\tenrm (\teneufm V\
+tenrm (\teni w\tenrm )\teni ; m\tenrm (\teni w\tenrm )) \tensy ^^U \teni a[]$ \
+tenrm and
+
+\hbox(9.13887+5.15549)x433.62, glue set 2.97383
+.\tenrm b
+.\kern0.27779
+.\tenrm e
+.\tenrm l
+.\tenrm o
+.etc.
+
+[7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] )<cmtt8.pfb><cmr6.pfb>
+<msbm7.pfb><cmbx8.pfb><cmti8.pfb><msbm7.pfb><msam10.pfb><eufm10.pfb><cmsy5.pfb>
+<cmr5.pfb><cmmi5.pfb><cmsy8.pfb><cmsy7.pfb><cmex10.pfb><cmr7.pfb><cmsy10.pfb><c
+mti10.pfb><cmmi10.pfb><cmmi7.pfb><msbm10.pfb><cmr10.pfb><cmmi6.pfb><cmmi8.pfb><
+cmr8.pfb><cmcsc10.pfb><cmcsc10.pfb><cmbx10.pfb>
+Output written on publicaciones2001.pdf (18 pages, 317611 bytes).

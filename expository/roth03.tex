@@ -1,0 +1,250 @@
+\documentstyle{amsppt}
+\tolerance 3000 \pagewidth{5.5in} \vsize7.0in
+\magnification=\magstep1 \NoRunningHeads \widestnumber
+\key{AAAAAAAAA} \topmatter
+\title Roth's theorem on arithmetic progressions
+\endtitle
+\author Alex Iosevich
+\endauthor
+\date September 17, 2003
+\enddate
+\endtopmatter
+\document
+
+The purpose of this paper is to provide a simple and
+self-contained exposition of the celebrated Roth's theorem on
+arithmetic progressions of length three. The original result is
+proved in \cite{Roth53}, while the proof given below is very
+similar to the exposition of Roth's original argument given in
+\cite{GRS1990}.
+
+\definition{Definition} We say that a subset of positive integers
+$A$ has positive upper density if
+$$ \lim_N \sup \frac{|A \cap [1,N]|}{N}>0. \tag1$$
+\enddefinition
+
+\proclaim{Roth's Theorem} If $A$ is a subset of positive integers
+of positive upper density, then $A$ contains a three term
+arithmetic progression. \endproclaim
+
+\subhead Basic setup \endsubhead Let $S(n)$ denote the largest
+number of integers in $[1,n]$ that can be chosen so that no three
+term arithmetic progression is formed. Let
+$$ c=\lim_{n \to \infty} \frac{S(n)}{n}. \tag2$$
+
+The existence of this limit exists follows from the fact that
+$S:{\Bbb Z}^{+} \to {\Bbb R}$ is a sub-additive function. The
+(easy) details are left to the reader.
+
+Let
+$$ \epsilon=\frac{c^2}{10^6}, \tag3$$ and let $m$ be large enough
+so that
+$$ c \leq \frac{S(n)}{n}<c+\epsilon \ \text{for} \ 2m+1 \leq n.
+\tag4$$
+
+Let $2N$ be sufficiently large in the sense that will become clear
+below. Let $A \subset \{1,2 \dots, 2N\}$ with $|A| \ge 2Nc$ which
+contains no arithmetic progressions of length three. Let
+$$ A=\{u_1, u_2, \dots, u_r\}. \tag5$$
+
+Let $A_{even}$ denote the set of even elements of $A$,
+$$ A_{even}=\{2v_1, 2v_2, \dots, 2v_s\}; \ \frac{1}{2}A_{even}
+=\{v_1, v_2, \dots, v_s\}. \tag6$$
+
+By assumption,
+$$ 2Nc \leq r \leq 2N(c+\epsilon), \tag7$$ and
+$$ N(c-\epsilon) \leq s \leq N(c+\epsilon). \tag8$$
+
+\subhead Fourier transform \endsubhead Let
+$$ \widehat{A}(\alpha)=\sum_{i=1}^r e(\alpha u_i), \tag9$$ and
+$$ \widehat{A_{even}}(\alpha)=\sum_{j=1}^s e(\alpha v_j), \tag10$$
+where
+$$ e(t)=e^{2 \pi i t}. \tag11$$
+
+As we shall see below, the key to the proof of Roth's theorem is
+to show that away from $\alpha=0$, $|\widehat{A}(\alpha)|$ is much
+smaller than $N$, the number of terms in the sum. The idea behind
+this is that the enemy of an exponential sum is presence of
+arithmetic progression. These progressions play the same role in
+the discrete Fourier transforms as that of lack of curvature in
+the decay properties of the Fourier transform of a surface carried
+measure.
+
+\subhead The basic idea \endsubhead Let $\int$ denote the sum over
+$\alpha=\frac{i}{2N}$, $i=0,1, \dots, 2N-1$. Observe that
+$$ \int e(\alpha u)=2N \ \text{if} \ u=0, \ \text{and} \ 0 \
+\text{otherwise}. \tag12$$
+
+The key observation is that
+$$ \int \widehat{A}(\alpha) {(\widehat{A_{even}})}^2(-\alpha)=2N \# \{(i,j,k):
+u_i-v_j-v_k=0; u_i \in A, v_j, v_k \in \frac{1}{2}A_{even} \}.
+\tag13$$
+
+Why is this important? If $u_i-v_j-v_k=0$, then the set
+$$ \{2v_j, u_i, 2v_k\} \tag14$$ is an arithmetic progression of
+length three, except for the trivial cases when
+$$ 2v_j=u_i=2v_k. \tag15$$
+
+By assumption our $A$ does not contain arithmetic progressions of
+length three, therefore the right hand side of $(13)$ equals
+$$2Ns<3cN^2, \tag16$$ where the inequality follows by $(8)$.
+
+We shall obtain a contradiction in the following manner. First,
+$$ \widehat{A}(0) {(\widehat{A_{even}})}^2(0)=rs^2>c^3N^3.
+\tag17$$
+
+On the other hand,
+$$ \widehat{A}(0) {(\widehat{A_{even}})}^2(0)<\left|\int
+\widehat{A}(\alpha)
+{(\widehat{A_{even}})}^2(-\alpha)\right|+\left|\int_{\alpha
+\not=0} \widehat{A}(\alpha)
+{(\widehat{A_{even}})}^2(-\alpha)\right|=I+II. \tag18$$
+
+We already know that
+$$ I \leq 3cN^2. \tag19$$
+
+We will see that
+$$ II \leq 18 \epsilon c N^3. \tag20$$
+
+This will be accomplished as follows. We will show that when
+$\alpha \not=0$,
+$$ |\widehat{A}(\alpha)| \leq 6 \epsilon N. \tag21$$
+
+This is the main estimate of the paper which we shall carry out
+shortly. With $(21)$ in tow, we complete the proof in the
+following way. We observe that
+$$ II \leq \left( \max_{\alpha \not=0} \left|
+\widehat{A}(\alpha)\right| \right) \int
+|{(\widehat{A_{even}}(-\alpha))}^2| \leq 6 \epsilon N \int
+|{(\widehat{A_{even}}(-\alpha))}^2|, \tag22$$ so $(20)$ would
+follow if we could show that
+$$ \int |{(\widehat{A_{even}}(-\alpha))}^2| \leq 3cN^2. \tag23$$
+
+To establish $(23)$ observe that the left hand side of $(23)$
+equals
+$$ \sum_{j=1}^s \sum_{k=1}^s \int e(\alpha(v_j-v_k))=2Ns \leq
+3cN^2 \tag24$$ by $(8)$ and $(12)$.
+
+Using $(17)$, $(18)$, $(19)$, and $(20)$ we see that
+$$ c^3N^3 \leq 3cN^2+18 \epsilon c N^3, \tag25$$ which is not
+possible if $N$ is sufficiently large. Thus the proof of Roth's
+theorem is reduced to establishing $(21)$.
+
+\subhead Estimate $(21)$ \endsubhead We need the following basic
+fact about diophantine approximation which can be found in any
+book on elementary number theory and/or deduced easily from the
+pigeon-hole principle. For $\alpha$ arbitrary and $M>0$, there
+exist integers $p,q$ with
+$$ \alpha=\frac{p}{q}+\beta, \ 1 \leq q \leq M \ \text{and} \
+q|\beta| \leq \frac{1}{M}. \tag26$$
+
+We also need the following elementary estimate which we do not
+prove...
+$$ \left|\frac{1}{2}(e(x)+e(-x))-1\right|=|\cos(x)-1| \leq \frac{x^2}{2}.
+\tag27$$
+
+The first step in establishing the estimate $(21)$ is "smearing".
+More precisely, we show that
+$$ \left|\widehat{A}(\alpha)-\frac{1}{2m+1} \sum_A \sum_{|i| \leq
+m} e(\alpha(u+iq)) \right| \leq \frac{|A|m^2}{2M^2} \leq
+\frac{Nm^2}{2M^2}. \tag28$$
+
+We shall then estimate the "smeared" part by showing that
+$$ \left|\frac{1}{2m+1} \sum_A \sum_{|i| \leq
+m} e(\alpha(u+iq)) \right| \leq 5N \epsilon. \tag29$$
+
+Combining $(28)$ and $(29)$ yields $(21)$.
+
+\vskip.125in
+
+We first establish $(28)$, which is a bit easier. From $(27)$ we
+deduce that
+$$ \left| \frac{1}{2m+1} \sum_{|i| \leq m}
+[e(\alpha+i\gamma)-e(\alpha)] \right| \leq
+\frac{{(m\gamma)}^2}{2}. \tag30$$
+
+Let $M$ denote the largest integer smaller than $\sqrt{N}$. Let
+$\alpha \not=0$ and let $p,q, \beta$ be as in $(26)$ above. Then
+$$ e(\alpha(u+iq))=e(\alpha u+i (\beta q)). \tag31$$
+
+It follows that
+$$ \left|\frac{1}{2m+1}\sum_{|i| \leq m} [e(\alpha(u+iq))-e(\alpha
+u)]\right|=\left|e(\alpha u)-\frac{1}{2m+1}\sum_{|i| \leq m}
+e(\alpha(u+iq)) \right|$$ $$ \leq \frac{{(m \beta q)}^2}{2} \leq
+\frac{m^2}{2M^2}, \tag32$$ and $(28)$ follows instantly.
+
+We now turn our attention to $(29)$. Let
+$$ W_s=\{s+iq: |i| \leq m\} \ \text{calculated modulo 2N}.
+\tag33$$
+
+It follows that
+$$ \frac{1}{2m+1}\sum_A \sum_{|i| \leq m}
+e(\alpha(u+iq))=\sum_{s=0}^{2N-1} e(\alpha s) \frac{|W_s \cap
+A|}{2m+1}. \tag34$$
+
+We want to show that
+$$ \left|\sum_{s=0}^{2N-1} e(\alpha s) \frac{|W_s \cap
+A|}{2m+1}\right| \leq 5N \epsilon \tag35$$ which will establish
+$(29)$.
+
+From $(35)$, $(34)$ and $(28)$ it will then follow that
+$$ |\widehat{A}(\alpha)| \leq \frac{m^2N}{2M^2}+5N\epsilon \leq 6N \epsilon
+\tag36$$ for a sufficiently large $N$ which will establish $(21)$.
+
+We now prove $(35)$. Let
+$$ E_s=\frac{|W_s \cap A|}{2m+1}-c. \tag37$$
+
+Observe that for $mq \leq s \leq 2N-mq$, $W_s$ forms an arithmetic
+progression of length $2m+1$ in $\{1, 2, \dots, 2N\}$. It follows
+that
+$$ |W_s \cap A| \leq (2m+1)(c+\epsilon) \tag38$$ by $(7)$.
+It follows that for these values of $s$, $E_s \leq \epsilon$. For
+the other $2mq$ values of $s$ we use the trivial bound $E_s \leq
+1$.
+
+Our next observation is that the average value of $E_s$ is
+positive. Indeed, since each $a \in A$ appears in exactly $2m+1$
+sets $W_s$, we have
+$$ \frac{1}{2m+1} \sum_{s=0}^{2N-1} |W_s \cap A|=|A|
+\frac{2m+1}{2m+1}=|A|, \tag39$$ so
+$$ \frac{\sum_{s=0}^{2N-1} E_s}{2N}=\frac{|A|}{2N}-c, \tag40$$
+which is a positive number.
+
+Now, using $(40)$ and the discussion following $(38)$,
+$$ \sum_{s=0}^{2N-1} |E_s| \leq 2 \sum_{0 \leq s \leq 2N-1: E_s>0}
+E_s \leq 2(2N \epsilon+2mq) \leq 4 \epsilon N+4mM \leq 5N\epsilon
+\tag41$$ if $N$ is sufficiently large.
+
+For $\alpha \not=0$, $\sum_{s=0}^{2N-1} e(\alpha s)=0$, so
+$$ \left| \sum_{s=0}^{2N-1} e(\alpha s) \frac{|W_s \cap A|}{2m+1}
+\right|=\left|\sum_{s=0}^{2N-1} e(\alpha s) E_s \right|$$ $$ \leq
+\sum_{s=0}^{2N-1} |E_s| \leq 5N \epsilon. \tag42$$
+
+This establishes $(35)$ and proof of Roth's theorem is complete.
+
+
+
+
+
+
+\newpage
+
+\head References \endhead
+
+\ref \key GRS1990 \by R. Graham, B. Rothschild, and J. Spencer
+\paper Ramsey theory \jour John Wiley and Sons, Inc. \yr 1990
+\endref
+
+\ref \key Roth53 \by K. Roth \paper On certain sets of integers
+\jour J. London Math Soc. \yr 1953 \vol 28 \pages 104-109 \endref
+
+
+
+
+
+
+
+
+
+
+\enddocument
