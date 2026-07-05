@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media and Profiles | Alex Iosevich</title>
+  <meta name="description" content="Media articles, profiles, honors, interviews, essays, lectures, and features involving Alex Iosevich.">
+  <link rel="canonical" href="https://alexiosevich.com/media">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap nav-wrap">
+    <a class="brand" href="index.html">Alex Iosevich</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="researchpage.html">Research</a>
+      <a href="mentoringandteaching">People &amp; Mentoring</a>
+      <a href="dissemination">Programs &amp; Outreach</a>
+      <a href="media" aria-current="page">Media</a>
+      <a href="cvweb.html">CV</a>
+      <a href="about#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow">Media</div>
+      <h1>Profiles, interviews, and public mathematics</h1>
+      <p class="lead">Selected articles, honors, lectures, essays, and features related to research, mentoring, and academic life.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid-2">
+        <article class="card">
+          <h3>Research in the news</h3>
+          <ul class="list-clean">
+            <li><a href="https://www.quantamagazine.org/number-of-distances-separating-points-has-a-new-bound-20240409/">Number of Distances Separating Points Has a New Bound</a> — Quanta Magazine</li>
+            <li><a href="https://www.quantamagazine.org/merging-fields-mathematicians-go-the-distance-on-old-problem-20240401/">Merging Fields, Mathematicians Go the Distance on Old Problem</a> — Quanta Magazine</li>
+            <li><a href="https://www.quantamagazine.org/nasty-geometry-breaks-decades-old-tiling-conjecture-20221215/">“Nasty” Geometry Breaks Decades-Old Tiling Conjecture</a> — Quanta Magazine</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Profiles and honors</h3>
+          <ul class="list-clean">
+            <li><a href="https://www.simonsfoundation.org/2026/04/10/2026-simons-fellows-in-mathematics-announced/">2026 Simons Fellows in Mathematics Announced</a></li>
+            <li><a href="https://www.sas.rochester.edu/mth/news-events/archive/2026-06-23-iosevich-named-simons-fellow.html">Alex Iosevich Named 2026 Simons Fellow in Mathematics</a></li>
+            <li><a href="https://www.rochester.edu/news/email.php?refno=7632">Alex Iosevich Named Fellow of the American Mathematical Society</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Essays, interviews, and lectures</h3>
+          <ul class="list-clean">
+            <li><a href="https://www.ams.org/journals/notices/202309/noti2786/noti2786.html?adat=October+2023&cat=none&pdffile=rnoti-p1439.pdf&pdfissue=202309&trk=2786&type=.html">On Challenges and Opportunities of Graduate Advising</a></li>
+            <li><a href="https://www.nature.com/articles/nj7603-429a">Relationships: Doctor’s Advice</a> — Nature Careers</li>
+            <li><a href="https://www.mathematics.uni-bonn.de/him/video-recordings/tp_2024_03_school_video">Signal Recovery, Restriction Theory, and Applications</a> — Hausdorff Research Institute</li>
+            <li><a href="https://podcasts.apple.com/us/podcast/mathematics-students-gain-retail-analytics-experience/id1517831626?i=1000580840090">Mathematics Students Gain Retail Analytics Experience</a> — podcast</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Students, mentoring, and academic life</h3>
+          <ul class="list-clean">
+            <li><a href="https://www.rochester.edu/newscenter/rochester-math-professor-champions-undergraduate-research-508402/">Why This Rochester Math Professor Champions Year-Round Undergraduate Research</a></li>
+            <li><a href="https://www.campustimes.org/2020/10/12/urs-covid-19-budget-cuts-lead-to-facultys-frustration/">UR’s COVID-19 Budget Cuts Lead to Faculty Frustrations</a></li>
+            <li><a href="https://ems.press/journals/mag/articles/14298937">Reviving Ukrainian Science: International Centre for Mathematics in Ukraine</a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <p>Alex Iosevich · Media</p>
+    <p><a href="index.html">Home</a></p>
+  </div>
+</footer>
+</body>
+</html>

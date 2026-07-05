@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About and Contact | Alex Iosevich</title>
+  <meta name="description" content="Biography, honors, editorial service, and contact information for Alex Iosevich, Professor of Mathematics at the University of Rochester.">
+  <link rel="canonical" href="https://alexiosevich.com/about">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap nav-wrap">
+    <a class="brand" href="index.html">Alex Iosevich</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="researchpage.html">Research</a>
+      <a href="mentoringandteaching">People &amp; Mentoring</a>
+      <a href="dissemination">Programs &amp; Outreach</a>
+      <a href="media">Media</a>
+      <a href="cvweb.html">CV</a>
+      <a href="about" aria-current="page">About &amp; Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow">About</div>
+      <h1>About Alex Iosevich</h1>
+      <p class="lead">Professor of Mathematics at the University of Rochester, working across harmonic analysis, geometry, combinatorics, number theory, signal recovery, and data science.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap content-grid">
+      <div>
+        <h2>Biography</h2>
+        <p>I received my B.S. in mathematics from the University of Chicago in 1989 and my Ph.D. in mathematics from UCLA in 1993 under the direction of Christopher Sogge. After positions at McMaster University, Wright State University, Georgetown University, and the University of Missouri, I joined the University of Rochester, where I have been Professor of Mathematics since 2010.</p>
+        <p>My research is driven by connections: between Fourier analysis and geometric measure theory, between continuous and finite settings, and between classical harmonic analysis and modern questions in signal recovery, learning theory, and data science.</p>
+
+        <h2>Honors and service</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Honors</h3>
+            <ul class="list-clean">
+              <li>Fellow of the American Mathematical Society, 2014</li>
+              <li>2026 Simons Fellow in Mathematics</li>
+              <li>Professor of the Year in the Natural Sciences, University of Rochester, 2015</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Editorial service</h3>
+            <p>Editor-in-Chief for Analysis at Research in the Mathematical Sciences, together with editorial and advisory roles in several journals.</p>
+            <p><a href="editorialwork.html">Full editorial service page</a></p>
+          </article>
+        </div>
+
+        <h2 id="contact" style="margin-top:2.5rem">Contact</h2>
+        <div class="contact-block">
+          <address>
+            <strong>Alex Iosevich</strong><br>
+            Department of Mathematics<br>
+            University of Rochester<br>
+            Hylan Building, Office 909<br>
+            Rochester, NY 14627<br><br>
+            <a href="mailto:alex.iosevich@rochester.edu">alex.iosevich@rochester.edu</a><br>
+            <a href="mailto:iosevich@gmail.com">iosevich@gmail.com</a>
+          </address>
+        </div>
+      </div>
+      <aside class="sidebar">
+        <h2>Quick links</h2>
+        <ul>
+          <li><a href="cvweb.html">Full curriculum vitae</a></li>
+          <li><a href="https://www.sas.rochester.edu/mth/people/faculty/iosevich-alex/index.html">University profile</a></li>
+          <li><a href="https://scholar.google.com/citations?hl=en&amp;user=AtZdcBYAAAAJ">Google Scholar</a></li>
+          <li><a href="https://www.genealogy.math.ndsu.nodak.edu/id.php?fChrono=1&amp;id=40136">Mathematics Genealogy Project</a></li>
+          <li><a href="media">Media and profiles</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <p>Alex Iosevich · University of Rochester</p>
+    <p><a href="index.html">Home</a></p>
+  </div>
+</footer>
+</body>
+</html>

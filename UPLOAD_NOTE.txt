@@ -1,0 +1,5 @@
+This package is designed as a direct front-layer replacement for the current site.
+
+The filenames match the current public URLs wherever those URLs are extensionless. Upload every file in this folder to the same directory that currently contains the website. The package includes the existing homepage photograph as homepagephoto.jpg so the preview and upload are self-contained.
+
+The redesigned pages intentionally link to the existing deep archive pages, including the full CV, student lists, lecture archive, and program pages. Those archive files do not need to be moved.
