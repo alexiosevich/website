@@ -1,0 +1,13 @@
+Upload these files into the same web directory that currently contains index.html:
+
+index.html
+style.css
+people.html
+programs.html
+media.html
+about.html
+researchpage.html
+editorialwork.html
+homepagephoto.jpg
+
+Do not rename people.html, programs.html, media.html, or about.html. The revised navigation uses these explicit filenames. The old extensionless files may remain on the server; the new navigation will no longer point to them.
