@@ -3,30 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About and Contact | Alex Iosevich</title>
-  <meta name="description" content="Biography, honors, editorial service, and contact information for Alex Iosevich, Professor of Mathematics at the University of Rochester.">
+  <title>About, Mentoring and Contact | Alex Iosevich</title>
+  <meta name="description" content="Biography, mentoring, editorial service, and contact information for Alex Iosevich, Professor of Mathematics at the University of Rochester.">
   <link rel="canonical" href="https://alexiosevich.com/about">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://alexiosevich.com/style.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="wrap nav-wrap">
-    <a class="brand" href="index.html">Alex Iosevich</a>
+    <a class="brand" href="https://alexiosevich.com/">Alex Iosevich</a>
     <nav class="site-nav" aria-label="Primary navigation">
-      <a href="researchpage.html">Research</a>
-      <a href="mentoringandteaching">People &amp; Mentoring</a>
-      <a href="dissemination">Programs &amp; Outreach</a>
-      <a href="media">Media</a>
-      <a href="cvweb.html">CV</a>
-      <a href="about" aria-current="page">About &amp; Contact</a>
+      <a href="https://alexiosevich.com/researchpage.html">Research</a>
+      <a href="https://alexiosevich.com/about" aria-current="page">People &amp; Mentoring</a>
+      <a href="https://alexiosevich.com/dissemination">Programs &amp; Outreach</a>
+      <a href="https://alexiosevich.com/media">Media</a>
+      <a href="https://alexiosevich.com/cvweb.html">CV</a>
+      <a href="https://alexiosevich.com/about#contact">Contact</a>
     </nav>
   </div>
 </header>
+
 <main id="main">
   <section class="page-hero">
     <div class="wrap">
-      <div class="eyebrow">About</div>
+      <div class="eyebrow">About, people, and mentoring</div>
       <h1>About Alex Iosevich</h1>
       <p class="lead">Professor of Mathematics at the University of Rochester, working across harmonic analysis, geometry, combinatorics, number theory, signal recovery, and data science.</p>
     </div>
@@ -39,10 +40,33 @@
         <p>I received my B.S. in mathematics from the University of Chicago in 1989 and my Ph.D. in mathematics from UCLA in 1993 under the direction of Christopher Sogge. After positions at McMaster University, Wright State University, Georgetown University, and the University of Missouri, I joined the University of Rochester, where I have been Professor of Mathematics since 2010.</p>
         <p>My research is driven by connections: between Fourier analysis and geometric measure theory, between continuous and finite settings, and between classical harmonic analysis and modern questions in signal recovery, learning theory, and data science.</p>
 
-        <h2>Honors and service</h2>
+        <h2 style="margin-top:2.5rem">People and mentoring</h2>
+        <p>Mentoring is an integral part of my research life. I have advised or co-advised 38 past and current Ph.D. students, supervised 48 undergraduate honors theses, worked with 15 postdoctoral researchers, and collaborated with more than 200 coauthors. My advising emphasizes regular collaboration, increasing independence, and sustained support through the transition to academic or industry careers.</p>
         <div class="grid-2">
           <article class="card">
-            <h3>Honors</h3>
+            <h3>Students and postdocs</h3>
+            <ul class="list-clean">
+              <li><a href="https://alexiosevich.com/currentphdstudents.html">Past and current Ph.D. students</a></li>
+              <li><a href="https://alexiosevich.com/graduatestudentsinfo.html">Information for prospective graduate students</a></li>
+              <li><a href="https://alexiosevich.com/postdocs.html">Past and current postdoctoral researchers</a></li>
+              <li><a href="https://alexiosevich.com/currenthonorsthesisstudents.html">Undergraduate honors thesis students</a></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Collaboration and programs</h3>
+            <ul class="list-clean">
+              <li><a href="https://alexiosevich.com/collaborators.html">Collaborators</a></li>
+              <li><a href="https://alexiosevich.com/undergraduateresearch.html">Undergraduate research programs</a></li>
+              <li><a href="https://alexiosevich.com/dissemination">Programs, lectures, and outreach</a></li>
+              <li><a href="https://alexiosevich.com/fall2025meetingschedule.html">Meeting schedule page</a></li>
+            </ul>
+          </article>
+        </div>
+
+        <h2 style="margin-top:2.5rem">Honors and editorial leadership</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Selected honors</h3>
             <ul class="list-clean">
               <li>Fellow of the American Mathematical Society, 2014</li>
               <li>2026 Simons Fellow in Mathematics</li>
@@ -51,8 +75,8 @@
           </article>
           <article class="card">
             <h3>Editorial service</h3>
-            <p>Editor-in-Chief for Analysis at Research in the Mathematical Sciences, together with editorial and advisory roles in several journals.</p>
-            <p><a href="editorialwork.html">Full editorial service page</a></p>
+            <p>Editor-in-Chief for Analysis at <a href="https://link.springer.com/journal/40687/editorial-board">Research in the Mathematical Sciences</a>; Associate Editor of the <a href="https://www.sciencedirect.com/journal/journal-of-functional-analysis/about/editorial-board">Journal of Functional Analysis</a>; and a member of the editorial board of the <a href="https://link.springer.com/journal/41/editorial-board">Journal of Fourier Analysis and Applications</a>.</p>
+            <p><a href="https://alexiosevich.com/editorialwork.html">Full editorial service page</a></p>
           </article>
         </div>
 
@@ -69,23 +93,29 @@
           </address>
         </div>
       </div>
+
       <aside class="sidebar">
-        <h2>Quick links</h2>
+        <h2>Existing pages</h2>
         <ul>
-          <li><a href="cvweb.html">Full curriculum vitae</a></li>
-          <li><a href="https://www.sas.rochester.edu/mth/people/faculty/iosevich-alex/index.html">University profile</a></li>
-          <li><a href="https://scholar.google.com/citations?hl=en&amp;user=AtZdcBYAAAAJ">Google Scholar</a></li>
-          <li><a href="https://www.genealogy.math.ndsu.nodak.edu/id.php?fChrono=1&amp;id=40136">Mathematics Genealogy Project</a></li>
-          <li><a href="media">Media and profiles</a></li>
+          <li><a href="https://alexiosevich.com/cvweb.html">Full curriculum vitae</a></li>
+          <li><a href="https://alexiosevich.com/currentphdstudents.html">Ph.D. students</a></li>
+          <li><a href="https://alexiosevich.com/postdocs.html">Postdocs</a></li>
+          <li><a href="https://alexiosevich.com/collaborators.html">Collaborators</a></li>
+          <li><a href="https://alexiosevich.com/graduatestudentsinfo.html">Prospective students and advising</a></li>
+          <li><a href="https://alexiosevich.com/currenthonorsthesisstudents.html">Honors thesis students</a></li>
+          <li><a href="https://alexiosevich.com/undergraduateresearch.html">Undergraduate research</a></li>
+          <li><a href="https://alexiosevich.com/editorialwork.html">Editorial work</a></li>
+          <li><a href="https://alexiosevich.com/media">Media and profiles</a></li>
         </ul>
       </aside>
     </div>
   </section>
 </main>
+
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <p>Alex Iosevich · University of Rochester</p>
-    <p><a href="index.html">Home</a></p>
+    <p><a href="https://alexiosevich.com/">Home</a></p>
   </div>
 </footer>
 </body>
