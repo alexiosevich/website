@@ -1,0 +1,17 @@
+LINK AND CONTENT AUDIT
+======================
+
+index.html: 20 clickable links checked; no local-file links remain.
+researchpage.html: 28 clickable links checked; no local-file links remain.
+
+Homepage corrections:
+- People & Mentoring -> https://alexiosevich.com/people.html
+- Mentoring card -> https://alexiosevich.com/people.html
+- Programs & Outreach -> https://alexiosevich.com/programs.html
+- Vertical integration card -> https://alexiosevich.com/programs.html
+- Media -> https://alexiosevich.com/media.html
+- Contact -> https://alexiosevich.com/about.html#contact
+
+Research-page correction:
+- Analytical Methods in Geodesy, Cryptography and Machine Learning is explicitly labeled a collaborative research program.
+- StemForAll 2026 is explicitly labeled an undergraduate research program.
