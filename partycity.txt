@@ -1,0 +1,11 @@
+Departments: 
+
+solids
+Foil
+
+Aggregate by: 
+
+"dept_no", "price_zone", "pricing_line", choice_Set
+
+Join by: sku_no, site_no
+
