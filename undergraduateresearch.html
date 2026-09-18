@@ -1,81 +1,537 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>summerresearchprograms</title>
-  </head>
-  <body vlink="#551A8B" text="#000000" link="#0000EE" bgcolor="#c0c0c0"
-    alink="#EE0000">
-    <div align="center"><font size="+3" color="#cc0000"><b>Summer
-          Research Programs </b></font><br>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Undergraduate research opportunities and the StemForAll summer research program organized by Alex Iosevich at the University of Rochester.">
+  <title>Undergraduate Research and StemForAll | Alex Iosevich</title>
+  <style>
+    :root {
+      --navy: #142945;
+      --blue: #315f86;
+      --gold: #e4a62a;
+      --gold-dark: #8b5700;
+      --ink: #263442;
+      --muted: #657483;
+      --paper: #ffffff;
+      --wash: #f3f7f9;
+      --line: #dce5eb;
+      --shadow: 0 16px 38px rgba(20, 41, 69, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--wash);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #245f8e;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover, a:focus { color: var(--gold-dark); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background:
+        radial-gradient(circle at 88% 22%, rgba(228, 166, 42, 0.32) 0 2px, transparent 3px),
+        radial-gradient(circle at 73% 68%, rgba(255, 255, 255, 0.14) 0 3px, transparent 4px),
+        linear-gradient(125deg, #10233c 0%, #1e496c 67%, #2c6d8f 100%);
+      background-size: 37px 37px, 61px 61px, auto;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -180px;
+      width: 540px;
+      height: 540px;
+      border: 2px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+      box-shadow: 0 0 0 70px rgba(255, 255, 255, 0.035), 0 0 0 145px rgba(255, 255, 255, 0.025);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 104px 0 94px;
+    }
+
+    .eyebrow {
+      margin: 0 0 9px;
+      color: #ffd978;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 790px;
+      margin: 0;
+      font-size: clamp(2.6rem, 6vw, 5.2rem);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      margin: 22px 0 0;
+      font-size: 1.18rem;
+      line-height: 1.58;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      font: 700 0.88rem/1.4 Arial, Helvetica, sans-serif;
+      text-decoration: none;
+    }
+
+    .button-primary { color: var(--navy); background: #ffd978; }
+    .button-primary:hover, .button-primary:focus { color: var(--navy); background: white; }
+
+    .button-secondary {
+      color: white;
+      border-color: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .button-secondary:hover, .button-secondary:focus { color: var(--navy); background: white; }
+
+    .page-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 3px 14px rgba(20, 41, 69, 0.06);
+    }
+
+    .page-nav div {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 12px 0;
+      display: flex;
+      gap: 22px;
+      overflow-x: auto;
+      white-space: nowrap;
+      font: 700 0.83rem/1.4 Arial, Helvetica, sans-serif;
+    }
+
+    .page-nav a { color: var(--navy); text-decoration: none; }
+    .page-nav a:hover, .page-nav a:focus { color: var(--gold-dark); }
+
+    main {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 66px 0 92px;
+    }
+
+    section { scroll-margin-top: 78px; }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--navy);
+      font-size: clamp(1.8rem, 4vw, 2.65rem);
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 1.28rem;
+      line-height: 1.35;
+    }
+
+    p { margin: 0 0 1em; }
+    p:last-child { margin-bottom: 0; }
+
+    .lead-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.8fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .card {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--paper);
+      box-shadow: 0 8px 24px rgba(20, 41, 69, 0.06);
+    }
+
+    .at-a-glance {
+      display: grid;
+      align-content: center;
+      border-top: 5px solid var(--gold);
+    }
+
+    .stat {
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .stat:first-of-type { padding-top: 2px; }
+    .stat:last-child { padding-bottom: 0; border-bottom: 0; }
+
+    .stat strong {
+      display: block;
+      color: var(--navy);
+      font: 700 1.05rem/1.35 Arial, Helvetica, sans-serif;
+    }
+
+    .stat span { color: var(--muted); font-size: 0.92rem; }
+
+    .section-heading {
+      max-width: 800px;
+      margin: 74px 0 28px;
+    }
+
+    .section-heading .eyebrow { color: var(--gold-dark); }
+    .section-heading > p:last-child { color: var(--muted); font-size: 1.05rem; }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .process-step {
+      position: relative;
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--paper);
+    }
+
+    .step-number {
+      display: inline-grid;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 16px;
+      place-items: center;
+      border-radius: 50%;
+      color: white;
+      background: var(--blue);
+      font: 700 0.9rem/1 Arial, Helvetica, sans-serif;
+    }
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .year-card {
+      display: flex;
+      min-height: 245px;
+      flex-direction: column;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      color: var(--ink);
+      background: var(--paper);
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .year-card:hover, .year-card:focus {
+      color: var(--ink);
+      border-color: #9db4c5;
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+
+    .year {
+      color: var(--gold-dark);
+      font: 700 0.78rem/1.3 Arial, Helvetica, sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .year-card h3 { margin-top: 8px; }
+    .year-card p { color: var(--muted); font-size: 0.93rem; line-height: 1.55; }
+
+    .card-link {
+      margin-top: auto;
+      padding-top: 18px;
+      color: #245f8e;
+      font: 700 0.84rem/1.4 Arial, Helvetica, sans-serif;
+    }
+
+    .featured-year {
+      grid-column: span 2;
+      min-height: 270px;
+      color: white;
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--navy), #285f82);
+    }
+
+    .featured-year:hover, .featured-year:focus { color: white; border-color: transparent; }
+    .featured-year .year { color: #ffd978; }
+    .featured-year h3 { color: white; font-size: 1.55rem; }
+    .featured-year p { max-width: 650px; color: #e5eef4; }
+    .featured-year .card-link { color: #ffd978; }
+
+    .thanks {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
+      gap: 30px;
+      align-items: center;
+      margin-top: 72px;
+      padding: 34px;
+      border-radius: 12px;
+      color: white;
+      background: var(--navy);
+    }
+
+    .thanks h2 { color: white; }
+    .thanks .eyebrow { color: #ffd978; }
+    .thanks p { color: #e3ebf1; }
+
+    .closing-card {
+      margin-top: 26px;
+      padding: 31px;
+      border: 1px solid #e8d19a;
+      border-radius: 10px;
+      background: #fffaf0;
+    }
+
+    footer {
+      padding: 28px 20px;
+      color: #dfe8ef;
+      background: #0d1c2f;
+      text-align: center;
+      font: 0.82rem/1.6 Arial, Helvetica, sans-serif;
+    }
+
+    footer a { color: #ffd978; }
+
+    @media (max-width: 860px) {
+      .archive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .featured-year { grid-column: span 2; }
+      .process-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      body { font-size: 17px; }
+      .hero-inner { padding: 78px 0 72px; }
+      .lead-grid, .archive-grid, .thanks { grid-template-columns: 1fr; }
+      .featured-year { grid-column: auto; }
+      .page-nav div, main, .hero-inner { width: min(100% - 28px, 1080px); }
+      main { padding-top: 42px; }
+      .section-heading { margin-top: 56px; }
+      .card, .thanks { padding: 24px; }
+      .year-card { min-height: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .year-card { transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">University of Rochester</p>
+      <h1>Undergraduate research begins with a good question</h1>
+      <p class="hero-copy">StemForAll brings undergraduate students, advanced high school students, faculty members, graduate students, and researchers together to explore open-ended problems in mathematics, data science, and neighboring fields.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="stemforall2026.html">Explore StemForAll 2026</a>
+        <a class="button button-secondary" href="#archive">Browse the program archive</a>
+      </div>
     </div>
-    <br>
-    <br>
-    This page contains links to the description of the
-    Tripods/StemForAll programs from 2020 until present day. It is very
-    important to note that these programs would not have been possible
-    without tremendous efforts by Charlotte Aten, Ayla Gafni, Azita
-    Mayeli, Steven Kleene, Sevak Mkrtchyan, Emmett Wyman, and many
-    others. It is a tremendous privilege to work with excellent
-    mathematicians and high quality human beings on these endeavors. <br>
-    <br>
-    <br>
-    <a moz-do-not-send="true" href="stemforall.html">StemForAll 2018</a><br>
-    <a moz-do-not-send="true" href="stemforall2019.html"><br>
-      StemForAll 2019</a><br>
-    <br>
-    <a moz-do-not-send="true" href="stemforall2020.html">Tripods/StemForAll
+  </header>
 
+  <nav class="page-nav" aria-label="On this page">
+    <div>
+      <a href="#about">About</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#archive">Program archive</a>
+      <a href="#team">The team</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
+  <main>
+    <section id="about" class="lead-grid">
+      <div class="card">
+        <p class="eyebrow" style="color: #8b5700;">The central idea</p>
+        <h2>Learn mathematics by helping to create it</h2>
+        <p>StemForAll is a research-apprenticeship program for undergraduate students and especially talented high school students in the Rochester area. It rests on a simple principle: students should have an opportunity to see how research is actually done, even before they have completed every advanced course.</p>
+        <p>Participants work in small groups on questions drawn from pure and applied mathematics, statistics, computation, physics, biology, and related fields. They learn to formulate problems, read technical material, test ideas, use computation thoughtfully, explain their work, and persist when the answer is not immediate.</p>
+        <p>The program places learning and the creative process first. Some projects eventually lead to talks, software, or research papers, but the essential goal is to help students become confident and independent thinkers.</p>
+      </div>
 
+      <aside class="card at-a-glance">
+        <h3>At a glance</h3>
+        <div class="stat">
+          <strong>Running since 2018</strong>
+          <span>Nine consecutive summer programs</span>
+        </div>
+        <div class="stat">
+          <strong>Local and inclusive</strong>
+          <span>Designed to lower geographic and financial barriers</span>
+        </div>
+        <div class="stat">
+          <strong>Research in small groups</strong>
+          <span>Faculty, graduate students, and junior mentors working together</span>
+        </div>
+        <div class="stat">
+          <strong>Beyond the summer</strong>
+          <span>Promising projects can continue through the academic year</span>
+        </div>
+      </aside>
+    </section>
 
+    <section id="how-it-works">
+      <div class="section-heading">
+        <p class="eyebrow">The research pathway</p>
+        <h2>How the program works</h2>
+        <p>The summer workshop is the center of the program, but the most productive projects often begin beforehand and continue long afterward.</p>
+      </div>
 
+      <div class="process-grid">
+        <article class="process-step">
+          <span class="step-number">1</span>
+          <h3>Prepare</h3>
+          <p>Students begin with readings, preliminary exercises, programming, and conversations with project supervisors. The aim is to build the background needed to ask serious questions.</p>
+        </article>
+        <article class="process-step">
+          <span class="step-number">2</span>
+          <h3>Work intensively</h3>
+          <p>The summer workshop combines mini-courses with daily research in small groups. Participants compare approaches, test conjectures, write code when useful, and present what they have learned.</p>
+        </article>
+        <article class="process-step">
+          <span class="step-number">3</span>
+          <h3>Continue</h3>
+          <p>Projects with further potential may continue during the fall and winter. Students can deepen the mathematics and work toward presentations, software, or research papers.</p>
+        </article>
+      </div>
+    </section>
 
-      2020</a><br>
-    <br>
-    <a moz-do-not-send="true" href="stemforall2021.html">Tripods/StemForAll
+    <section id="archive">
+      <div class="section-heading">
+        <p class="eyebrow">2018&ndash;2026</p>
+        <h2>StemForAll program archive</h2>
+        <p>Each page records the people, topics, schedules, projects, and—in several years—lecture notes and final presentations that made the program possible.</p>
+      </div>
 
+      <div class="archive-grid">
+        <a class="year-card featured-year" href="stemforall2026.html">
+          <span class="year">Latest program &middot; 2026</span>
+          <h3>Eight projects across mathematics, data science, and physics</h3>
+          <p>Signal recovery, fractal analysis of EEG data, topology, geometric partial differential equations, neural networks, financial mathematics, and quantum systems.</p>
+          <span class="card-link">View the 2026 program &rarr;</span>
+        </a>
 
+        <a class="year-card" href="stemforall2025.html">
+          <span class="year">2025</span>
+          <h3>StemForAll research workshop</h3>
+          <p>A Rochester-area program built around supervised projects, background lectures, computation, and sustained collaboration.</p>
+          <span class="card-link">View 2025 &rarr;</span>
+        </a>
 
+        <a class="year-card" href="stemforall2024.html">
+          <span class="year">2024</span>
+          <h3>From signal recovery to automated theorem proving</h3>
+          <p>Projects included exact signal recovery, the Buffon needle problem, automated theorem proving, and Kolmogorov complexity.</p>
+          <span class="card-link">View 2024 &rarr;</span>
+        </a>
 
+        <a class="year-card" href="stemforall2023.html">
+          <span class="year">2023</span>
+          <h3>Geometry, number theory, probability, and data</h3>
+          <p>Advanced undergraduate mathematics was paired with Python, modern data techniques, eight research projects, and final presentations.</p>
+          <span class="card-link">View 2023 &rarr;</span>
+        </a>
 
+        <a class="year-card" href="stemforall2022.html">
+          <span class="year">2022</span>
+          <h3>Neural networks: theory and computation</h3>
+          <p>Mini-courses in linear algebra, probability, inequalities, and multivariable calculus supported a four-week research program.</p>
+          <span class="card-link">View 2022 &rarr;</span>
+        </a>
 
-      2021</a><br>
-    <br>
-    <a moz-do-not-send="true" href="stemforall2022.html">Tripods/StemForAll
+        <a class="year-card" href="stemforall2021.html">
+          <span class="year">2021</span>
+          <h3>A comprehensive approach to neural networks</h3>
+          <p>Theoretical foundations in the mornings, intensive programming in the afternoons, and projects joining pure and applied data science.</p>
+          <span class="card-link">View 2021 &rarr;</span>
+        </a>
 
+        <a class="year-card" href="stemforall2020.html">
+          <span class="year">2020</span>
+          <h3>Tripods NSF REU and Grad For All</h3>
+          <p>Coursework, mentoring, Python instruction, and accessible open problems brought together students and researchers across institutions.</p>
+          <span class="card-link">View 2020 &rarr;</span>
+        </a>
 
+        <a class="year-card" href="stemforall2019.html">
+          <span class="year">2019</span>
+          <h3>Four routes into modern mathematics</h3>
+          <p>Integer partitions, sums and products, foundations of geometry, and knot invariants, each followed by a research phase.</p>
+          <span class="card-link">View 2019 &rarr;</span>
+        </a>
 
+        <a class="year-card" href="stemforall.html">
+          <span class="year">2018</span>
+          <h3>The first StemForAll summer</h3>
+          <p>Functional programming, Bayesian inference, optimization, and statistical machine learning launched the Rochester program.</p>
+          <span class="card-link">View 2018 &rarr;</span>
+        </a>
+      </div>
+    </section>
 
+    <section id="team" class="thanks">
+      <div>
+        <p class="eyebrow">A collaborative effort</p>
+        <h2>Made possible by an extraordinary team</h2>
+      </div>
+      <div>
+        <p>These programs would not have been possible without the tremendous efforts of Charlotte Aten, Ayla Gafni, Azita Mayeli, Steven Kleene, Sevak Mkrtchyan, Emmett Wyman, and many other faculty members, graduate students, undergraduate mentors, organizers, and institutional partners.</p>
+        <p>It is a tremendous privilege to work with excellent mathematicians and generous human beings on these endeavors.</p>
+      </div>
+    </section>
 
+    <section id="contact" class="closing-card">
+      <h2>Interested in undergraduate research?</h2>
+      <p>Students should begin with the <a href="stemforall2026.html">latest StemForAll program page</a>, which describes current projects, preparation, participation, and contact information. Questions may also be directed to <a href="mailto:iosevich@math.rochester.edu">iosevich@math.rochester.edu</a>.</p>
+    </section>
+  </main>
 
-      2022</a><br>
-    <br>
-    <a moz-do-not-send="true" href="stemforall2023.html">Tripods/StemForAll
-
-
-
-
-
-
-      2023 </a><br>
-    <br>
-    <a moz-do-not-send="true" href="stemforall2024.html">StemForAll 2024</a><br>
-    <br>
-    <a moz-do-not-send="true" href="stemforall2025.html">StemForAll 2025</a><br>
-    <br>
-    <font color="#cc0000"><font color="#cc0000"><font color="#cc0000"><font
-            color="#000000"><b><font color="#cc0000"><font
-                  color="#cc0000"><u><b><font color="#cc0000"><u><b><font
-                              color="#cc0000"><u><b><font
-                                    color="#cc0000"><u><b><font
-                                          color="#cc0000"><u><b><font
-                                                color="#cc0000"><font
-                                                  color="#cc0000"><u><b><font
-                                                        color="#cc0000"><u><b><font
-color="#cc0000"><u><b><font color="#cc0000"><u><b><font color="#cc0000"><u><b><font
-color="#cc0000"><u><b><font color="#cc0000"><font color="#cc0000"><font
-color="#cc0000"><u><b><a
-                                                          href="https://alexiosevich.com/stemforall2026.html">StemForAll2026</a></b></u></font></font></font></b></u></font></b></u></font></b></u></font></b></u></font></b></u></font></b></u></font></font></b></u></font></b></u></font></b></u></font></b></u></font></b></u></font></font></b></font></font></font></font><br>
-  </body>
+  <footer>
+    Alex Iosevich &middot; Department of Mathematics &middot; University of Rochester<br>
+    <a href="index.html">Return to the home page</a>
+  </footer>
+</body>
 </html>
