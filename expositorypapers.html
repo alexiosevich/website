@@ -1,86 +1,442 @@
-<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="Author" content="Alex Iosevich">
-    <meta name="GENERATOR" content="Mozilla/4.79 [en] (Windows NT 5.0;
-      U) [Netscape]">
-    <title>PapersInPreparation</title>
-  </head>
-  <body style="background-image:
-    url(http://www.math.missouri.edu/~iosevich/backgroundexpository.jpg);"
-    vlink="#551A8B" text="#000000" link="#0000EE" bgcolor="#c0c0c0"
-    alink="#EE0000">
-    <center><font size="+3" color="#cc0000"><b>Expository papers</b></font><b><font
-          size="+2"><br>
-          <br>
-          <img alt="" src="alexworking.jpg"><br>
-        </font></b></center>
-    <p><b><u>Kakeya Lectures:</u></b> </p>
-    <p>A series of lectures on the Kakeya problem, the restriction
-      conjecture, and related issues, delivered at the probability
-      learning seminar at the University of Missouri-Columbia during the
-      first semester of 2000.The subject matter has advanced
-      considerably since then, but the lectures may still be useful for
-      learning some basic techniques. <br>
-    </p>
-    <p><a href="expository/seminarlecture1.pdf">Lecture #1: Kakeya
-        problem, Kakeya maximal operator, and the restriction
-        phenomenon: connections and relationships</a> </p>
-    <p><a href="expository/seminarlecture2.pdf">Lecture #2: Adventures
-        in the plane</a> </p>
-    <p><a href="expository/seminarlecture3.pdf">Lecture #3: Higher
-        dimensional adventures: n+1/2 and discrete n+2/2</a> </p>
-    <p><a href="expository/seminarlecture4.pdf">Lecture #4: Wolff's
-        n+2/2 result: We are in the 90's!</a> </p>
-    <p><a href="expository/seminarlecture5.pdf">Lecture #5: Bourgain
-        strikes again- Arithmetic Kakeya estimates</a> <br>
-      &nbsp; </p>
-    <p><b><u><a href="expository/FugledeLattice.pdf">Fuglede conjecture
-            for lattices:</a></u></b> </p>
-    <p>This short note gives a simple proof of a theorem due to Fuglede
-      which says that the statement that the lattice L tiles a domain in
-      Euclidean space is equivalent to the statement that the dual
-      lattice generates an orthogonal basis of exponentials for L_2 of
-      this domain. An even shorter proof can be given using the Poisson
-      Summation Formula. The proof here was designed to be almost
-      completely self-contained, so the PSF is essentially reproved in
-      the course of the argument. This paper was written around 2004. <br>
-      <br>
-    </p>
-    <p><a href="expository/roth03.pdf"><b><span>Roth's theorem on
-            arithmetic progressions:</span></b></a> <br>
-    </p>
-    <p>In this note we give a simple and self-contained proof of Roth's
-      theorem which says that the any subset of the positive integers of
-      positive density contains an arithmetic progression of length
-      three. This paper was written around 2002. <br>
-    </p>
-    <b><a href="falcsteintomas.pdf">Proof of Falconer's distance set
-        estimate via Stein-Tomas</a></b><small><b> : </b><br>
-    </small>
-    <p>In this note we use the Stein-Tomas restriction theorem to prove
-      a result due to Falconer which says that if the Hausdorff
-      dimension of a set is greater than (d+1)/2, then the Lebesgue
-      measure of the set of distances is positive. This point of view
-      has let to some interesting advances in recent years in papers by
-      Bourgain, Wolff, Erdogan and others. This paper was written around
-      2006. <br>
-    </p>
-    <br>
-    <p> &nbsp; <br>
-      &nbsp; <br>
-      &nbsp; <br>
-      &nbsp; <br>
-      &nbsp; <br>
-      &nbsp; <br>
-      &nbsp; <br>
-      &nbsp; </p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Alex Iosevich">
+  <meta name="description" content="Expository articles and lecture notes by Alex Iosevich on Falconer's conjecture, Kakeya problems, Fourier analysis, tiling, and arithmetic progressions.">
+  <title>Expository Articles and Lecture Notes | Alex Iosevich</title>
+  <style>
+    :root {
+      --navy: #142945;
+      --blue: #315f86;
+      --gold: #e4a62a;
+      --gold-dark: #8b5700;
+      --ink: #263442;
+      --muted: #657483;
+      --paper: #ffffff;
+      --wash: #f3f7f9;
+      --line: #dce5eb;
+      --shadow: 0 16px 38px rgba(20, 41, 69, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--wash);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #245f8e;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover, a:focus { color: var(--gold-dark); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background: linear-gradient(125deg, #10233c 0%, #1d496c 68%, #2c6d8f 100%);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border: 2px solid rgba(255, 255, 255, 0.11);
+      transform: rotate(45deg);
+    }
+
+    .hero::before {
+      top: -190px;
+      right: 80px;
+      width: 430px;
+      height: 430px;
+    }
+
+    .hero::after {
+      right: -110px;
+      bottom: -260px;
+      width: 520px;
+      height: 520px;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(1060px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 100px 0 88px;
+    }
+
+    .eyebrow {
+      margin: 0 0 9px;
+      color: #ffd978;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin: 0;
+      font-size: clamp(2.65rem, 6vw, 5.2rem);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+    }
+
+    .hero p:last-child {
+      max-width: 720px;
+      margin: 22px 0 0;
+      font-size: 1.17rem;
+      line-height: 1.58;
+    }
+
+    .page-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 3px 14px rgba(20, 41, 69, 0.06);
+    }
+
+    .page-nav div {
+      width: min(1060px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 12px 0;
+      display: flex;
+      gap: 22px;
+      overflow-x: auto;
+      white-space: nowrap;
+      font: 700 0.83rem/1.4 Arial, Helvetica, sans-serif;
+    }
+
+    .page-nav a { color: var(--navy); text-decoration: none; }
+    .page-nav a:hover, .page-nav a:focus { color: var(--gold-dark); }
+
+    main {
+      width: min(1060px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 66px 0 92px;
+    }
+
+    section { scroll-margin-top: 78px; }
+
+    h2 {
+      margin: 0 0 18px;
+      color: var(--navy);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 1.28rem;
+      line-height: 1.35;
+    }
+
+    p { margin: 0 0 1em; }
+    p:last-child { margin-bottom: 0; }
+
+    .featured {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      gap: 34px;
+      align-items: center;
+      padding: 34px;
+      border: 1px solid #d8c189;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #fffaf0, #ffffff 62%);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-mark {
+      display: grid;
+      width: 142px;
+      height: 172px;
+      padding: 18px;
+      align-content: space-between;
+      border-radius: 6px 16px 6px 6px;
+      color: white;
+      background: var(--navy);
+      box-shadow: 11px 11px 0 #e8bb56;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .feature-mark span {
+      color: #ffd978;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .feature-mark strong {
+      font-size: 2.4rem;
+      line-height: 1;
+    }
+
+    .citation {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      border: 1px solid var(--navy);
+      border-radius: 6px;
+      font: 700 0.85rem/1.4 Arial, Helvetica, sans-serif;
+      text-decoration: none;
+    }
+
+    .button-primary { color: white; background: var(--navy); }
+    .button-primary:hover, .button-primary:focus { color: white; background: var(--blue); }
+    .button-secondary { color: var(--navy); background: white; }
+    .button-secondary:hover, .button-secondary:focus { color: var(--gold-dark); border-color: var(--gold-dark); }
+
+    .section-heading {
+      max-width: 800px;
+      margin: 74px 0 28px;
+    }
+
+    .section-heading .eyebrow { color: var(--gold-dark); }
+    .section-heading > p:last-child { color: var(--muted); font-size: 1.04rem; }
+
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .note-card {
+      display: flex;
+      flex-direction: column;
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--gold);
+      border-radius: 10px;
+      background: var(--paper);
+      box-shadow: 0 8px 24px rgba(20, 41, 69, 0.05);
+    }
+
+    .note-card .date {
+      margin-bottom: 9px;
+      color: var(--muted);
+      font: 700 0.76rem/1.3 Arial, Helvetica, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .note-card p { color: var(--muted); font-size: 0.93rem; line-height: 1.58; }
+    .note-card .card-link { margin-top: auto; padding-top: 16px; font-weight: 700; }
+
+    .lecture-intro {
+      padding: 27px 30px;
+      border-left: 5px solid var(--blue);
+      background: var(--paper);
+    }
+
+    .lecture-list {
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: lectures;
+    }
+
+    .lecture-list li {
+      counter-increment: lectures;
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      padding: 19px 21px;
+      border: 1px solid var(--line);
+      border-bottom: 0;
+      background: var(--paper);
+    }
+
+    .lecture-list li:first-child { border-radius: 10px 10px 0 0; }
+    .lecture-list li:last-child { border-bottom: 1px solid var(--line); border-radius: 0 0 10px 10px; }
+
+    .lecture-list li::before {
+      content: counter(lectures, decimal-leading-zero);
+      color: var(--gold-dark);
+      font: 700 1.05rem/1 Arial, Helvetica, sans-serif;
+    }
+
+    .lecture-title { color: var(--navy); font-weight: 700; line-height: 1.45; }
+    .pdf-label { color: var(--muted); font: 700 0.74rem/1 Arial, Helvetica, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
+
+    .closing {
+      margin-top: 54px;
+      padding: 29px 32px;
+      border-radius: 10px;
+      color: white;
+      background: var(--navy);
+    }
+
+    .closing a { color: #ffd978; }
+
+    footer {
+      padding: 28px 20px;
+      color: #dfe8ef;
+      background: #0d1c2f;
+      text-align: center;
+      font: 0.82rem/1.6 Arial, Helvetica, sans-serif;
+    }
+
+    footer a { color: #ffd978; }
+
+    @media (max-width: 820px) {
+      .notes-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      body { font-size: 17px; }
+      .hero-inner { padding: 78px 0 72px; }
+      .featured { grid-template-columns: 1fr; }
+      .feature-mark { width: 120px; height: 145px; }
+      .lecture-list li { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; }
+      .pdf-label { grid-column: 2; }
+      .page-nav div, main, .hero-inner { width: min(100% - 28px, 1060px); }
+      main { padding-top: 42px; }
+      .section-heading { margin-top: 56px; }
+      .featured, .note-card { padding: 24px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Alex Iosevich</p>
+      <h1>Expository articles and lecture notes</h1>
+      <p>Introductions to central ideas in harmonic analysis, geometric measure theory, and additive combinatorics, written to make the main questions and methods accessible.</p>
+    </div>
+  </header>
+
+  <nav class="page-nav" aria-label="On this page">
+    <div>
+      <a href="#featured">Featured article</a>
+      <a href="#notes">Standalone notes</a>
+      <a href="#kakeya">Kakeya lectures</a>
+      <a href="cvweb.html">Complete CV</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="featured" class="featured">
+      <div class="feature-mark" aria-hidden="true">
+        <span>Notices of the AMS</span>
+        <strong>2019</strong>
+      </div>
+      <div>
+        <p class="eyebrow" style="color: #8b5700;">Featured expository article</p>
+        <h2>What Is&hellip; Falconer's Conjecture?</h2>
+        <p>This article introduces one of the central open problems in geometric measure theory: how large a compact subset of Euclidean space must be before its set of pairwise distances necessarily has positive Lebesgue measure. It explains the conjecture's relationship with the Erdős distinct-distances problem and the role of Fourier analysis in the subject.</p>
+        <p class="citation">Alex Iosevich, <i>Notices of the American Mathematical Society</i> 66 (2019), no. 4, 552&ndash;555.</p>
+        <div class="actions">
+          <a class="button button-primary" href="https://www.ams.org/journals/notices/201904/rnoti-p552.pdf">Read the article</a>
+          <a class="button button-secondary" href="https://www.ams.org/cgi-bin/notices/nxgnotices.pl?prev=201904">View the Notices issue</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="notes">
+      <div class="section-heading">
+        <p class="eyebrow">Short introductions</p>
+        <h2>Standalone expository notes</h2>
+        <p>Self-contained accounts of several classical results and the Fourier-analytic ideas behind them.</p>
+      </div>
+
+      <div class="notes-grid">
+        <article class="note-card">
+          <span class="date">Written around 2006</span>
+          <h3>Falconer's distance-set estimate via Stein&ndash;Tomas</h3>
+          <p>A short proof, using the Stein&ndash;Tomas restriction theorem, that a set of Hausdorff dimension greater than (d+1)/2 has a distance set of positive Lebesgue measure. This perspective became influential in later work on the problem.</p>
+          <a class="card-link" href="falcsteintomas.pdf">Read the note (PDF) &rarr;</a>
+        </article>
+
+        <article class="note-card">
+          <span class="date">Written around 2004</span>
+          <h3>The Fuglede conjecture for lattices</h3>
+          <p>A nearly self-contained proof that a domain tiles Euclidean space by translations along a lattice precisely when the dual lattice gives an orthogonal basis of exponentials for its L<sup>2</sup> space. The argument essentially rebuilds the needed Poisson summation formula.</p>
+          <a class="card-link" href="expository/FugledeLattice.pdf">Read the note (PDF) &rarr;</a>
+        </article>
+
+        <article class="note-card">
+          <span class="date">Written around 2002</span>
+          <h3>Roth's theorem on arithmetic progressions</h3>
+          <p>A simple, self-contained proof that every subset of the positive integers with positive upper density contains a three-term arithmetic progression.</p>
+          <a class="card-link" href="expository/roth03.pdf">Read the note (PDF) &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="kakeya">
+      <div class="section-heading">
+        <p class="eyebrow">Five lectures</p>
+        <h2>The Kakeya lecture series</h2>
+      </div>
+
+      <div class="lecture-intro">
+        <p>This series on the Kakeya problem, the restriction conjecture, and related questions was delivered in the Probability Learning Seminar at the University of Missouri&ndash;Columbia during the fall semester of 2000. The subject has advanced considerably since then, but the lectures remain useful introductions to several fundamental techniques and historical ideas.</p>
+      </div>
+
+      <ol class="lecture-list">
+        <li>
+          <a class="lecture-title" href="expository/seminarlecture1.pdf">Kakeya problems, the Kakeya maximal operator, and the restriction phenomenon</a>
+          <span class="pdf-label">6-page PDF</span>
+        </li>
+        <li>
+          <a class="lecture-title" href="expository/seminarlecture2.pdf">Adventures in the plane</a>
+          <span class="pdf-label">6-page PDF</span>
+        </li>
+        <li>
+          <a class="lecture-title" href="expository/seminarlecture3.pdf">Higher-dimensional adventures: (n+1)/2 and the discrete (n+2)/2 problem</a>
+          <span class="pdf-label">4-page PDF</span>
+        </li>
+        <li>
+          <a class="lecture-title" href="expository/seminarlecture4.pdf">Wolff's (n+2)/2 result: We are in the 1990s!</a>
+          <span class="pdf-label">7-page PDF</span>
+        </li>
+        <li>
+          <a class="lecture-title" href="expository/seminarlecture5.pdf">Bourgain strikes again: arithmetic Kakeya estimates</a>
+          <span class="pdf-label">8-page PDF</span>
+        </li>
+      </ol>
+    </section>
+
+    <div class="closing">
+      <p>For research papers, books, and a complete publication list, please see my <a href="cvweb.html">curriculum vitae</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    Alex Iosevich &middot; Department of Mathematics &middot; University of Rochester<br>
+    <a href="index.html">Return to the home page</a>
+  </footer>
+</body>
 </html>
