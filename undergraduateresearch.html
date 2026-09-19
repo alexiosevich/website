@@ -1,15 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Undergraduate research
-      opportunities and the StemForAll summer research program organized
-      by Alex Iosevich at the University of Rochester.">
-    <title>Undergraduate Research and StemForAll | Alex Iosevich</title>
-    <style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Undergraduate research opportunities and the StemForAll summer research program organized by Alex Iosevich at the University of Rochester.">
+  <title>Undergraduate Research and StemForAll | Alex Iosevich</title>
+  <style>
     :root {
       --navy: #142945;
       --blue: #315f86;
@@ -47,6 +43,7 @@
       position: relative;
       overflow: hidden;
       color: white;
+      background-color: #142945;
       background:
         radial-gradient(circle at 88% 22%, rgba(228, 166, 42, 0.32) 0 2px, transparent 3px),
         radial-gradient(circle at 73% 68%, rgba(255, 255, 255, 0.14) 0 3px, transparent 4px),
@@ -71,7 +68,7 @@
       z-index: 1;
       width: min(1080px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 104px 0 94px;
+      padding: 62px 0 58px;
     }
 
     .eyebrow {
@@ -87,24 +84,28 @@
     h1 {
       max-width: 790px;
       margin: 0;
-      font-size: clamp(2.6rem, 6vw, 5.2rem);
-      line-height: 1.03;
+      color: #ffffff;
+      font-size: clamp(2.35rem, 5vw, 4.45rem);
+      line-height: 1.06;
       letter-spacing: -0.04em;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.32);
       text-wrap: balance;
     }
 
     .hero-copy {
       max-width: 720px;
-      margin: 22px 0 0;
+      margin: 18px 0 0;
+      color: #f1f6fa;
       font-size: 1.18rem;
       line-height: 1.58;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 30px;
+      margin-top: 24px;
     }
 
     .button {
@@ -346,7 +347,7 @@
 
     @media (max-width: 680px) {
       body { font-size: 17px; }
-      .hero-inner { padding: 78px 0 72px; }
+      .hero-inner { padding: 42px 0 40px; }
       .lead-grid, .archive-grid, .thanks { grid-template-columns: 1fr; }
       .featured-year { grid-column: auto; }
       .page-nav div, main, .hero-inner { width: min(100% - 28px, 1080px); }
@@ -361,194 +362,181 @@
       .year-card { transition: none; }
     }
   </style>
-  </head>
-  <body>
-    <header class="hero">
-      <div class="hero-inner">
-        <p class="eyebrow">University of Rochester</p>
-        <h1>Undergraduate research begins with a good question</h1>
-        <p class="hero-copy">StemForAll brings undergraduate students,
-          advanced high school students, faculty members, graduate
-          students, and researchers together to explore open-ended
-          problems in mathematics, data science, and neighboring fields.</p>
-        <div class="hero-actions"> <a class="button button-primary"
-            href="stemforall2026.html">Explore StemForAll 2026</a> <a
-            class="button button-secondary" href="#archive">Browse the
-            program archive</a> </div>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">University of Rochester</p>
+      <h1>Undergraduate research begins with a good question</h1>
+      <p class="hero-copy">StemForAll brings undergraduate students, advanced high school students, faculty members, graduate students, and researchers together to explore open-ended problems in mathematics, data science, and neighboring fields.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="stemforall2026.html">Explore StemForAll 2026</a>
+        <a class="button button-secondary" href="#archive">Browse the program archive</a>
       </div>
-    </header>
-    <nav class="page-nav" aria-label="On this page">
-      <div> <a href="#about">About</a> <a href="#how-it-works">How it
-          works</a> <a href="#archive">Program archive</a> <a
-          href="#team">The team</a> <a href="#contact">Contact</a> </div>
-    </nav>
-    <main>
-      <section id="about" class="lead-grid">
-        <div class="card">
-          <p class="eyebrow" style="color: #8b5700;">The central idea</p>
-          <h2>Learn mathematics by helping to create it</h2>
-          <p>StemForAll is a research-apprenticeship program for
-            undergraduate students and especially talented high school
-            students in the Rochester area. It rests on a simple
-            principle: students should have an opportunity to see how
-            research is actually done, even before they have completed
-            every advanced course.</p>
-          <p>Participants work in small groups on questions drawn from
-            pure and applied mathematics, statistics, computation,
-            physics, biology, and related fields. They learn to
-            formulate problems, read technical material, test ideas, use
-            computation thoughtfully, explain their work, and persist
-            when the answer is not immediate.</p>
-          <p>The program places learning and the creative process first.
-            Some projects eventually lead to talks, software, or
-            research papers, but the essential goal is to help students
-            become confident and independent thinkers.</p>
+    </div>
+  </header>
+
+  <nav class="page-nav" aria-label="On this page">
+    <div>
+      <a href="#about">About</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#archive">Program archive</a>
+      <a href="#team">The team</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="about" class="lead-grid">
+      <div class="card">
+        <p class="eyebrow" style="color: #8b5700;">The central idea</p>
+        <h2>Learn mathematics by helping to create it</h2>
+        <p>StemForAll is a research-apprenticeship program for undergraduate students and especially talented high school students in the Rochester area. It rests on a simple principle: students should have an opportunity to see how research is actually done, even before they have completed every advanced course.</p>
+        <p>Participants work in small groups on questions drawn from pure and applied mathematics, statistics, computation, physics, biology, and related fields. They learn to formulate problems, read technical material, test ideas, use computation thoughtfully, explain their work, and persist when the answer is not immediate.</p>
+        <p>The program places learning and the creative process first. Some projects eventually lead to talks, software, or research papers, but the essential goal is to help students become confident and independent thinkers.</p>
+      </div>
+
+      <aside class="card at-a-glance">
+        <h3>At a glance</h3>
+        <div class="stat">
+          <strong>Running since 2018</strong>
+          <span>Nine consecutive summer programs</span>
         </div>
-        <aside class="card at-a-glance">
-          <h3>At a glance</h3>
-          <div class="stat"> <strong>Running since 2018</strong> <span>Nine
-              consecutive summer programs</span> </div>
-          <div class="stat"> <strong>Local and inclusive</strong> <span>Designed
-              to lower geographic and financial barriers</span> </div>
-          <div class="stat"> <strong>Research in small groups</strong>
-            <span>Faculty, graduate students, and junior mentors working
-              together</span> </div>
-          <div class="stat"> <strong>Beyond the summer</strong> <span>Promising
-              projects can continue through the academic year</span> </div>
-        </aside>
-      </section>
-      <section id="how-it-works">
-        <div class="section-heading">
-          <p class="eyebrow">The research pathway</p>
-          <h2>How the program works</h2>
-          <p>The summer workshop is the center of the program, but the
-            most productive projects often begin beforehand and continue
-            long afterward.</p>
+        <div class="stat">
+          <strong>Local and inclusive</strong>
+          <span>Designed to lower geographic and financial barriers</span>
         </div>
-        <div class="process-grid">
-          <article class="process-step"> <span class="step-number">1</span>
-            <h3>Prepare</h3>
-            <p>Students begin with readings, preliminary exercises,
-              programming, and conversations with project supervisors.
-              The aim is to build the background needed to ask serious
-              questions.</p>
-          </article>
-          <article class="process-step"> <span class="step-number">2</span>
-            <h3>Work intensively</h3>
-            <p>The summer workshop combines mini-courses with daily
-              research in small groups. Participants compare approaches,
-              test conjectures, write code when useful, and present what
-              they have learned.</p>
-          </article>
-          <article class="process-step"> <span class="step-number">3</span>
-            <h3>Continue</h3>
-            <p>Projects with further potential may continue during the
-              fall and winter. Students can deepen the mathematics and
-              work toward presentations, software, or research papers.</p>
-          </article>
+        <div class="stat">
+          <strong>Research in small groups</strong>
+          <span>Faculty, graduate students, and junior mentors working together</span>
         </div>
-      </section>
-      <section id="archive">
-        <div class="section-heading">
-          <p class="eyebrow">2018–2026</p>
-          <h2>StemForAll program archive</h2>
-          <p>Each page records the people, topics, schedules, projects,
-            and—in several years—lecture notes and final presentations
-            that made the program possible.</p>
+        <div class="stat">
+          <strong>Beyond the summer</strong>
+          <span>Promising projects can continue through the academic year</span>
         </div>
-        <div class="archive-grid"> <a class="year-card featured-year"
-            href="stemforall2026.html"> <span class="year">Latest
-              program · 2026</span>
-            <h3>Eight projects across mathematics, data science, and
-              physics</h3>
-            <p>Signal recovery, fractal analysis of EEG data, topology,
-              geometric partial differential equations, neural networks,
-              financial mathematics, and quantum systems.</p>
-            <span class="card-link">View the 2026 program →</span> </a>
-          <a class="year-card" href="stemforall2025.html"> <span
-              class="year">2025</span>
-            <h3>StemForAll research workshop</h3>
-            <p>A Rochester-area program built around supervised
-              projects, background lectures, computation, and sustained
-              collaboration.</p>
-            <span class="card-link">View 2025 →</span> </a> <a
-            class="year-card" href="stemforall2024.html"> <span
-              class="year">2024</span>
-            <h3>From signal recovery to automated theorem proving</h3>
-            <p>Projects included exact signal recovery, the Buffon
-              needle problem, automated theorem proving, and Kolmogorov
-              complexity.</p>
-            <span class="card-link">View 2024 →</span> </a> <a
-            class="year-card" href="stemforall2023.html"> <span
-              class="year">2023</span>
-            <h3>Geometry, number theory, probability, and data</h3>
-            <p>Advanced undergraduate mathematics was paired with
-              Python, modern data techniques, eight research projects,
-              and final presentations.</p>
-            <span class="card-link">View 2023 →</span> </a> <a
-            class="year-card" href="stemforall2022.html"> <span
-              class="year">2022</span>
-            <h3>Neural networks: theory and computation</h3>
-            <p>Mini-courses in linear algebra, probability,
-              inequalities, and multivariable calculus supported a
-              four-week research program.</p>
-            <span class="card-link">View 2022 →</span> </a> <a
-            class="year-card" href="stemforall2021.html"> <span
-              class="year">2021</span>
-            <h3>A comprehensive approach to neural networks</h3>
-            <p>Theoretical foundations in the mornings, intensive
-              programming in the afternoons, and projects joining pure
-              and applied data science.</p>
-            <span class="card-link">View 2021 →</span> </a> <a
-            class="year-card" href="stemforall2020.html"> <span
-              class="year">2020</span>
-            <h3>Tripods NSF REU and Grad For All</h3>
-            <p>Coursework, mentoring, Python instruction, and accessible
-              open problems brought together students and researchers
-              across institutions.</p>
-            <span class="card-link">View 2020 →</span> </a> <a
-            class="year-card" href="stemforall2019.html"> <span
-              class="year">2019</span>
-            <h3>Four routes into modern mathematics</h3>
-            <p>Integer partitions, sums and products, foundations of
-              geometry, and knot invariants, each followed by a research
-              phase.</p>
-            <span class="card-link">View 2019 →</span> </a> <a
-            class="year-card" href="stemforall.html"> <span
-              class="year">2018</span>
-            <h3>The first StemForAll summer</h3>
-            <p>Functional programming, Bayesian inference, optimization,
-              and statistical machine learning launched the Rochester
-              program.</p>
-            <span class="card-link">View 2018 →</span> </a> </div>
-      </section>
-      <section id="team" class="thanks">
-        <div>
-          <p class="eyebrow">A collaborative effort</p>
-          <h2>Made possible by an extraordinary team</h2>
-        </div>
-        <div>
-          <p>These programs would not have been possible without the
-            tremendous efforts of Charlotte Aten, Ayla Gafni, Steven
-            Kleene, Azita Mayeli, Sevak Mkrtchyan, Svetlana Pack,
-            Jonathan Pakianathan, Emmett Wyman, and many other faculty
-            members, graduate students, undergraduate mentors,
-            organizers, and institutional partners.</p>
-          <p>It is a tremendous privilege to work with excellent
-            mathematicians and generous human beings on these endeavors.</p>
-        </div>
-      </section>
-      <section id="contact" class="closing-card">
-        <h2>Interested in undergraduate research?</h2>
-        <p>Students should begin with the <a href="stemforall2026.html">latest
-            StemForAll program page</a>, which describes current
-          projects, preparation, participation, and contact information.
-          Questions may also be directed to iosevich@gmail.com. <br>
-        </p>
-      </section>
-    </main>
-    <footer> Alex Iosevich · Department of Mathematics · University of
-      Rochester<br>
-      <a href="index.html">Return to the home page</a> </footer>
-  </body>
+      </aside>
+    </section>
+
+    <section id="how-it-works">
+      <div class="section-heading">
+        <p class="eyebrow">The research pathway</p>
+        <h2>How the program works</h2>
+        <p>The summer workshop is the center of the program, but the most productive projects often begin beforehand and continue long afterward.</p>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-step">
+          <span class="step-number">1</span>
+          <h3>Prepare</h3>
+          <p>Students begin with readings, preliminary exercises, programming, and conversations with project supervisors. The aim is to build the background needed to ask serious questions.</p>
+        </article>
+        <article class="process-step">
+          <span class="step-number">2</span>
+          <h3>Work intensively</h3>
+          <p>The summer workshop combines mini-courses with daily research in small groups. Participants compare approaches, test conjectures, write code when useful, and present what they have learned.</p>
+        </article>
+        <article class="process-step">
+          <span class="step-number">3</span>
+          <h3>Continue</h3>
+          <p>Projects with further potential may continue during the fall and winter. Students can deepen the mathematics and work toward presentations, software, or research papers.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="archive">
+      <div class="section-heading">
+        <p class="eyebrow">2018&ndash;2026</p>
+        <h2>StemForAll program archive</h2>
+        <p>Each page records the people, topics, schedules, projects, and—in several years—lecture notes and final presentations that made the program possible.</p>
+      </div>
+
+      <div class="archive-grid">
+        <a class="year-card featured-year" href="stemforall2026.html">
+          <span class="year">Latest program &middot; 2026</span>
+          <h3>Eight projects across mathematics, data science, and physics</h3>
+          <p>Signal recovery, fractal analysis of EEG data, topology, geometric partial differential equations, neural networks, financial mathematics, and quantum systems.</p>
+          <span class="card-link">View the 2026 program &rarr;</span>
+        </a>
+
+        <a class="year-card" href="stemforall2025.html">
+          <span class="year">2025</span>
+          <h3>StemForAll research workshop</h3>
+          <p>A Rochester-area program built around supervised projects, background lectures, computation, and sustained collaboration.</p>
+          <span class="card-link">View 2025 &rarr;</span>
+        </a>
+
+        <a class="year-card" href="stemforall2024.html">
+          <span class="year">2024</span>
+          <h3>From signal recovery to automated theorem proving</h3>
+          <p>Projects included exact signal recovery, the Buffon needle problem, automated theorem proving, and Kolmogorov complexity.</p>
+          <span class="card-link">View 2024 &rarr;</span>
+        </a>
+
+        <a class="year-card" href="stemforall2023.html">
+          <span class="year">2023</span>
+          <h3>Geometry, number theory, probability, and data</h3>
+          <p>Advanced undergraduate mathematics was paired with Python, modern data techniques, eight research projects, and final presentations.</p>
+          <span class="card-link">View 2023 &rarr;</span>
+        </a>
+
+        <a class="year-card" href="stemforall2022.html">
+          <span class="year">2022</span>
+          <h3>Neural networks: theory and computation</h3>
+          <p>Mini-courses in linear algebra, probability, inequalities, and multivariable calculus supported a four-week research program.</p>
+          <span class="card-link">View 2022 &rarr;</span>
+        </a>
+
+        <a class="year-card" href="stemforall2021.html">
+          <span class="year">2021</span>
+          <h3>A comprehensive approach to neural networks</h3>
+          <p>Theoretical foundations in the mornings, intensive programming in the afternoons, and projects joining pure and applied data science.</p>
+          <span class="card-link">View 2021 &rarr;</span>
+        </a>
+
+        <a class="year-card" href="stemforall2020.html">
+          <span class="year">2020</span>
+          <h3>Tripods NSF REU and Grad For All</h3>
+          <p>Coursework, mentoring, Python instruction, and accessible open problems brought together students and researchers across institutions.</p>
+          <span class="card-link">View 2020 &rarr;</span>
+        </a>
+
+        <a class="year-card" href="stemforall2019.html">
+          <span class="year">2019</span>
+          <h3>Four routes into modern mathematics</h3>
+          <p>Integer partitions, sums and products, foundations of geometry, and knot invariants, each followed by a research phase.</p>
+          <span class="card-link">View 2019 &rarr;</span>
+        </a>
+
+        <a class="year-card" href="stemforall.html">
+          <span class="year">2018</span>
+          <h3>The first StemForAll summer</h3>
+          <p>Functional programming, Bayesian inference, optimization, and statistical machine learning launched the Rochester program.</p>
+          <span class="card-link">View 2018 &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="team" class="thanks">
+      <div>
+        <p class="eyebrow">A collaborative effort</p>
+        <h2>Made possible by an extraordinary team</h2>
+      </div>
+      <div>
+        <p>These programs would not have been possible without the tremendous efforts of Charlotte Aten, Ayla Gafni, Azita Mayeli, Steven Kleene, Sevak Mkrtchyan, Emmett Wyman, and many other faculty members, graduate students, undergraduate mentors, organizers, and institutional partners.</p>
+        <p>It is a tremendous privilege to work with excellent mathematicians and generous human beings on these endeavors.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="closing-card">
+      <h2>Interested in undergraduate research?</h2>
+      <p>Students should begin with the <a href="stemforall2026.html">latest StemForAll program page</a>, which describes current projects, preparation, participation, and contact information. Questions may also be directed to <a href="mailto:iosevich@math.rochester.edu">iosevich@math.rochester.edu</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    Alex Iosevich &middot; Department of Mathematics &middot; University of Rochester<br>
+    <a href="index.html">Return to the home page</a>
+  </footer>
+</body>
 </html>
