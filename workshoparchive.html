@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Programs, schedules, posters, and abstracts from the Vertical Integration Workshops at the University of Rochester.">
+  <title>Workshop Archive | Alex Iosevich</title>
+  <style>:root {
+  --ink: #1d2730;
+  --muted: #5e6872;
+  --navy: #17384f;
+  --navy-dark: #102b3d;
+  --accent: #9a2f35;
+  --paper: #ffffff;
+  --warm: #f5f2eb;
+  --line: #d8dde1;
+  --soft: #edf2f5;
+  --max: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a { color: var(--navy); text-decoration-thickness: 1px; text-underline-offset: 0.16em; }
+a:hover { color: var(--accent); }
+a:focus-visible { outline: 3px solid #d6a11d; outline-offset: 3px; }
+
+img { max-width: 100%; height: auto; }
+
+h1, h2, h3 {
+  color: var(--navy-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+h1 { font-size: clamp(2.7rem, 6vw, 5.2rem); margin: 0 0 0.35rem; letter-spacing: -0.03em; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.7rem); margin: 0 0 1rem; }
+h3 { font-size: 1.3rem; margin: 0 0 0.45rem; }
+
+p { margin: 0 0 1.1rem; }
+
+.wrap { width: calc(100% - 2rem); max-width: var(--max); margin: 0 auto; }
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  background: var(--navy-dark);
+  color: white;
+  padding: 0;
+  z-index: 100;
+}
+.skip-link:focus {
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  padding: 0.6rem 1rem;
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,0.97);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 76px;
+}
+
+.brand {
+  color: var(--navy-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.3rem 1rem;
+  font-size: 0.94rem;
+}
+
+.site-nav a { text-decoration: none; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { border-bottom-color: var(--accent); color: var(--navy-dark); }
+
+.hero {
+  background: linear-gradient(180deg, var(--warm) 0%, #fff 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.75fr);
+  align-items: center;
+  gap: 3.5rem;
+  padding: 4.7rem 0 4.2rem;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.lead {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  line-height: 1.45;
+  color: #30414e;
+  max-width: 760px;
+}
+
+.credentials {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 1.35rem 0 1.6rem;
+}
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.button {
+  display: inline-block;
+  background: var(--navy);
+  color: white;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--navy);
+  border-radius: 3px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.button:hover { background: var(--navy-dark); color: white; }
+.button.secondary { background: white; color: var(--navy); }
+.button.secondary:hover { background: var(--soft); color: var(--navy-dark); }
+
+.portrait-frame {
+  margin: 0;
+  border: 1px solid #c9cfd3;
+  background: white;
+  padding: 0.55rem;
+  box-shadow: 0 14px 35px rgba(16,43,61,0.12);
+}
+.portrait-frame img { display: block; width: 100%; }
+.portrait-frame figcaption { color: var(--muted); font-size: 0.75rem; padding: 0.45rem 0.15rem 0.05rem; }
+
+.section { padding: 4rem 0; }
+.section.alt { background: var(--warm); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-heading { max-width: 760px; margin-bottom: 1.8rem; }
+.section-heading p { color: var(--muted); }
+
+.current-box {
+  border-left: 5px solid var(--accent);
+  background: #fff;
+  padding: 1.35rem 1.45rem;
+  box-shadow: 0 6px 20px rgba(16,43,61,0.07);
+}
+.current-box p:last-child { margin-bottom: 0; }
+
+.grid-2, .grid-3, .grid-4 {
+  display: grid;
+  gap: 1.2rem;
+}
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.card {
+  border: 1px solid var(--line);
+  background: white;
+  padding: 1.35rem;
+  min-height: 100%;
+}
+.card p { color: var(--muted); font-size: 0.96rem; }
+.card p:last-child { margin-bottom: 0; }
+.card-link { font-weight: 750; }
+
+.list-clean { list-style: none; padding: 0; margin: 0; }
+.list-clean li { padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
+.list-clean li:last-child { border-bottom: 0; }
+
+.page-hero {
+  background: var(--warm);
+  border-bottom: 1px solid var(--line);
+  padding: 3.6rem 0 3rem;
+}
+.page-hero h1 { font-size: clamp(2.5rem, 5vw, 4.3rem); }
+.page-hero .lead { max-width: 850px; }
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(240px, 0.75fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.sidebar {
+  border-top: 4px solid var(--accent);
+  background: var(--warm);
+  padding: 1.2rem;
+}
+.sidebar h2 { font-size: 1.35rem; }
+.sidebar ul { margin: 0; padding-left: 1.1rem; }
+.sidebar li { margin-bottom: 0.55rem; }
+
+.topic { padding: 1.35rem 0; border-bottom: 1px solid var(--line); }
+.topic:first-child { padding-top: 0; }
+.topic:last-child { border-bottom: 0; }
+.topic h2 { font-size: 1.75rem; }
+
+.quote {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+  color: #3b4650;
+  text-align: center;
+}
+.quote cite { display: block; margin-top: 0.8rem; color: var(--muted); font-family: inherit; font-size: 0.95rem; }
+
+.contact-block {
+  border: 1px solid var(--line);
+  background: white;
+  padding: 1.5rem;
+}
+.contact-block address { font-style: normal; }
+
+.kicker { color: var(--accent); font-weight: 800; }
+.small { font-size: 0.88rem; color: var(--muted); }
+
+.site-footer {
+  background: var(--navy-dark);
+  color: #edf3f6;
+  padding: 2.2rem 0;
+}
+.footer-grid { display: flex; justify-content: space-between; gap: 1rem 2rem; flex-wrap: wrap; }
+.site-footer a { color: white; }
+.site-footer p { margin: 0; }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 2.2rem; padding: 3.5rem 0; }
+  .portrait-frame { max-width: 480px; }
+  .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid-3 { grid-template-columns: 1fr; }
+  .content-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+  body { font-size: 17px; }
+  .nav-wrap { align-items: flex-start; flex-direction: column; padding: 0.85rem 0; }
+  .site-nav { justify-content: flex-start; gap: 0.2rem 0.85rem; }
+  .grid-2, .grid-4 { grid-template-columns: 1fr; }
+  .section { padding: 3rem 0; }
+  .page-hero { padding: 2.8rem 0 2.4rem; }
+}
+
+@media print {
+  .site-header, .site-footer, .actions { display: none; }
+  body { font-size: 12pt; }
+  a { color: black; }
+}
+
+
+.archive-list{display:grid;gap:1.5rem;max-width:940px}
+.archive-entry{padding:1.7rem 2rem;border:1px solid var(--line,#d7dde3);border-left:4px solid var(--accent,#95632f);border-radius:8px;background:var(--surface,#fff)}
+.archive-entry h2{font-size:1.6rem;margin:.25rem 0 .5rem}
+.archive-entry p{max-width:72ch}
+.archive-date{font-weight:650;font-size:1.05rem}
+.archive-links{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;margin:1.2rem 0 .2rem}
+.archive-links a{font-weight:600}
+.archive-entry .eyebrow{font-size:.78rem}
+.archive-intro{max-width:760px}
+.archive-note{color:var(--muted,#586575);font-size:.93rem;margin-top:1.5rem}
+@media(max-width:600px){.archive-entry{padding:1.25rem}.archive-entry h2{font-size:1.3rem}.archive-links{display:grid;gap:.6rem}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap nav-wrap">
+  <a class="brand" href="https://alexiosevich.com/">Alex Iosevich</a>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="https://alexiosevich.com/researchpage.html">Research</a>
+    <a href="https://alexiosevich.com/people.html">People &amp; Mentoring</a>
+    <a href="https://alexiosevich.com/programs.html">Programs &amp; Outreach</a>
+    <a href="https://alexiosevich.com/cvweb.html">CV</a>
+  </nav>
+</div></header>
+<main id="main">
+  <section class="page-hero"><div class="wrap archive-intro">
+    <div class="eyebrow">University of Rochester</div>
+    <h1>Workshop archive</h1>
+    <p class="lead">Vertical Integration Workshops</p>
+    <p>These workshops bring students, postdoctoral researchers, and faculty together to share mathematics and discuss research. Programs, schedules, posters, and abstracts from past meetings are collected here.</p>
+  </div></section>
+  <section class="section"><div class="wrap">
+    <div class="archive-list">
+      <article class="archive-entry" id="fall-2026" aria-labelledby="fall-2026-title">
+        <div class="eyebrow">Fall 2026 · Past workshop</div>
+        <h2 id="fall-2026-title">Vertical Integration Workshop</h2>
+        <p class="archive-date"><time datetime="2026-10-16">October 16</time>–<time datetime="2026-10-18">18, 2026</time></p>
+        <p>University of Rochester · Organized by A. Iosevich and E. Palsson.</p>
+        <p>Three days of talks on harmonic analysis, combinatorics, geometry, and signal recovery, bringing together high school students, undergraduates, graduate students, postdoctoral researchers, and faculty.</p>
+        <p>Friday · Lattimore 201<br>Saturday and Sunday · Hylan 1106A</p>
+        <div class="archive-links"><a href="workshop-materials/2026-10/poster.pdf">Poster and full schedule (PDF)</a></div>
+      </article>
+      <article class="archive-entry" id="spring-2026" aria-labelledby="spring-2026-title">
+        <div class="eyebrow">Spring 2026 · Past workshop</div>
+        <h2 id="spring-2026-title">Vertical Integration Workshop</h2>
+        <p class="archive-date"><time datetime="2026-04-16">April 16</time>–<time datetime="2026-04-19">19, 2026</time></p>
+        <p>University of Rochester.</p>
+        <p>Talks and discussion sessions with faculty, postdoctoral researchers, graduate students, and undergraduates. The program includes all talk titles and the abstracts collected on the original page.</p>
+        <p>Thursday, Saturday, and Sunday · Hylan 1106A<br>Friday · Dewey 2110E</p>
+        <div class="archive-links"><a href="workshop-materials/2026-04/program.html">Program and abstracts</a><a href="https://alexiosevich.com/april2026workshop.html">Original workshop page</a></div>
+      </article>
+      <article class="archive-entry" id="fall-2025" aria-labelledby="fall-2025-title">
+        <div class="eyebrow">Fall 2025 · Past workshop</div>
+        <h2 id="fall-2025-title">Vertical Integration Workshop</h2>
+        <p class="archive-date"><time datetime="2025-11-16">November 16, 2025</time></p>
+        <p>University of Rochester · Hylan 1106A.</p>
+        <p>Presentations on recent results from the Vertical Integration of Research group, with talks by graduate students, postdoctoral researchers, and undergraduates.</p>
+        <div class="archive-links"><a href="workshop-materials/2025-11/program.html">Program and 13 abstract PDFs</a><a href="https://alexiosevich.com/gradworkshopfall2025">Original workshop page</a></div>
+      </article>
+    </div>
+    <p class="archive-note">The historical programs and abstracts retain their original wording.</p>
+    <p><a href="https://alexiosevich.com/conferences.html">All conferences and workshops</a> · <a href="https://alexiosevich.com/programs.html">Programs &amp; Outreach</a></p>
+  </div></section>
+</main>
+<footer class="site-footer"><div class="wrap footer-grid"><p>Alex Iosevich · Workshop archive</p><p><a href="https://alexiosevich.com/">Home</a></p></div></footer>
+</body>
+</html>
