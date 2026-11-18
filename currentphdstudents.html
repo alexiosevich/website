@@ -46,6 +46,20 @@
       }
       a { color: #0000ee; }
       a:visited { color: #551a8b; }
+
+      .group-photo { margin: 18px 0; text-align: center; }
+      .group-photo img { display: block; width: 100%; max-width: none; aspect-ratio: 2.4; object-fit: cover; object-position: center 54%; box-sizing: border-box; }
+      .group-photo p { margin: 8px 0; font-style: italic; }
+      .timeline { margin: 20px 0; padding: 16px; background: #faf8f5; border: 1px solid #aaa; }
+      .timeline h2 { margin: 0; font-size: 1.3em; }
+      .timeline p { margin: 6px 0; }
+      .years { display: grid; grid-template-columns: repeat(25, minmax(0, 1fr)); }
+      .year { display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding-top: 10px; }
+      .year small { text-align: center; width: 100%; border-top: 1px solid #999; padding-top: 4px; margin-top: 3px; }
+      .dot { display: inline-block; width: 9px; height: 9px; border: 2px solid #852b2b; border-radius: 50%; background: #852b2b; margin: 2px; }
+      .dot.open { background: transparent; }
+      @media (max-width: 900px) { .years { grid-template-columns: repeat(10, 1fr); } }
+      @media (max-width: 600px) { body { margin: 8px; } .main { padding: 12px; } .years { grid-template-columns: repeat(5, 1fr); } .group-photo img { aspect-ratio: 1.85; } }
     </style>
   </head>
   <body vlink="#551A8B" text="#000000" link="#0000EE" bgcolor="#c0c0c0"
@@ -53,6 +67,10 @@
     <div class="main">
       <div class="header"> <font size="+3"><b>Past and Current Ph.D.
             Students</b></font> </div>
+      <div class="group-photo">
+        <a href="phd-students-gathering.jpg"><img src="phd-students-gathering.jpg" alt="Nine people gathered in front of tall arched windows"></a>
+        <p>A gathering with several of my Ph.D. students, postdocs, and other friends</p>
+      </div>
       <div class="intro"> This page is dedicated to my past and present
         Ph.D. students. I have been extraordinarily fortunate to advise
         so many talented and dedicated people. Their accomplishments
@@ -64,6 +82,37 @@
         and the University of Rochester, as well as students co-advised
         with colleagues at other institutions where indicated. Career
         information is updated periodically. </div>
+      <div class="timeline">
+        <h2>Ph.D. students by degree year</h2>
+        <p>Each dot represents one student. Filled dots show completed degrees. Open dots show expected degrees.</p>
+        <div class="years">
+          <div class="year"><span class="dot" role="img" aria-label="Georgiy Arutunyants, 2006" title="Georgiy Arutunyants"></span><small>2006</small></div>
+          <div class="year"><small>2007</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Derrick Hart, 2008" title="Derrick Hart"></span><span class="dot" role="img" aria-label="Doowon Koh, 2008" title="Doowon Koh"></span><small>2008</small></div>
+          <div class="year"><small>2009</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Jeremy Chapman, 2010" title="Jeremy Chapman"></span><span class="dot" role="img" aria-label="Le Anh Vinh, 2010" title="Le Anh Vinh"></span><small>2010</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="David Covert, 2011" title="David Covert"></span><span class="dot" role="img" aria-label="Steven Senger, 2011" title="Steven Senger"></span><small>2011</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Krystal Taylor, 2012" title="Krystal Taylor"></span><small>2012</small></div>
+          <div class="year"><small>2013</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Esen Aksoy, 2014" title="Esen Aksoy"></span><small>2014</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Mike Bennett, 2015" title="Mike Bennett"></span><small>2015</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Dee Ethier, 2016" title="Dee Ethier"></span><span class="dot" role="img" aria-label="Brendan Murphy, 2016" title="Brendan Murphy"></span><small>2016</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Bochen Liu, 2017" title="Bochen Liu"></span><small>2017</small></div>
+          <div class="year"><small>2018</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Philipp Birklbauer, 2019" title="Philipp Birklbauer"></span><small>2019</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Nick Chatzikonstantinou, 2020" title="Nick Chatzikonstantinou"></span><small>2020</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Alex McDonald, 2021" title="Alex McDonald"></span><span class="dot" role="img" aria-label="Jonathan Passant, 2021" title="Jonathan Passant"></span><span class="dot" role="img" aria-label="Brianna Vick, 2021" title="Brianna Vick"></span><span class="dot" role="img" aria-label="Belmiro Galo, 2021" title="Belmiro Galo"></span><small>2021</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Gail Jardine, 2022" title="Gail Jardine"></span><span class="dot" role="img" aria-label="Tingsong Jiang, 2022" title="Tingsong Jiang"></span><span class="dot" role="img" aria-label="Tritium Shen, 2022" title="Tritium Shen"></span><small>2022</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Shashank Chorge, 2023" title="Shashank Chorge"></span><span class="dot" role="img" aria-label="Brian McDonald, 2023" title="Brian McDonald"></span><small>2023</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Donggeun Ryou, 2024" title="Donggeun Ryou"></span><span class="dot" role="img" aria-label="Firdavs Rakhmonov, 2024" title="Firdavs Rakhmonov"></span><small>2024</small></div>
+          <div class="year"><small>2025</small></div>
+          <div class="year"><span class="dot" role="img" aria-label="Shengze Duan, 2026" title="Shengze Duan"></span><span class="dot" role="img" aria-label="Quy Pham, 2026" title="Quy Pham"></span><span class="dot" role="img" aria-label="Pablo Bhowmik, 2026" title="Pablo Bhowmik"></span><span class="dot" role="img" aria-label="Hari Nathan, 2026" title="Hari Nathan"></span><small>2026</small></div>
+          <div class="year"><span class="dot open" role="img" aria-label="Will Burstein, 2027 expected" title="Will Burstein"></span><span class="dot open" role="img" aria-label="Shantanu Deodhar, 2027 expected" title="Shantanu Deodhar"></span><small>2027</small></div>
+          <div class="year"><span class="dot open" role="img" aria-label="Ella Yu, 2028 expected" title="Ella Yu"></span><span class="dot open" role="img" aria-label="Zhihe Li, 2028 expected" title="Zhihe Li"></span><span class="dot open" role="img" aria-label="Haoyuan Tian, 2028 expected" title="Haoyuan Tian"></span><small>2028</small></div>
+          <div class="year"><small>2029</small></div>
+          <div class="year"><span class="dot open" role="img" aria-label="Alex Liu, 2030 expected" title="Alex Liu"></span><span class="dot open" role="img" aria-label="Kellen Adkins, 2030 expected" title="Kellen Adkins"></span><span class="dot open" role="img" aria-label="Svetlana Pack, 2030 expected" title="Svetlana Pack"></span><small>2030</small></div>
+        </div>
+      </div>
       <div class="legend"> <b>Notation</b><br>
         <br>
         (*) indicates that the student obtained a postdoctoral position
