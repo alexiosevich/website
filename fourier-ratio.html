@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Fourier ratio and signal recovery | Alex Iosevich</title>
+  <meta name="description" content="A worked example of recovering two signals from the same incomplete measurements, with a figure and a reproducible Python notebook.">
+  <link rel="canonical" href="https://alexiosevich.com/fourier-ratio.html">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .experiment {max-width: 54rem;}
+    .experiment figure {margin: 2rem 0 1rem;}
+    .experiment img {display: block; width: 100%; height: auto;}
+    .experiment figcaption {margin-top: .7rem;}
+    .experiment table {width: 100%; border-collapse: collapse; margin: 1.2rem 0;}
+    .experiment th, .experiment td {padding: .5rem .4rem; text-align: right; border-bottom: 1px solid #ccd4da;}
+    .experiment tr > :first-child {text-align: left;}
+    .experiment tr > th {font-size: inherit;}
+    .experiment h2 {margin-top: 1.75rem;}
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header"><div class="wrap nav-wrap">
+  <a class="brand" href="index.html">Alex Iosevich</a>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="researchpage.html">Research</a>
+    <a href="people.html">People &amp; Mentoring</a>
+    <a href="programs.html">Programs &amp; Outreach</a>
+    <a href="media.html">Media</a><a href="cv.html">CV</a><a href="about.html#contact">Contact</a>
+  </nav>
+</div></header>
+<main id="main">
+  <section class="page-hero"><div class="wrap">
+    <h1>The Fourier ratio and signal recovery</h1>
+    <p class="lead">Suppose a sensor records 35 of 64 measurements. What can we say about the 29 values it missed? The answer depends in part on how the signal distributes its energy across frequencies.</p>
+    <div class="actions"><a class="button" href="#experiment">See the experiment</a>
+      <a class="button secondary" href="fourier-ratio-recovery.ipynb" download>Download the Python notebook</a></div>
+  </div></section>
+  <section id="experiment" class="section"><div class="wrap experiment">
+    <h2>Two signals with the same energy</h2>
+    <p>Both signals in this example contain all 64 Fourier frequencies. In the first signal, most of the energy lies in two cosine waves. In the second, every Fourier coefficient has the same magnitude. We use the same phases for both signals and scale each to have unit energy.</p>
+    <p>The Fourier ratio of a nonzero signal is the sum of the magnitudes of its Fourier coefficients divided by the square root of the sum of their squares. In symbols, FR(<i>f</i>) = ‖<i>f̂</i>‖₁ / ‖<i>f̂</i>‖₂. If exactly <i>k</i> coefficients have equal nonzero magnitude and the rest vanish, the ratio is √<i>k</i>. Thus a flat spectrum across 64 frequencies has ratio 8. Concentrating the energy in a few frequencies lowers the ratio even when all the other coefficients remain nonzero.</p>
+    <h2>Filling in the missing measurements</h2>
+    <p>At each time we toss a fair coin to decide whether to keep the measurement. We use the same 35 retained times for both signals. Among the signals that agree with the measurements, we choose one with the smallest sum of Fourier coefficient magnitudes. The algorithm receives only the observed values and their time indices.</p>
+    <figure>
+      <a href="fourier-ratio-recovery.svg" aria-label="Open the full-size spectrum and reconstruction figure"><img src="fourier-ratio-recovery.svg" width="800" height="540" alt="The spectra are concentrated in two peaks for the first signal and flat for the second. The recovered curve closely follows the first original and misses many fluctuations in the second."></a>
+      <figcaption>The left panels show frequencies 0 through 32. The other half of each spectrum is determined by symmetry. On the right, the dots are the observed values and the dashed line is the reconstruction.</figcaption>
+    </figure>
+    <table aria-label="Recovery results for one sample of 35 time indices">
+      <thead><tr><th scope="col">Signal</th><th scope="col">Fourier ratio</th><th scope="col">Relative error</th></tr></thead>
+      <tbody><tr><th scope="row">Two dominant tones</th><td>2.106</td><td>3.14%</td></tr>
+        <tr><th scope="row">Equal amplitudes</th><td>8.000</td><td>88.80%</td></tr></tbody>
+    </table>
+    <p>The error is the Euclidean length of the reconstruction error divided by the length of the original signal, measured over all 64 times. These are the errors for one random sample. The notebook fixes the seed at 2026 so that the calculation can be repeated.</p>
+    <h2>What the theorem says</h2>
+    <p>For a finite signal of length <i>N</i> with Fourier ratio at most <i>r</i>, choose each time independently with probability <i>p</i>. For 0 &lt; ε &lt; 1, a sufficient expected sample size for stable recovery is</p>
+    <p><i>pN</i> ≥ <i>C</i>(<i>r</i>/ε)<sup>2</sup> log<sup>2</sup>(<i>r</i>/ε) log <i>N</i>.</p>
+    <p>Here <i>C</i> is an absolute constant. Under the theorem’s data-fidelity condition, minimizing the Fourier ℓ¹ norm gives relative error at most 11.47ε with probability at least 1 − exp(−<i>cpN</i>) for an absolute constant <i>c</i> &gt; 0. The experiment above fits noiseless measurements exactly. Its two observed errors illustrate how the method behaves at a fixed sample size.</p>
+    <p>The full statement appears in Theorem 3 of <a href="https://arxiv.org/abs/2601.16345"><cite>The Fourier Ratio: A Unifying Measure of Complexity for Recovery, Localization, and Learning</cite></a>, with Will Burstein and Hari Sarang Nathan. <a href="https://doi.org/10.1016/j.acha.2026.101904">Journal version</a>.</p>
+    <p>For more on the mathematics of incomplete measurements, see my <a href="https://www.mathematics.uni-bonn.de/him/video-recordings/tp_2024_03_school_video">four lectures on signal recovery, restriction theory, and applications</a> at the Hausdorff Institute.</p>
+  </div></section>
+</main>
+<footer class="site-footer"><div class="wrap"><a href="researchpage.html">Research</a> · <a href="index.html">Alex Iosevich</a></div></footer>
+</body>
+</html>
